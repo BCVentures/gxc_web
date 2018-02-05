@@ -1,0 +1,67 @@
+{
+  "env": {
+    "server": {
+      "presets": [
+        [
+          "env",
+          {
+            "targets": {
+              "node": "current"
+            }
+          }
+        ],
+        "react"
+      ],
+      "plugins": [
+        "transform-async-to-generator",
+        "transform-decorators-legacy",
+        "transform-class-properties",
+        "transform-regenerator"
+      ]
+    },
+    "client-dev": {
+      "presets": [
+        "react-hmre",
+        [
+          "env",
+          {
+            "targets": {
+              "node": "current"
+            }
+          }
+        ],
+        "react"
+      ],
+      "plugins": [
+        "transform-decorators-legacy",
+        "transform-class-properties",
+        "transform-regenerator",
+        [
+          "react-intl",
+          {
+            "messagesDir": "./build/messages",
+            "enforceDescriptions": false
+          }
+        ]
+      ]
+    },
+    "client-build": {
+      "presets": [
+        [
+          "env",
+          {
+            "targets": {
+              "node": "current"
+            }
+          }
+        ],
+        "react"
+      ],
+      "plugins": [
+        "transform-decorators-legacy",
+        "transform-class-properties",
+        "transform-regenerator"
+      ]
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.DS_Store
+**/node_modules/**
+*.log
+coverage/
+test/encrypted/nodejs-docs-samples.json
+*.iml
+.idea/
+dist
+built
+views/base.marko.js
+tmp*
+yarn.lock

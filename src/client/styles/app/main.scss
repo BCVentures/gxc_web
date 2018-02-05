@@ -1,0 +1,65 @@
+
+#main {
+  .main-bg {
+    height: 527px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    position: relative;
+    justify-content: flex-start;
+    .left-pattern {
+      height: 100%;
+      flex-basis: 60%;
+      background: url("/static/images/bg_main_left_pattern.png") center center repeat-x;
+    }
+
+    .center {
+      height: 100%;
+      flex-basis: 70%;
+      max-width: 750px;
+      background: url("/static/images/bg_main.png") center center no-repeat;
+    }
+
+    .right-pattern {
+      height: 100%;
+      flex: 1;
+      background: url("/static/images/bg_main_right_pattern.png") center center repeat-x;
+    }
+    .title {
+      position: absolute;
+      top: 291px;
+      left: 25%;
+      color: white;
+    }
+    .description {
+      position: absolute;
+      top: 365px;
+      left: 25%;
+    }
+  }
+
+  .intro {
+    padding: 10rem;
+    img {
+      display: block;
+      margin: 0 auto;
+      &.logo {
+        width: 167px;
+        height: 167px;
+      }
+      &.gxc {
+        margin-top: 10px;
+        width: 90px;
+      }
+    }
+    .title, .description {
+      margin: 28px auto 0;
+      text-align: center;
+    }
+    .title {
+      font-weight: bold;
+    }
+  }
+}
+
+
