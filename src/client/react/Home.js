@@ -20,11 +20,13 @@ export default class Home extends Component {
 
   t = (key) => {
     const str = this.props.t(key);
+    if (str.indexOf("\n") < 0) return str;
     return str.split("\n")
       .map((item, index) => <p key={index}>{item}</p>)
   }
 
   renderMember = (member) => {
+
     return (
       <li className="member" key={member.name}>
         <img src={imageRequire(member.photo)} className="photo" alt={member.name} />
@@ -45,16 +47,16 @@ export default class Home extends Component {
 
   renderAdvisor = (member) => {
     return (
-      <Col span={12} className="advisor" xs={24} key={member.name}>
+      <Col xs={24} sm={12} className="advisor" key={member.name}>
         <img src={imageRequire(member.photo)} className="photo" alt={member.name} />
         <div className="texts">
           <h2 className="name">
             {member.name}
           </h2>
-        </div>
           <h5 className="description">
             {member.description}
           </h5>
+        </div>
       </Col>
     );
   };
