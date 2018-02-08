@@ -20,17 +20,17 @@ export default class Home extends Component {
 
   t = (key) => {
     const str = this.props.t(key);
-    return <p>
+    return (<p key={key}>
       {str.split("\n")
-      .map(e => <p>{e}</p>)}
-    </p>;
+      .map((item, index) => <p key={index}>{item}</p>)}
+    </p>);
     // let this.props.t()
   }
 
   renderMember = (member) => {
     return (
       <li className="member">
-        <img src={imageRequire(member.photo)} className="photo" alt={member.name}/>
+        <img src={imageRequire(member.photo)} className="photo" alt={member.name} />
         <div className="texts">
           <h2 className="name">
             {member.name}
@@ -49,7 +49,7 @@ export default class Home extends Component {
   renderAdvisor = (member) => {
     return (
       <Col span={12} className="advisor" xs={24}>
-        <img src={imageRequire(member.photo)} className="photo" />
+        <img src={imageRequire(member.photo)} className="photo" alt={member.name} />
         <div className="texts">
           <h2 className="name">
             {member.name}
@@ -99,13 +99,13 @@ export default class Home extends Component {
       {[0, 1, 2, 3, 4, 5].map((i, index) => {
         if (index === 0) {
           return (<List.Item
-            key={ i }
+            key={i}
             thumb="https://zos.alipayobjects.com/rmsportal/eOZidTabPoEbPeU.png"
             multipleLine
           >Category</List.Item>);
         }
         return (<List.Item
-          key={ i }
+          key={i}
           thumb="https://zos.alipayobjects.com/rmsportal/eOZidTabPoEbPeU.png"
         >Category{index}</List.Item>);
       })}
@@ -120,8 +120,8 @@ export default class Home extends Component {
       ["Coming soon"],
       ["Coming soon"],
     ];
-    return (
 
+    return (
       <Layout className="layout" id="main">
         <Header className="header">
           <div className="logo-box">
@@ -142,13 +142,13 @@ export default class Home extends Component {
             <Menu.Item key="5"><a className="nav-link" href="#contact">Token Sale</a></Menu.Item>
             <Menu.Item key="4"><a className="nav-link" href="#contact">News</a></Menu.Item>
             <Menu.Item>
-              <Select defaultValue={i18n.language} style={{ width: 120 }} onChange={this.handleChangeLang.bind(this)}>
+              <Select defaultValue={i18n.language} style={{ width: 120 }} onChange={() => this.handleChangeLang()}>
                 <Option value="en">EN</Option>
                 <Option value="kr">KR</Option>
               </Select>
             </Menu.Item>
           </Menu>
-          <Icon className="only-mobile" type="menu-fold" onClick={this.openMobileSidebar} style={{display: "none"}} />
+          <Icon className="only-mobile" type="menu-fold" onClick={this.openMobileSidebar} style={{ display: "none" }} />
         </Header>
         <Drawer
           className="my-drawer"
@@ -157,7 +157,7 @@ export default class Home extends Component {
           contentStyle={{ color: '#A6A6A6', textAlign: 'center', paddingTop: 42 }}
           sidebar={sidebar}
           open={this.sidebarOpen}
-          onOpenChange={() => this.sidebarOpen = false}
+          onOpenChange={this.sidebarOpen = false}
         >
           Click upper-left corner
         </Drawer>
@@ -183,14 +183,12 @@ export default class Home extends Component {
                   <h2 className="title">{t('main:rewardTitle')}</h2>
                   <h4 className="description" dangerouslySetInnerHTML={{ __html: t('main:rewardDescription') }} />
                 </div>
-                <img className="right" src={imageRequire('pictogram_reward.png')} />
+                <img className="right" src={imageRequire('pictogram_reward.png')} alt="pictorgram_reward" />
               </div>
-
-
             </div>
             <div className="p2p right">
               <div className="container-fluid">
-                <img src={imageRequire('pictogram_p2p.png')} />
+                <img src={imageRequire('pictogram_p2p.png')} alt="pictorgram_p2p" />
                 <div className="right texts">
                   <h2 className="title">{t('main:p2p:title')}</h2>
                   <h4 className="description" dangerouslySetInnerHTML={{ __html: t('main:p2p:description') }} />
@@ -198,15 +196,13 @@ export default class Home extends Component {
               </div>
             </div>
             <div className="commission left">
-
               <div className="container-fluid">
                 <div className="texts">
                   <h2 className="title">{t('main:commission:title')}</h2>
                   <h4 className="description" dangerouslySetInnerHTML={{ __html: t('main:commission:description') }} />
                 </div>
-                <img className="right" src={imageRequire('pictogram_commission.png')} alt="commission"/>
+                <img className="right" src={imageRequire('pictogram_commission.png')} alt="commission" />
               </div>
-
             </div>
           </Content>
           <Content className="whitepaper">
@@ -214,8 +210,9 @@ export default class Home extends Component {
             <h1 className="title">{t('main:whitepaper.title')}</h1>
             <h3 className="description">{this.t('main:whitepaper.description')}</h3>
             <div className="links">
-              {whitepapers.map(whitepaper => {
+              {whitepapers.map((whitepaper, index) => {
                 return (<Link
+                  key={index}
                   to={whitepaper[1]}
                   className={`link-to-whitepaper ${whitepaper[2]}`}
                 >{whitepaper[0]}</Link>);
@@ -235,7 +232,6 @@ export default class Home extends Component {
                 {advisors.map(member => this.renderAdvisor(member))}
               </Row>
             </div>
-
           </Content>
           <Content className="roadmap section-type-1 container-fluid">
             <h1 className="title">{t("main:roadmap:title")}</h1>
@@ -245,8 +241,8 @@ export default class Home extends Component {
                   <Row gutter={16} key={key}>
                     <Col className="quarter" span={6} offset={key % 2 === 0 ? 3 : 16}>
                       <ul className="title">
-                        {roadmap.map((e, key2) => {
-                          return <li key={key2}>{e}</li>;
+                        {roadmap.map((e, index) => {
+                          return <li key={index}>{e}</li>;
                         })}
                       </ul>
                     </Col>
@@ -254,20 +250,18 @@ export default class Home extends Component {
                 );
               })}
             </div>
-
-
           </Content>
           <Content className="partners section-type-1">
             <h1 className="title">{t("main:partner:title")}</h1>
             <ul className="container-fluid">
               <li>
-                <img src={imageRequire("logo_xlgames.png")} alt="logo_xlgames"/>
+                <img src={imageRequire("logo_xlgames.png")} alt="logo_xlgames" />
               </li>
               <li>
                 <img src={imageRequire("logo_superplanet.png")} alt="logo_superplanet" />
               </li>
               <li>
-                <img src={imageRequire("logo_pays.png")} alt="logo_pays"/>
+                <img src={imageRequire("logo_pays.png")} alt="logo_pays" />
               </li>
             </ul>
           </Content>
