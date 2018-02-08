@@ -325,7 +325,7 @@
         .link-to-whitepaper {
           width: 60px;
           height: 60px;
-          margin-right: 2.5rem;
+          margin-right: 2rem;
           display: inline-block;
 
           color: white;
@@ -410,13 +410,14 @@
 
       .content {
         background-position-y: 0px;
-        background-position-x: 20px;
-        background-size: 30%;
+        background-position-x: 10%;
+        background-size: contain;
       }
 
       .quarter {
         &:first-child {
-          margin-top: -10px;
+          margin-top: -23px;
+          padding-top: 33px;
         }
         .title {
           font-size: 14px;
@@ -424,8 +425,8 @@
         .description {
           font-size: 12px;
         }
-        margin-left: 40%;
-        width: 100%;
+        margin-left: 45%;
+        width: 55%;
         height: 150.5px;
       }
     }
