@@ -75,7 +75,7 @@ export default class Home extends Component {
   render() {
     const Search = Input.Search;
     const { Header, Footer, Content } = Layout;
-    const t = this.props.t;
+    const t = this.t;
     const whitepapers = [
       ["English", "#", "english"],
       ["日本語", "#", "japanese"],
@@ -91,12 +91,12 @@ export default class Home extends Component {
         description: t(`member:${memberName}:description`),
       };
     });
-    const advisorNames = ["ckh"];
+    const advisorNames = ["ckh", "kjh", "kdi", "cjm", "myw"];
     const advisors = advisorNames.map(name => {
       return {
         name: t(`member:${name}:name`),
         photo: `photo_${name}.png`,
-        description: t(`member:${name}:description`),
+        description: this.t(`member:${name}:description`),
       };
     });
 
@@ -168,7 +168,7 @@ export default class Home extends Component {
         <Content className="">
           <Content className="main-bg">
             <h1 className="title">{t('main:title')}</h1>
-            <h4 className="description" dangerouslySetInnerHTML={{ __html: t('main:description') }} />
+            <h4 className="description">{t('main:description')}</h4>
 
             <div className="left-pattern only-desktop" />
             <div className="center" />
@@ -177,8 +177,8 @@ export default class Home extends Component {
           <Content className="intro">
             <img src={imageRequire('logo.svg')} alt="logo" className="logo" />
             <img src={imageRequire('gxc.svg')} alt="gxc" className="gxc" />
-            <div className="title" dangerouslySetInnerHTML={{ __html: t('main:introTitle') }} />
-            <div className="description" dangerouslySetInnerHTML={{ __html: t('main:introDescription') }} />
+            <div className="title">{t('main:introTitle')}</div>
+            <div className="description">{t('main:introDescription')}</div>
           </Content>
           <Content className="advantages">
             <div className="reward">

@@ -118,13 +118,26 @@ i18n
           },
           ckh: {
             name: "Kwanho Choi",
-            description: "XLGames 대표이사\n네오위즈 게임즈 대표이사\n네오위즈 인터넷 대표이사\n네오위즈 아이엔에스 대표이사\n게임온 대표이사\n한국게임산업협회 회장"
-          }
-
+            description: "XLGames 대표이사네오위즈 게임즈 대표이사\n네오위즈 인터넷 대표이사\n네오위즈 아이엔에스 대표이사\n게임온 대표이사\n한국게임산업협회 회장",
+          },
+          kjh: {
+            name: "Jongho Kim",
+            description: "페이레터 결제사업본부 이사\n이지스 효성 결제 사업 경력\n서강대학교 수학과 졸업\n서강대학교 신문방송학 석사 졸업",
+          },
+          kdi: {
+            name: "Dooil Kim",
+            description: "ChinaLab 대표이사\n네오윈게임즈 대표이사\n웹젠 MU의 중국 초대형 IP 계약 경험\n중국 진출 및 중국 게임업체 제휴 자문",
+          },
+          cjm: {
+            name: "Jaemin Choi",
+            description: "세무법인 자성 대표 세무사\n현대중공업 전문연구요원\n프리챌 근무\n서울대학교 조선해양공학과 졸업\n서울대학교 조선해양공학과 석사 졸업",
+          },
+          myw: {
+            name: "Yongwon Moon",
+            description: "쿠프마케팅 전략기획 이사\nEbay E-커머스 사업부\nGXC - E커머스 사업 연결 자문\n한양대학교 경영학과 졸업",
+          },
         },
-
       },
-
     },
     // react i18next special options (optional)
     react: {
