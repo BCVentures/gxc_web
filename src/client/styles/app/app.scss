@@ -15,6 +15,22 @@ body {
 .container-fluid {
   max-width: 1440px;
   margin: 0 auto;
+  padding: 0 15px;
+  @media (max-width: $screen-xs) {
+    width: 100%;
+  }
+  @media (max-width: $screen-sm) {
+    width: 100%;
+  }
+  @media (max-width: $screen-md) {
+    max-width: 720px;
+  }
+  @media (max-width: $screen-lg) {
+    max-width: 950px;
+  }
+  @media (max-width: $screen-xl) {
+    max-width: 1100px;
+  }
 }
 
 .header {

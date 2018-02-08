@@ -19,35 +19,37 @@ i18n
           title: 'Gamecoin Exchange',
           description: 'By connecting the game with the blockchain, Break the wall between games',
           introTitle: '블록체인과 게임을 연결하여 게임 간의 벽을 허문다',
-          introDescription: 'Gamecoin Exchange는 게임 간 화폐들을 기축통화인 GXC를 통해 연결하는 것을 목적으로 둡니다.<br/>' +
+          introDescription: 'Gamecoin Exchange는 게임 간 화폐들을 기축통화인 GXC를 통해 연결하는 것을 목적으로 둡니다.\n' +
           'GXC는 블록체인을 기반으로 게임 개발사, 게이머에게 보다 가치있는 시스템을 제공합니다.',
         },
       },
 
-      kr: {
+      "ko-KR": {
         main: {
           title: 'Gamecoin Exchange',
           description: 'By connecting the game with the blockchain, Break the wall between games',
           introTitle: '블록체인과 게임을 연결하여 게임 간의 벽을 허문다',
-          introDescription: 'Gamecoin Exchange는 게임 간 화폐들을 기축통화인 GXC를 통해 연결하는 것을 목적으로 둡니다.<br/>' +
+          introDescription: 'Gamecoin Exchange는 게임 간 화폐들을 기축통화인 GXC를 통해 연결하는 것을 목적으로 둡니다.\n' +
           'GXC는 블록체인을 기반으로 게임 개발사, 게이머에게 보다 가치있는 시스템을 제공합니다.',
-          rewardTitle: 'Reward',
-          rewardDescription: '기존에는 게임을 플레이 하다가 그만 두게 되면 게임에서 습득한 보상을 <br/>' +
-          '모두 포기해야했습니다. 하지만 GXC를 통해 어떠한 게임을 플레이 하든 <br/>' +
-          '게이머는 각기 다른 게임에서 얻은 보상을 온전히 자신의 것으로 소유할 수 있습니다.',
-          p2pTitle: 'P2P',
+          reward: {
+            title: 'Reward',
+            description: '기존에는 게임을 플레이 하다가 그만 두게 되면 게임에서 습득한 보상을 \n' +
+            '모두 포기해야했습니다. 하지만 GXC를 통해 어떠한 게임을 플레이 하든 \n' +
+            '게이머는 각기 다른 게임에서 얻은 보상을 온전히 자신의 것으로 소유할 수 있습니다.',
+
+          },
           p2p: {
             title: 'P2P',
-            description: '게이머들은 게임 플레이를 하는 동안 같은 게임을 즐기는 다른 게이머와<br/>' +
-            '거래가 빈번하게 발생합니다. 이는 블록체인의 스마트 컨트랙트를 활용하면<br/>' +
-            '타 거래소를 통해 지출되던 수수료를 아낄 수 있고, 하나의 계약서와 같은 형태로 <br/>' +
+            description: '게이머들은 게임 플레이를 하는 동안 같은 게임을 즐기는 다른 게이머와\n' +
+            '거래가 빈번하게 발생합니다. 이는 블록체인의 스마트 컨트랙트를 활용하면\n' +
+            '타 거래소를 통해 지출되던 수수료를 아낄 수 있고, 하나의 계약서와 같은 형태로 \n' +
             '게임 내에서 자유롭게 활용할 수 있습니다.',
           },
           commission: {
             title: 'Commission',
-            description: '개발사가 플랫폼에 지불해야 하는 수수료는 30%로 구조화 되어있습니다.<br/>' +
-            '이는 플랫폼이 독과점 형태로 이루어졌기 때문입니다.<br/>' +
-            'GXC는 탈 중앙화를 통해 게임 개발사들이 부담없이 게이머와 연결될 수 있도록<br/>' +
+            description: '개발사가 플랫폼에 지불해야 하는 수수료는 30%로 구조화 되어있습니다.\n' +
+            '이는 플랫폼이 독과점 형태로 이루어졌기 때문입니다.\n' +
+            'GXC는 탈 중앙화를 통해 게임 개발사들이 부담없이 게이머와 연결될 수 있도록\n' +
             '결제 수수료를 획기적으로 낮추고 수수료의 일부를 개발사와 수익을 나눌 것입니다.',
           },
           member: {

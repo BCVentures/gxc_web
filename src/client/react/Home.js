@@ -125,8 +125,8 @@ export default class Home extends Component {
       ["Coming soon"],
       ["Coming soon"],
     ];
-
     return (
+
       <Layout className="layout" id="main">
         <Header className="header">
           <div className="logo-box">
@@ -148,7 +148,7 @@ export default class Home extends Component {
             <Menu.Item key="4"><a className="nav-link" href="#contact" style={{display: "none"}}>News</a></Menu.Item>
             <Menu.Item>
               <Select defaultValue={i18n.language.toUpperCase()} style={{ width: 120 }} onChange={this.handleChangeLang.bind(this)}>
-                <Option value="kr">KR</Option>
+                <Option value="ko-KR">KR</Option>
               </Select>
             </Menu.Item>
           </Menu>
@@ -184,8 +184,8 @@ export default class Home extends Component {
             <div className="reward">
               <div className="container-fluid">
                 <div className="texts">
-                  <h2 className="title">{t('main:rewardTitle')}</h2>
-                  <h4 className="description" dangerouslySetInnerHTML={{ __html: t('main:rewardDescription') }} />
+                  <h2 className="title">{t('main:reward:title')}</h2>
+                  <h4 className="description">{t('main:reward:description')}</h4>
                 </div>
                 <img className="right" src={imageRequire('pictogram_reward.png')} alt="pictorgram_reward" />
               </div>
@@ -195,7 +195,7 @@ export default class Home extends Component {
                 <img src={imageRequire('pictogram_p2p.png')} alt="pictorgram_p2p" />
                 <div className="right texts">
                   <h2 className="title">{t('main:p2p:title')}</h2>
-                  <h4 className="description" dangerouslySetInnerHTML={{ __html: t('main:p2p:description') }} />
+                  <h4 className="description">{t('main:p2p:description')}</h4>
                 </div>
               </div>
             </div>
@@ -203,7 +203,7 @@ export default class Home extends Component {
               <div className="container-fluid">
                 <div className="texts">
                   <h2 className="title">{t('main:commission:title')}</h2>
-                  <h4 className="description" dangerouslySetInnerHTML={{ __html: t('main:commission:description') }} />
+                  <h4 className="description">{t('main:commission:description')}</h4>
                 </div>
                 <img className="right" src={imageRequire('pictogram_commission.png')} alt="commission" />
               </div>
