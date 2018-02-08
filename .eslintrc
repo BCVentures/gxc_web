@@ -23,6 +23,7 @@
     "react/sort-comp": 0,
     "no-console": 0,
     "no-param-reassign": 0,
+    "react/no-array-index-key": 0,
     "no-trailing-spaces": [2, {
       "skipBlankLines": true
     }],

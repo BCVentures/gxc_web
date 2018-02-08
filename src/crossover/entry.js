@@ -7,8 +7,8 @@ import injectTapEvent from 'react-tap-event-plugin';
 import { Router, browserHistory } from 'react-router';
 import { routes } from '../client/react/routes/routes';
 import { createStoresFromState } from '../crossover/mobx/store-utils';
-import { IntlProvider } from "react-intl";
-
+import i18n from './i18n/i18n';
+import { I18nextProvider } from "react-i18next";
 /*
  +*  This function is important for the crossover between server and client (isomorphic / universal).
  +*  It defines a single, identical starting point for ReactJS page layout on both sides.
@@ -16,9 +16,9 @@ import { IntlProvider } from "react-intl";
 export function baseReact(stores, router) {
   return (
     <Provider {...stores}>
-      <IntlProvider locale={navigator.language}>
+      <I18nextProvider i18n={ i18n }>
         {router}
-      </IntlProvider>
+      </I18nextProvider>
     </Provider>
   );
 }
@@ -28,8 +28,8 @@ export function baseReact(stores, router) {
 // this code will throw an error because of the undefined document variable
 if (typeof document !== 'undefined') {
   require('antd/dist/antd.css');
+  require('antd-mobile/dist/antd-mobile.css');
   require('../client/styles/entry.scss');
-
   injectTapEvent();
 
   const rootEl = document.getElementById('root');

@@ -1,0 +1,20 @@
+@mixin rotated_rec($color, $size) {
+  &::before {
+    z-index: -1;
+    background: $color;
+    content: " ";
+    width: $size;
+    height: $size;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    margin-left: calc(-1 * #{$size} / 2);
+    margin-top: calc(-1 * #{$size} / 2);
+    /* Rotate */
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
