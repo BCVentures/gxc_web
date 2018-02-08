@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Layout, Menu, Select, Input, Icon, Row, Col } from 'antd';
+import { Layout, Menu, Select, Input, Icon, Row, Col, message } from 'antd';
 import { translate } from 'react-i18next';
 import { Link } from "react-router";
 import { Drawer, List } from 'antd-mobile';
@@ -9,7 +9,7 @@ import { imageRequire } from '../../utils/universalRequire';
 import i18n from '../../crossover/i18n/i18n';
 
 
-@translate(['main', 'member'], { wait: true })
+@translate(['main', 'member', 'error'], { wait: true })
 @observer
 export default class Home extends Component {
   @observable sidebarOpen = false;
@@ -20,16 +20,13 @@ export default class Home extends Component {
 
   t = (key) => {
     const str = this.props.t(key);
-    return (<p key={key}>
-      {str.split("\n")
-      .map((item, index) => <p key={index}>{item}</p>)}
-    </p>);
-    // let this.props.t()
+    return str.split("\n")
+      .map((item, index) => <p key={index}>{item}</p>)
   }
 
   renderMember = (member) => {
     return (
-      <li className="member">
+      <li className="member" key={member.name}>
         <img src={imageRequire(member.photo)} className="photo" alt={member.name} />
         <div className="texts">
           <h2 className="name">
@@ -48,7 +45,7 @@ export default class Home extends Component {
 
   renderAdvisor = (member) => {
     return (
-      <Col span={12} className="advisor" xs={24}>
+      <Col span={12} className="advisor" xs={24} key={member.name}>
         <img src={imageRequire(member.photo)} className="photo" alt={member.name} />
         <div className="texts">
           <h2 className="name">
@@ -62,10 +59,18 @@ export default class Home extends Component {
     );
   };
 
+  onEnterEmail = (email) => {
+    message.info("준비중입니다.");
+  }
+
   openMobileSidebar = () => {
     console.log(this.sidebarOpen);
     this.sidebarOpen = !this.sidebarOpen;
   };
+
+  downloadWhitepaper = (lang) => {
+    message.info(this.props.t("error:whitepaperDownload"));
+  }
 
   render() {
     const Search = Input.Search;
@@ -136,14 +141,13 @@ export default class Home extends Component {
             className="only-desktop"
             style={{ lineHeight: '64px' }}
           >
-            <Menu.Item key="1"><a className="nav-link" href="#">{t('Whitepaper')}</a></Menu.Item>
-            <Menu.Item key="2"><a className="nav-link" href="#about">Team</a></Menu.Item>
-            <Menu.Item key="3"><a className="nav-link" href="#team">Roadmap</a></Menu.Item>
-            <Menu.Item key="5"><a className="nav-link" href="#contact">Token Sale</a></Menu.Item>
-            <Menu.Item key="4"><a className="nav-link" href="#contact">News</a></Menu.Item>
+            <Menu.Item key="1"><a className="nav-link" href="#whitepaper">{t('Whitepaper')}</a></Menu.Item>
+            <Menu.Item key="2"><a className="nav-link" href="#team">Team</a></Menu.Item>
+            <Menu.Item key="3"><a className="nav-link" href="#roadmap">Roadmap</a></Menu.Item>
+            <Menu.Item key="5"><a className="nav-link" href="#contact" style={{display: "none"}}>Token Sale</a></Menu.Item>
+            <Menu.Item key="4"><a className="nav-link" href="#contact" style={{display: "none"}}>News</a></Menu.Item>
             <Menu.Item>
-              <Select defaultValue={i18n.language} style={{ width: 120 }} onChange={() => this.handleChangeLang()}>
-                <Option value="en">EN</Option>
+              <Select defaultValue={i18n.language.toUpperCase()} style={{ width: 120 }} onChange={this.handleChangeLang.bind(this)}>
                 <Option value="kr">KR</Option>
               </Select>
             </Menu.Item>
@@ -157,7 +161,7 @@ export default class Home extends Component {
           contentStyle={{ color: '#A6A6A6', textAlign: 'center', paddingTop: 42 }}
           sidebar={sidebar}
           open={this.sidebarOpen}
-          onOpenChange={this.sidebarOpen = false}
+          onOpenChange={e => this.sidebarOpen = false}
         >
           Click upper-left corner
         </Drawer>
@@ -205,7 +209,7 @@ export default class Home extends Component {
               </div>
             </div>
           </Content>
-          <Content className="whitepaper">
+          <Content className="whitepaper" id="whitepaper">
             <img src={imageRequire('logo_white.svg')} className="logo" alt="logo" />
             <h1 className="title">{t('main:whitepaper.title')}</h1>
             <h3 className="description">{this.t('main:whitepaper.description')}</h3>
@@ -213,13 +217,14 @@ export default class Home extends Component {
               {whitepapers.map((whitepaper, index) => {
                 return (<Link
                   key={index}
+                  onClick={this.downloadWhitepaper.bind(this, whitepaper[2])}
                   to={whitepaper[1]}
                   className={`link-to-whitepaper ${whitepaper[2]}`}
                 >{whitepaper[0]}</Link>);
               })}
             </div>
           </Content>
-          <Content className="members section-type-1">
+          <Content className="members section-type-1" id="team">
             <h1 className="title">{t("main:member:title")}</h1>
             <ul>
               {members.map(member => this.renderMember(member))}
@@ -233,13 +238,13 @@ export default class Home extends Component {
               </Row>
             </div>
           </Content>
-          <Content className="roadmap section-type-1 container-fluid">
+          <Content className="roadmap section-type-1 container-fluid" id="roadmap">
             <h1 className="title">{t("main:roadmap:title")}</h1>
             <div className="content">
               {roadmaps.map((roadmap, key) => {
                 return (
                   <Row gutter={16} key={key}>
-                    <Col className="quarter" span={6} offset={key % 2 === 0 ? 3 : 16}>
+                    <Col className="quarter" span={6} offset={key % 2 === 0 ? 3 : 16} >
                       <ul className="title">
                         {roadmap.map((e, index) => {
                           return <li key={index}>{e}</li>;
@@ -254,21 +259,24 @@ export default class Home extends Component {
           <Content className="partners section-type-1">
             <h1 className="title">{t("main:partner:title")}</h1>
             <ul className="container-fluid">
-              <li>
+              <li key="xlgames">
                 <img src={imageRequire("logo_xlgames.png")} alt="logo_xlgames" />
               </li>
-              <li>
+              <li key="superplanet">
                 <img src={imageRequire("logo_superplanet.png")} alt="logo_superplanet" />
               </li>
-              <li>
+              <li key="pays">
                 <img src={imageRequire("logo_pays.png")} alt="logo_pays" />
+              </li>
+              <li key="cointong">
+                <img src={imageRequire("logo_cointong.png")} alt="logo_cointong" />
               </li>
             </ul>
           </Content>
           <Content className="subscribe section-type-1">
             <h1 className="title">{t('main:subscribe:title')}</h1>
             <h3 className="description">{t('main:subscribe:description')}</h3>
-            <Search type="email" placeholder="E-Mail Address" enterButton="Subscribe" />
+            <Search type="email" placeholder="E-Mail Address" enterButton="Subscribe" onSearch={this.onEnterEmail}/>
           </Content>
         </Content>
         <Footer style={{ textAlign: 'center', background: "#001529", color: "white" }}>

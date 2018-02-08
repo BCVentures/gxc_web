@@ -7,11 +7,11 @@ i18n
   .use(LanguageDetector)
   .use(reactI18nextModule) // if not using I18nextProvider
   .init({
-    fallbackLng: 'en',
+    fallbackLng: 'ko',
     debug: true,
 
     interpolation: {
-      escapeValue: false, // not needed for react!!
+      // escapeValue: false, // not needed for react!!
     },
     resources: {
       en: {
@@ -71,6 +71,9 @@ i18n
             title: "Subscribe",
             description: "이메일 주소를 입력하시면 GXC 관련 소식을 가장 빠르게 전해드립니다.",
           },
+        },
+        error: {
+          whitepaperDownload: "백서는 현재 준비중입니다.",
         },
         member: {
           kwk: {
