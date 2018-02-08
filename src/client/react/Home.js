@@ -20,8 +20,10 @@ export default class Home extends Component {
 
   t = (key) => {
     const str = this.props.t(key);
-    return str.split("\n")
-      .map(e => <p>{e}</p>);
+    return <p>
+      {str.split("\n")
+      .map(e => <p>{e}</p>)}
+    </p>;
     // let this.props.t()
   }
 
@@ -68,7 +70,7 @@ export default class Home extends Component {
   render() {
     const Search = Input.Search;
     const { Header, Footer, Content } = Layout;
-    const t = this.t;
+    const t = this.props.t;
     const whitepapers = [
       ["English", "#", "english"],
       ["日本語", "#", "japanese"],
