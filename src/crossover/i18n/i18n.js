@@ -26,10 +26,10 @@ i18n
 
       "ko-KR": {
         main: {
-          title: 'Gamecoin Exchange',
+          title: 'Game X Coin',
           description: 'By connecting the game with the blockchain, Break the wall between games',
-          introTitle: '블록체인과 게임을 연결하여 게임 간의 벽을 허문다',
-          introDescription: 'Gamecoin Exchange는 게임 간 화폐들을 기축통화인 GXC를 통해 연결하는 것을 목적으로 둡니다.\n' +
+          introTitle: '블록체인과 게임을 연결하여\n게임 간의 벽을 허문다',
+          introDescription: 'Game X Coin는 게임 간 화폐들을 기축통화인 GXC를 통해 연결하는 것을 목적으로 둡니다.\n' +
           'GXC는 블록체인을 기반으로 게임 개발사, 게이머에게 보다 가치있는 시스템을 제공합니다.',
           reward: {
             title: 'Reward',
@@ -53,7 +53,7 @@ i18n
             '결제 수수료를 획기적으로 낮추고 수수료의 일부를 개발사와 수익을 나눌 것입니다.',
           },
           member: {
-            title: "about Team",
+            title: "About Team",
           },
           advisor: {
             title: "Advisor",
@@ -61,7 +61,7 @@ i18n
           whitepaper: {
             title: "WHITEPAPER",
             description: "GXC가 필요한 이유에 대해서 백서에 서술하였습니다.\n" +
-            "또한 GXC에서 사용될 암호화 토큰, GXC (Gamecoin Exchange) 의 토큰 메커니즘에 대해서 서술하였습니다.",
+            "또한 GXC에서 사용될 암호화 토큰, GXC (Game X Coin) 의 토큰 메커니즘에 대해서 서술하였습니다.",
           },
           roadmap: {
             title: "Roadmap",
@@ -80,7 +80,7 @@ i18n
         member: {
           kwk: {
             name: "Woongkyum Kim",
-            role: "CEO",
+            role: "Chief Executive Officer",
             description: "김웅겸은 연세대학교 컴퓨터과학과를 졸업하고, 1999년부터 대용량 서버 프로그래밍 및 게임 프로그래밍을 위주로 \n" +
             "개발경험을 쌓아왔다. 2010년 결제 소프트웨어 기업인 후퍼(주)를 창업한 뒤, 한국의 대표적인 전자금융전문기업인 \n" +
             "나이스정보통신과 “페이앳\"이란 모바일 결제 서비스를 해오고 있으며, 이 결제 서비스는 1년에 3,000억이 넘는\n" +
@@ -89,7 +89,7 @@ i18n
           },
           pje: {
             name: "Jieun Park",
-            role: "COO",
+            role: "Chief Operating Officer",
             description: "박지은은 숙명여자대학교에서 정보방송학을 전공하였다." +
             "김웅겸 대표와 공동 창업을 하여 10년간 운영이사의 역할을 해오고 있으며, 수 백명의 인력채용을 담당한 경험이 있고" +
             "100여개가 넘는 프로젝트의 매니징을 성공적으로 담당해왔다. 자금 운용, 인력 운용, 프로젝트 관리에 있어서 " +
@@ -97,7 +97,7 @@ i18n
           },
           yjh: {
             name: "Jinhwan Yang",
-            role: "CTO",
+            role: "Chief Technology Officer",
             description: "양진환은 블록체인벤처스의 CTO로서 서울대학교 경영학과 및 컴퓨터공학과를 복수전공으로 졸업한 개발자이다. " +
             "IT기업 Mozzet에서 웹 Lead Developer, 해외직구 검색엔진 Qpick에서 CTO,  비즈니스 컨설턴트 마켓플레이스" +
             "Profound에서 CTO로 활동하였다. 다방면에서 10년이 넘는 기간동안 Server, Architecture, User Interface 등을" +
@@ -105,17 +105,17 @@ i18n
           },
           bhs: {
             name: "Hyunseok Bang",
-            role: "CCO",
+            role: "Chief Createive Officer",
             description: "방현석은 20대 때부터 벤처에 뜻을 두어 서울과학기술대학교 시각디자인학과 재학생 시절부터 휴학을 하고 사업의 길에 뛰어들었다. 2011년 스타트업 미디어 beSUCCESS 창업 디자이너 멤버로 들어간 것을 시작으로 2012년에는 아시아 최대 스타트업 컨퍼런스 beLAUNCH 총괄 디자인하였다. beSUCCESS는 현재 한국의 대표적인 스타트업 미디어로 자리잡고 있다. 2012년에는 성장해가는 해외직구 시장의 가능성을 보고 해외직구 검색엔진 Qpick 기획이사로 참여하였으며, 이 후 사람과 사람을 연결해주는 산업에 관심을 갖게되어 비즈니스 컨설턴트 마켓플레이스 Profound에 CCO로 재임하며 수 많은 프로젝트에 기획자 겸 디자이너로서 참여하였다. 2017년에는 블록체인 기술에 매료, 앞으로 미래를 이끌어갈 산업이란 확신이 들어 팀에 참여하게 되었다.",
           },
           cyw: {
             name: "Yeonwoo Chu",
-            role: "CPO",
+            role: "Chief Partnership Officer",
             description: "추연우는 서울시립대학교 토목공학과를 졸업한 개발자이자 경영자이다. 2002년부터 아키텍쳐 설계 및 게임 서버 프로그래밍으로 개발경력을 쌓아왔으며, PC 온라인, 콘솔 , 모바일등 다양한 플랫폼의 게임 개발 경험을 가지고 있다. IT기업 어니언텍21 게임사업본부장, 타겟팅 마케팅 기업 모비온 Lead Developer, 모바일 개발사 이루고 CTO, 소프트웨어 개발사 코로스튜디오 CEO 등 개발 및 경영 15년 차 경력을 보유하고 있다. 2016년 금융권 개발프로젝트를 통해 블록체인을 처음 접했으며, 2017년 매력적인 블록체인 기술 팀인 블록체인벤처스에 합류하게 되었다.",
           },
           lhh: {
             name: "Hwanhee Lee",
-            role: "Blockchain developer",
+            role: "Blockchain Developer",
             description: "이환희는 블록체인벤처스의 개발자로서 명지대학교 소프트웨어공학 연구실에 있었으며, 컴퓨터공학과를 졸업했다. 개발 경력 개발 10년 차 경력을 보유하고 있다. 아사달에서 정부 프로젝트에 참여했으며,  한국 최대 웹호스팅 기업 가비아에서 근무하며, 데몬과 서버, 웹 개발을 했다. 커뮤니티 기업 리퍼블릭닷에서 CTO로 백만명이 넘는 커뮤니티 서비스를 개발 및 운영하였다. 개발자들을 위한 소규모 개발 프로젝트 그룹인 인디벨로퍼를 운영하고 있다. 또한 Pacy라는 팀에서 블록체인과 공유경제 모델을 통해 일 관련 협동 조합에 대한 프로젝트를 진행한 바 있다.",
           },
           ckh: {

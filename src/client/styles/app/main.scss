@@ -1,6 +1,9 @@
 @import "../common/mixins";
-
+@import "../common/variables";
 #main {
+  .description {
+    font-weight: 350;
+  }
   .main-bg {
     height: 527px;
     display: flex;
@@ -31,11 +34,15 @@
       top: 271px;
       left: 25%;
       color: white;
+      font-weight: bold;
+      letter-spacing: 0.03em;
     }
     .description {
       position: absolute;
       top: 365px;
+      font-weight: normal;
       left: 25%;
+      color: $font-default-black;
     }
   }
 
@@ -59,6 +66,12 @@
     }
     .title {
       font-weight: bold;
+      line-height: 140%;
+    }
+    .description {
+      line-height: 170%;
+      font-weight: 350;
+
     }
   }
 
@@ -74,7 +87,14 @@
       .right {
         margin-left: auto;
       }
-
+      .description {
+        line-height: 180%;
+        font-weight: 350;
+      }
+      .title {
+        font-weight: bold;
+        font-size: 34px;
+      }
     }
     .reward {
       background-image: url('/static/images/bg_reward.png');
@@ -99,11 +119,15 @@
     //align-content: flex-end;
     flex-direction: column;
     position: relative;
+    .logo {
+      margin-bottom: 30px;
+    }
     > * {
       margin: 0 auto;
     }
     .description {
       margin-top: 12px;
+      font-weight: 400;
     }
     .links {
       //position: absolute;
@@ -112,27 +136,27 @@
       //bottom: 20px;
 
       .link-to-whitepaper {
-        width: 90px;
-        height: 90px;
+        width: 62px;
+        height: 62px;
         margin-right: 4rem;
         display: block;
         color: white;
-        padding: 32px 0;
+        padding: 22px 0;
         font-size: 14px;
         position: relative;
         z-index: 3;
 
         &.english {
-          @include rotated_rec(#ff4b34, 90px);
+          @include rotated_rec(#ff4b34, 62px);
         }
         &.japanese {
-          @include rotated_rec(#ffd111, 90px);
+          @include rotated_rec(#ffd111, 62px);
         }
         &.korean {
-          @include rotated_rec(#33ba20, 90px);
+          @include rotated_rec(#33ba20, 62px);
         }
         &.chinese {
-          @include rotated_rec(#0070be, 90px);
+          @include rotated_rec(#0070be, 62px);
         }
       }
     }
@@ -156,7 +180,7 @@
         justify-content: center;
         .name {
           font-size: 24px;
-          font-weight: bold;
+          font-weight: 500;
         }
         .role {
           color: #9b9b9b;
@@ -165,6 +189,8 @@
           margin-top: 1rem;
           -ms-word-break: break-all;
           word-break: break-all;
+          font-size: 15px;
+          line-height: 170%;
         }
       }
     }
@@ -185,7 +211,7 @@
         padding: 0 30px;
         .name {
           font-size: 24px;
-          font-weight: bold;
+          font-weight: 500;
           margin-bottom: 0;
         }
         .role {
@@ -194,8 +220,10 @@
         }
         .description {
           margin-top: 10px;
+          font-size: 15px;
           -ms-word-break: break-all;
           word-break: break-all;
+          line-height: 170%;
         }
       }
     }
@@ -253,6 +281,16 @@
     ul {
       display: flex;
       justify-content: space-around;
+      li {
+        padding: 0 20px;
+        vertical-align: middle;
+        &.xlgames img {
+          height: 50px;
+        }
+      }
+      li img {
+        height: 60px;
+      }
     }
   }
   .subscribe {
@@ -313,7 +351,15 @@
     .advantages {
       div.container-fluid {
         flex-direction: row;
-        height: 250px;
+        height: 300px;
+        .title {
+          font-size: 22px;
+        }
+        .description {
+          font-size: 12px;
+          -ms-word-break: break-all;
+          word-break: break-all;
+        }
         img {
           width: 7rem;
           &:first-child {
@@ -335,7 +381,7 @@
           display: inline-block;
 
           color: white;
-          padding: 16px 0;
+          padding: 18px 0;
           font-size: 14px;
           position: relative;
           z-index: 3;

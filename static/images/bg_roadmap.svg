@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="227px" height="2186px" viewBox="0 0 227 2186" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
-    <title>Group 2</title>
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
     <desc>Created with Sketch.</desc>
     <defs>
         <rect id="path-1" x="33.137085" y="33.137085" width="160" height="160"></rect>
@@ -13,65 +13,67 @@
         <rect id="path-7" x="33.137085" y="873" width="160" height="160"></rect>
         <rect id="path-8" x="33.137085" y="1992" width="160" height="160"></rect>
     </defs>
-    <g id="Desktop-HD" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-607.000000, -6867.000000)">
-        <g id="Group-2" transform="translate(607.000000, 6867.000000)">
-            <path d="M113.5,109.5 L113.5,2071.50637" id="Line" stroke="#979797" stroke-width="2" stroke-linecap="square"></path>
-            <g id="Rectangle-2" transform="translate(113.137085, 113.137085) rotate(45.000000) translate(-113.137085, -113.137085) ">
-                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
-                <rect stroke="#FF4B34" stroke-width="2" x="34.137085" y="34.137085" width="158" height="158"></rect>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-607.000000, -7710.000000)">
+            <g id="Group" transform="translate(607.000000, 7710.000000)">
+                <path d="M113.5,109.5 L113.5,2071.50637" id="Line" stroke="#979797" stroke-width="2" stroke-linecap="square"></path>
+                <g id="Rectangle-2" transform="translate(113.137085, 113.137085) rotate(45.000000) translate(-113.137085, -113.137085) ">
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <rect stroke="#FF4B34" stroke-width="2" x="34.137085" y="34.137085" width="158" height="158"></rect>
+                </g>
+                <text id="2018-Q1" font-family="Poppins-SemiBold, Poppins" font-size="26" font-weight="500" fill="#FF4B34">
+                    <tspan x="65.153" y="121">2018 Q1</tspan>
+                </text>
+                <g id="Rectangle-2" transform="translate(113.137085, 1232.137085) rotate(45.000000) translate(-113.137085, -1232.137085) ">
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-2"></use>
+                    <rect stroke="#FF4B34" stroke-width="2" x="34.137085" y="1153.13708" width="158" height="158"></rect>
+                </g>
+                <text id="2019-Q1" font-family="Poppins-SemiBold, Poppins" font-size="26" font-weight="500" fill="#FF4B34">
+                    <tspan x="65.244" y="1240">2019 Q1</tspan>
+                </text>
+                <g id="Rectangle-2-Copy-2" transform="translate(113.137085, 673.000000) rotate(45.000000) translate(-113.137085, -673.000000) ">
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
+                    <rect stroke="#33BA20" stroke-width="2" x="34.137085" y="594" width="158" height="158"></rect>
+                </g>
+                <text id="2018-Q3" font-family="Poppins-SemiBold, Poppins" font-size="26" font-weight="500" fill="#33BA20">
+                    <tspan x="62.345" y="680.862915">2018 Q3</tspan>
+                </text>
+                <g id="Rectangle-2-Copy-2" transform="translate(113.137085, 1792.000000) rotate(45.000000) translate(-113.137085, -1792.000000) ">
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-4"></use>
+                    <rect stroke="#33BA20" stroke-width="2" x="34.137085" y="1713" width="158" height="158"></rect>
+                </g>
+                <text id="2019-Q3" font-family="Poppins-SemiBold, Poppins" font-size="26" font-weight="500" fill="#33BA20">
+                    <tspan x="62.436" y="1799.86292">2019 Q3</tspan>
+                </text>
+                <g id="Rectangle-2-Copy" transform="translate(113.137085, 393.000000) rotate(45.000000) translate(-113.137085, -393.000000) ">
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-5"></use>
+                    <rect stroke="#FFD111" stroke-width="2" x="34.137085" y="314" width="158" height="158"></rect>
+                </g>
+                <text id="2018-Q2" font-family="Poppins-SemiBold, Poppins" font-size="26" font-weight="500" fill="#FFD111">
+                    <tspan x="62.67" y="400.862915">2018 Q2</tspan>
+                </text>
+                <g id="Rectangle-2-Copy" transform="translate(113.137085, 1512.000000) rotate(45.000000) translate(-113.137085, -1512.000000) ">
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-6"></use>
+                    <rect stroke="#FFD111" stroke-width="2" x="34.137085" y="1433" width="158" height="158"></rect>
+                </g>
+                <text id="2019-Q2" font-family="Poppins-SemiBold, Poppins" font-size="26" font-weight="500" fill="#FFD111">
+                    <tspan x="62.761" y="1519.86292">2019 Q2</tspan>
+                </text>
+                <g id="Rectangle-2-Copy" transform="translate(113.137085, 953.000000) rotate(45.000000) translate(-113.137085, -953.000000) ">
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-7"></use>
+                    <rect stroke="#0070BE" stroke-width="2" x="34.137085" y="874" width="158" height="158"></rect>
+                </g>
+                <text id="2018-Q4" font-family="Poppins-SemiBold, Poppins" font-size="26" font-weight="500" fill="#0070BE">
+                    <tspan x="61.539" y="960.862915">2018 Q4</tspan>
+                </text>
+                <g id="Rectangle-2-Copy" transform="translate(113.137085, 2072.000000) rotate(45.000000) translate(-113.137085, -2072.000000) ">
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-8"></use>
+                    <rect stroke="#0070BE" stroke-width="2" x="34.137085" y="1993" width="158" height="158"></rect>
+                </g>
+                <text id="2019-Q4" font-family="Poppins-SemiBold, Poppins" font-size="26" font-weight="500" fill="#0070BE">
+                    <tspan x="61.63" y="2079.86292">2019 Q4</tspan>
+                </text>
             </g>
-            <text id="2018-Q1" font-family=".SFNSDisplay, .SF NS Display" font-size="26" font-weight="normal" fill="#FF4929">
-                <tspan x="65.5244141" y="117">2018 Q1</tspan>
-            </text>
-            <g id="Rectangle-2" transform="translate(113.137085, 1232.137085) rotate(45.000000) translate(-113.137085, -1232.137085) ">
-                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-2"></use>
-                <rect stroke="#FF4B34" stroke-width="2" x="34.137085" y="1153.13708" width="158" height="158"></rect>
-            </g>
-            <text id="2019-Q1" font-family=".SFNSDisplay, .SF NS Display" font-size="26" font-weight="normal" fill="#FF4929">
-                <tspan x="65.5307617" y="1236">2019 Q1</tspan>
-            </text>
-            <g id="Rectangle-2-Copy-2" transform="translate(113.137085, 673.000000) rotate(45.000000) translate(-113.137085, -673.000000) ">
-                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
-                <rect stroke="#33BA20" stroke-width="2" x="34.137085" y="594" width="158" height="158"></rect>
-            </g>
-            <text id="2018-Q3" font-family=".SFNSDisplay, .SF NS Display" font-size="26" font-weight="normal" fill="#33BA20">
-                <tspan x="63.5947266" y="676.862915">2018 Q3</tspan>
-            </text>
-            <g id="Rectangle-2-Copy-2" transform="translate(113.137085, 1792.000000) rotate(45.000000) translate(-113.137085, -1792.000000) ">
-                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-4"></use>
-                <rect stroke="#33BA20" stroke-width="2" x="34.137085" y="1713" width="158" height="158"></rect>
-            </g>
-            <text id="2019-Q3" font-family=".SFNSDisplay, .SF NS Display" font-size="26" font-weight="normal" fill="#33BA20">
-                <tspan x="63.6010742" y="1795.86292">2019 Q3</tspan>
-            </text>
-            <g id="Rectangle-2-Copy" transform="translate(113.137085, 393.000000) rotate(45.000000) translate(-113.137085, -393.000000) ">
-                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-5"></use>
-                <rect stroke="#FFD111" stroke-width="2" x="34.137085" y="314" width="158" height="158"></rect>
-            </g>
-            <text id="2018-Q2" font-family=".SFNSDisplay, .SF NS Display" font-size="26" font-weight="normal" fill="#FFD300">
-                <tspan x="63.9311523" y="396.862915">2018 Q2</tspan>
-            </text>
-            <g id="Rectangle-2-Copy" transform="translate(113.137085, 1512.000000) rotate(45.000000) translate(-113.137085, -1512.000000) ">
-                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-6"></use>
-                <rect stroke="#FFD111" stroke-width="2" x="34.137085" y="1433" width="158" height="158"></rect>
-            </g>
-            <text id="2019-Q2" font-family=".SFNSDisplay, .SF NS Display" font-size="26" font-weight="normal" fill="#FFD300">
-                <tspan x="63.9375" y="1515.86292">2019 Q2</tspan>
-            </text>
-            <g id="Rectangle-2-Copy" transform="translate(113.137085, 953.000000) rotate(45.000000) translate(-113.137085, -953.000000) ">
-                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-7"></use>
-                <rect stroke="#0070BE" stroke-width="2" x="34.137085" y="874" width="158" height="158"></rect>
-            </g>
-            <text id="2018-Q4" font-family=".SFNSDisplay, .SF NS Display" font-size="26" font-weight="normal" fill="#0070BE">
-                <tspan x="63.4296875" y="956.862915">2018 Q4</tspan>
-            </text>
-            <g id="Rectangle-2-Copy" transform="translate(113.137085, 2072.000000) rotate(45.000000) translate(-113.137085, -2072.000000) ">
-                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-8"></use>
-                <rect stroke="#0070BE" stroke-width="2" x="34.137085" y="1993" width="158" height="158"></rect>
-            </g>
-            <text id="2019-Q4" font-family=".SFNSDisplay, .SF NS Display" font-size="26" font-weight="normal" fill="#0070BE">
-                <tspan x="63.4360352" y="2075.86292">2019 Q4</tspan>
-            </text>
         </g>
     </g>
 </svg>

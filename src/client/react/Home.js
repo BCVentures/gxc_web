@@ -146,9 +146,7 @@ export default class Home extends Component {
             <Menu.Item key="1"><a className="nav-link" href="#whitepaper">{t('Whitepaper')}</a></Menu.Item>
             <Menu.Item key="2"><a className="nav-link" href="#team">Team</a></Menu.Item>
             <Menu.Item key="3"><a className="nav-link" href="#roadmap">Roadmap</a></Menu.Item>
-            <Menu.Item key="5"><a className="nav-link" href="#contact" style={{display: "none"}}>Token Sale</a></Menu.Item>
-            <Menu.Item key="4"><a className="nav-link" href="#contact" style={{display: "none"}}>News</a></Menu.Item>
-            <Menu.Item>
+            <Menu.Item className="lang-select">
               <Select defaultValue={i18n.language.toUpperCase()} style={{ width: 120 }} onChange={this.handleChangeLang.bind(this)}>
                 <Option value="ko-KR">KR</Option>
               </Select>
@@ -179,15 +177,15 @@ export default class Home extends Component {
           <Content className="intro">
             <img src={imageRequire('logo.svg')} alt="logo" className="logo" />
             <img src={imageRequire('gxc.svg')} alt="gxc" className="gxc" />
-            <div className="title">{t('main:introTitle')}</div>
-            <div className="description">{t('main:introDescription')}</div>
+            <h2 className="title">{t('main:introTitle')}</h2>
+            <h4 className="description">{t('main:introDescription')}</h4>
           </Content>
           <Content className="advantages">
             <div className="reward">
               <div className="container-fluid">
                 <div className="texts">
                   <h2 className="title">{t('main:reward:title')}</h2>
-                  <h4 className="description">{t('main:reward:description')}</h4>
+                  <h3 className="description">{t('main:reward:description')}</h3>
                 </div>
                 <img className="right" src={imageRequire('pictogram_reward.png')} alt="pictorgram_reward" />
               </div>
@@ -197,7 +195,7 @@ export default class Home extends Component {
                 <img src={imageRequire('pictogram_p2p.png')} alt="pictorgram_p2p" />
                 <div className="right texts">
                   <h2 className="title">{t('main:p2p:title')}</h2>
-                  <h4 className="description">{t('main:p2p:description')}</h4>
+                  <h3 className="description">{t('main:p2p:description')}</h3>
                 </div>
               </div>
             </div>
@@ -205,7 +203,7 @@ export default class Home extends Component {
               <div className="container-fluid">
                 <div className="texts">
                   <h2 className="title">{t('main:commission:title')}</h2>
-                  <h4 className="description">{t('main:commission:description')}</h4>
+                  <h3 className="description">{t('main:commission:description')}</h3>
                 </div>
                 <img className="right" src={imageRequire('pictogram_commission.png')} alt="commission" />
               </div>
@@ -261,17 +259,23 @@ export default class Home extends Component {
           <Content className="partners section-type-1">
             <h1 className="title">{t("main:partner:title")}</h1>
             <ul className="container-fluid">
-              <li key="xlgames">
+              <li key="xlgames" className="xlgames">
                 <img src={imageRequire("logo_xlgames.png")} alt="logo_xlgames" />
               </li>
               <li key="superplanet">
                 <img src={imageRequire("logo_superplanet.png")} alt="logo_superplanet" />
               </li>
-              <li key="pays">
-                <img src={imageRequire("logo_pays.png")} alt="logo_pays" />
-              </li>
               <li key="cointong">
                 <img src={imageRequire("logo_cointong.png")} alt="logo_cointong" />
+              </li>
+              <li key="besuccess">
+                <img src={imageRequire("logo_besuccess.png")} alt="logo_besuccess" />
+              </li>
+              <li key="hyperithm">
+                <img src={imageRequire("logo_hyperithm.png")} alt="logo_hyperithm" />
+              </li>
+              <li key="pays">
+                <img src={imageRequire("logo_pays.png")} alt="logo_pays" />
               </li>
             </ul>
           </Content>
@@ -281,9 +285,9 @@ export default class Home extends Component {
             <Search type="email" placeholder="E-Mail Address" enterButton="Subscribe" onSearch={this.onEnterEmail}/>
           </Content>
         </Content>
-        <Footer style={{ textAlign: 'center', background: "#001529", color: "white" }}>
+        <Footer style={{ textAlign: 'center', background: "#414141", color: "white" }}>
           <img src={imageRequire('logo.svg')} alt="logo" className="logo" />
-          <img src={imageRequire('gxc.svg')} alt="gxc" className="gxc" />
+          <img src={imageRequire('gxc_white.svg')} alt="gxc" className="gxc" />
           <div className="email">
             <Link to="mailto:support@bcventures.io">support@bcventures.io</Link>
           </div>

@@ -6,6 +6,10 @@ body {
   font-family: 'Poppins', 'Spoqa Han Sans', sans-serif;
   word-break: keep-all;
   color: #4a4a4a;
+  h1, h2, h3, h4, h5, h6 {
+    color: #4a4a4a;
+    line-height: 150%;
+  }
 }
 
 .ant-layout-content {
@@ -44,17 +48,25 @@ body {
   width: 100%;
   .logo-box {
     img.logo {
-      width: 20px;
-      height: 20px;
+      height: 26px;
       //margin-top: 20px;
       margin-right: 5px;
     }
     img.gxc {
-
+      height: 26px;
     }
   }
   .ant-menu-horizontal {
     border-bottom: none;
+  }
+  .ant-menu {
+    font-family: 'Poppins', sans-serif;
+  }
+  .ant-menu-item {
+    padding: 0 40px;
+  }
+  .lang-select .ant-select-selection {
+    border: none;
   }
 }
 
@@ -112,6 +124,9 @@ h4 {
   }
   .email {
     margin-bottom: 20px;
+    a {
+      color: #d2d2d2;
+    }
   }
   .copyright {
     font-size: 10px;
