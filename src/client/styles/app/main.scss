@@ -70,6 +70,7 @@
       flex-direction: row;
       align-items: center;
       padding: 0 15px;
+      max-width: 960px;
       .right {
         margin-left: auto;
       }
@@ -139,9 +140,14 @@
   .members {
     .member {
       margin: 0 auto;
-      max-width: 1200px;
+      max-width: 960px;
       display: flex;
       margin-bottom: 3rem;
+      align-items: center;
+      img {
+        width: 200px;
+        height: 200px;
+      }
       .texts {
         text-align: left;
         margin-left: 40px;
@@ -169,7 +175,7 @@
       height: 300px;
       display: flex;
       flex-direction: row;
-      //align-items: center;
+      align-items: center;
       img {
         width: 200px;
         height: 200px;
