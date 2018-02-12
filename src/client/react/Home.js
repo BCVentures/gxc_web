@@ -79,6 +79,7 @@ export default class Home extends Component {
   render() {
     const Search = Input.Search;
     const { Header, Footer, Content } = Layout;
+    const Option = Select.Option;
     const t = this.t;
     const languages = [
       { label: "English", whitePaperLink: "#", code: "english" },
