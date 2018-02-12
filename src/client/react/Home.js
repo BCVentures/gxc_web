@@ -159,17 +159,6 @@ export default class Home extends Component {
           </Menu>
           <Icon className="only-mobile" type="menu-fold" onClick={this.openMobileSidebar} style={{ display: "none" }}/>
         </Header>
-        <Drawer
-          className="my-drawer"
-          style={{ minHeight: document.documentElement.clientHeight }}
-          enableDragHandle
-          contentStyle={{ color: '#A6A6A6', textAlign: 'center', paddingTop: 42 }}
-          sidebar={sidebar}
-          open={this.sidebarOpen}
-          onOpenChange={e => this.sidebarOpen = false}
-        >
-          Click upper-left corner
-        </Drawer>
         <Content className="">
           <Content className="main-bg">
             <h1 className="title">{t('main:title')}</h1>
