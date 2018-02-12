@@ -152,7 +152,7 @@ export default class Home extends Component {
             <Menu.Item className="lang-select">
               <Select defaultValue={i18n.language} style={{ width: 120 }}
                       onChange={this.handleChangeLang.bind(this)}>
-                <Option value="ko-KR">KR</Option>
+                <Option value="KR">KR</Option>
               </Select>
             </Menu.Item>
           </Menu>
