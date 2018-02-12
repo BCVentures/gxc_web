@@ -24,7 +24,7 @@ i18n
         },
       },
 
-      "ko-KR": {
+      ko: {
         main: {
           title: 'Game X Coin',
           description: 'By connecting the game with the blockchain, Break the wall between games',
