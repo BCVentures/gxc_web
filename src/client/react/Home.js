@@ -7,6 +7,7 @@ import { observer } from 'mobx-react';
 import { observable } from 'mobx';
 import { imageRequire } from '../../utils/universalRequire';
 import i18n from '../../crossover/i18n/i18n';
+import ReactGA from "react-ga";
 
 
 @translate(['main', 'member', 'error'], { wait: true })
@@ -16,6 +17,10 @@ export default class Home extends Component {
 
   handleChangeLang(lang) {
     i18n.changeLanguage(lang);
+  }
+
+  componentDidMount() {
+    ReactGA.pageview(window.location.pathname + window.location.search);
   }
 
   t = (key) => {
