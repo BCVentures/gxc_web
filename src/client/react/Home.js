@@ -29,7 +29,9 @@ export default class Home extends Component {
 
     return (
       <li className="member" key={member.name}>
-        <img src={imageRequire(member.photo)} className="photo" alt={member.name} />
+        <div className="image-box">
+          <img src={imageRequire(member.photo)} className="photo" alt={member.name} />
+        </div>
         <div className="texts">
           <h2 className="name">
             {member.name}

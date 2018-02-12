@@ -1,10 +1,29 @@
 @import "../common/mixins";
 @import "../common/variables";
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes test {
+  from {
+    width: 0;
+  }
+  to {
+    width: auto;
+  }
+}
 #main {
   .description {
     font-weight: 350;
   }
   .main-bg {
+
     height: 527px;
     display: flex;
     flex-direction: row;
@@ -15,6 +34,7 @@
       height: 100%;
       flex-basis: 60%;
       background: url("/static/images/bg_main_left_pattern.png") center center repeat-x;
+      //animation: fadeins 3s;
     }
 
     .center {
@@ -22,6 +42,8 @@
       flex-basis: 70%;
       max-width: 750px;
       background: url("/static/images/bg_main.png") center center no-repeat;
+      //animation: fadein 2s;
+
     }
 
     .right-pattern {
@@ -36,6 +58,7 @@
       color: white;
       font-weight: bold;
       letter-spacing: 0.03em;
+      //animation: test 3s;
     }
     .description {
       position: absolute;
@@ -43,6 +66,7 @@
       font-weight: normal;
       left: 25%;
       color: $font-default-black;
+      //animation: test 3s;
     }
   }
 
@@ -168,11 +192,16 @@
       display: flex;
       margin-bottom: 3rem;
       align-items: center;
-      img {
-        width: 200px;
-        height: 200px;
+      .image-box {
+        flex-basis: content;
+        display: flex;
+        img {
+          width: 200px;
+          height: 200px;
+        }
       }
       .texts {
+        flex-basis: fill;
         text-align: left;
         margin-left: 40px;
         display: flex;
