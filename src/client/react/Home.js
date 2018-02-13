@@ -5,9 +5,10 @@ import { Link } from "react-router";
 import { Drawer, List } from 'antd-mobile';
 import { observer } from 'mobx-react';
 import { observable } from 'mobx';
+import ReactGA from "react-ga";
 import { imageRequire } from '../../utils/universalRequire';
 import i18n from '../../crossover/i18n/i18n';
-import ReactGA from "react-ga";
+import LogoAnimation from './component/LogoAnimation';
 
 
 @translate(['main', 'member', 'error'], { wait: true })
@@ -169,13 +170,12 @@ export default class Home extends Component {
             <h1 className="title">{t('main:title')}</h1>
             <h4 className="description">{t('main:description')}</h4>
 
-            <div className="left-pattern only-desktop"/>
-            <div className="center"/>
-            <div className="right-pattern only-desktop"/>
+            <div className="left-pattern" />
+            <div className="center" />
+            <div className="right-pattern only-desktop" />
           </Content>
           <Content className="intro">
-            <img src={imageRequire('logo.svg')} alt="logo" className="logo"/>
-            <img src={imageRequire('gxc.svg')} alt="gxc" className="gxc"/>
+            <LogoAnimation />
             <h2 className="title">{t('main:introTitle')}</h2>
             <h4 className="description">{t('main:introDescription')}</h4>
           </Content>

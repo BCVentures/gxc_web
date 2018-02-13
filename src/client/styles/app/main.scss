@@ -19,12 +19,23 @@
   }
 }
 #main {
+  background: white;
+  .header {
+    max-width: 1440px;
+    margin: 0 auto;
+    .ant-menu-item:first-child {
+      padding-left: 0;
+    }
+    .ant-menu-item:last-child {
+      padding-right: 0;
+    }
+  }
   .description {
     font-weight: 350;
   }
   .main-bg {
 
-    height: 527px;
+    height: 427px;
     display: flex;
     flex-direction: row;
     align-items: stretch;
@@ -34,6 +45,7 @@
       height: 100%;
       flex-basis: 60%;
       background: url("/static/images/bg_main_left_pattern.png") center center repeat-x;
+      background-position-y: 62%;
       //animation: fadeins 3s;
     }
 
@@ -42,6 +54,7 @@
       flex-basis: 70%;
       max-width: 750px;
       background: url("/static/images/bg_main.png") center center no-repeat;
+      background-position-y: 62%;
       //animation: fadein 2s;
 
     }
@@ -53,8 +66,8 @@
     }
     .title {
       position: absolute;
-      top: 271px;
-      left: 25%;
+      top: 202px;
+      left: 20%;
       color: white;
       font-weight: bold;
       letter-spacing: 0.03em;
@@ -62,16 +75,16 @@
     }
     .description {
       position: absolute;
-      top: 365px;
+      top: 292px;
       font-weight: normal;
-      left: 25%;
+      left: 20%;
       color: $font-default-black;
       //animation: test 3s;
     }
   }
 
   .intro {
-    padding: 10rem;
+    padding: 7rem;
     img {
       display: block;
       margin: 0 auto;
@@ -80,12 +93,12 @@
         height: 167px;
       }
       &.gxc {
-        margin-top: 10px;
-        width: 90px;
+        margin-top: 30px;
+        width: 120px;
       }
     }
     .title, .description {
-      margin: 28px auto 0;
+      margin: 20px auto 0;
       text-align: center;
     }
     .title {
@@ -354,24 +367,100 @@
     }
   }
 
-  @media (max-width: $screen-sm) {
-    .section-type-1 {
-      padding: 30px 15px;
+  @media (max-width: $screen-xl) {
+    .main-bg {
+      height: 327px;
+      .title {
+        left: 3%;
+        font-size: 25px;
+        top: 160px;
+      }
+      .description {
+        left: 3%;
+        font-size: 14px;
+        top: 230px;
+      }
+    }
+  }
+  @media (max-width: $screen-lg) {
+    .header {
+      &.ant-layout-header {
+        padding: 0 20px;
+      }
+      .ant-menu-item {
+        padding: 0 20px;
+      }
     }
     .main-bg {
-      height: 310px;
+      height: 327px;
+      .title {
+        font-size: 25px;
+        top: 160px;
+      }
+      .description {
+        font-size: 14px;
+        top: 230px;
+      }
+    }
+  }
+  @media (max-width: $screen-md) {
+    .header {
+      .logo-box {
+        img {
+          &.gxc {
+            display: none;
+          }
+        }
+      }
+    }
+    .main-bg {
+      height: 280px;
+      .left-pattern {
+        background-position-y: 65.2%;
+      }
       .center {
         flex-basis: 100%;
         background-size: cover;
       }
       .title {
-        top: 30px;
-        left: 20px;
+        top: 120px;
       }
       .description {
-        top: 8rem;
+        top: 12rem;
+        color: black;
+      }
+    }
+  }
+  @media (max-width: $screen-sm) {
+    .section-type-1 {
+      padding: 30px 15px;
+    }
+    #logo {
+      padding-top: 80px;
+    }
+    .main-bg {
+      height: 170px;
+      .center {
+        flex-basis: 100%;
+        background-size: cover;
+      }
+      .title {
+        top: 70px;
         left: 20px;
-        color: white;
+        font-size: 20px;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+      .description {
+        top: 120px;
+        left: 20px;
+        right: 20px;
+        color: black;
+        font-size: 13px;
+        text-align: center;
+      }
+      .left-pattern {
+        display: none;
       }
     }
     .intro {
@@ -437,14 +526,15 @@
       ul {
         li.member {
           display: flex;
-          border: 1px solid #eee;
           flex-direction: column;
           align-items: center;
-          padding: 1.5rem;
-          img {
-            display: flex;
-            width: 120px;
-            height: 120px;
+          padding: 0 1.5rem;
+          .image-box {
+            img {
+              display: flex;
+              width: 180px;
+              height: 180px;
+            }
           }
           .texts {
             margin-left: 0;
@@ -452,8 +542,14 @@
             .name, .role {
               text-align: center;
             }
+            .name {
+              margin-bottom: 0px;
+            }
             .description {
               margin-top: 3px;
+              font-size: 14px;
+              line-height: 180%;
+              margin-top: 12px;
             }
           }
         }
@@ -462,7 +558,6 @@
     .advisors {
       .advisor {
         display: flex;
-        border: 1px solid #eee;
         flex-direction: column;
         align-items: center;
         height: 100%;
@@ -472,8 +567,8 @@
           margin-top: 15px;
         }
         img {
-          width: 120px;
-          height: 120px;
+          width: 180px;
+          height: 180px;
         }
         .texts {
           padding: 5px;
@@ -483,7 +578,9 @@
             text-align: center;
           }
           .description {
-            margin-top: 5px;
+            margin-top: 12px;
+            font-size: 14px;
+            line-height: 180%;
             text-align: center;
           }
         }
@@ -525,7 +622,9 @@
           }
         }
       }
-
+    }
+    .subscribe {
+      min-height: 400px;
     }
   }
 }
