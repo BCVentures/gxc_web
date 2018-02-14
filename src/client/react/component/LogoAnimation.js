@@ -11,7 +11,7 @@ export default class LogoAnimation extends Component {
 
     setTimeout(() => {
       this.setState({ active: true });
-    }, 500);
+    }, 2000);
   }
 
   render() {

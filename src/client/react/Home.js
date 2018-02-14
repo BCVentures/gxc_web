@@ -39,7 +39,7 @@ export default class Home extends Component {
   renderMember = (member) => {
 
     return (
-      <Flip duration={2000}>
+      <Flip bottom duration={1500}>
         <li className="member" key={member.name}>
           <div className="image-box">
             <img src={imageRequire(member.photo)} className="photo" alt={member.name}/>
@@ -62,16 +62,19 @@ export default class Home extends Component {
 
   renderAdvisor = (member) => {
     return (
+
       <Col xs={24} sm={12} className="advisor" key={member.name}>
-        <img src={imageRequire(member.photo)} className="photo" alt={member.name}/>
-        <div className="texts">
-          <h2 className="name">
-            {member.name}
-          </h2>
-          <h5 className="description">
-            {member.description}
-          </h5>
-        </div>
+          <Flip bottom duration={1500}>
+          <img src={imageRequire(member.photo)} className="photo" alt={member.name}/>
+          <div className="texts">
+            <h2 className="name">
+              {member.name}
+            </h2>
+            <h5 className="description">
+              {member.description}
+            </h5>
+          </div>
+          </Flip>
       </Col>
     );
   };
@@ -208,42 +211,45 @@ export default class Home extends Component {
           </Flip>
 
           <Content className="advantages">
-            <Fade top duration={2000}>
-              <div className="reward">
-                <div className="container-fluid">
-                  <div className="texts">
-                    <h2 className="title">{t('main:reward:title')}</h2>
-                    <h3 className="description">{t('main:reward:description')}</h3>
-                  </div>
-                  <img className="right" src={imageRequire('pictogram_reward.png')} alt="pictorgram_reward"/>
-                </div>
-              </div>
-            </Fade>
-            <Fade top>
-              <div className="p2p right">
-                <div className="container-fluid">
-                  <img src={imageRequire('pictogram_p2p.png')} alt="pictorgram_p2p"/>
-                  <div className="right texts">
-                    <h2 className="title">{t('main:p2p:title')}</h2>
-                    <h3 className="description">{t('main:p2p:description')}</h3>
-                  </div>
-                </div>
-              </div>
-            </Fade>
-            <Fade top>
-            <div className="commission left">
+
+            <div className="reward">
+              <Flip bottom duration={2000}>
               <div className="container-fluid">
                 <div className="texts">
-                  <h2 className="title">{t('main:commission:title')}</h2>
-                  <h3 className="description">{t('main:commission:description')}</h3>
+                  <h2 className="title">{t('main:reward:title')}</h2>
+                  <h3 className="description">{t('main:reward:description')}</h3>
                 </div>
-                <img className="right" src={imageRequire('pictogram_commission.png')} alt="commission"/>
+                <img className="right" src={imageRequire('pictogram_reward.png')} alt="pictorgram_reward"/>
               </div>
+              </Flip>
             </div>
-            </Fade>
+            <div className="p2p right">
+              <Flip bottom duration={2000}>
+              <div className="container-fluid">
+                <img src={imageRequire('pictogram_p2p.png')} alt="pictorgram_p2p"/>
+                <div className="right texts">
+                  <h2 className="title">{t('main:p2p:title')}</h2>
+                  <h3 className="description">{t('main:p2p:description')}</h3>
+                </div>
+              </div>
+              </Flip>
+            </div>
+
+            <div className="commission left">
+              <Flip bottom duration={2000}>
+                <div className="container-fluid">
+                  <div className="texts">
+                    <h2 className="title">{t('main:commission:title')}</h2>
+                    <h3 className="description">{t('main:commission:description')}</h3>
+                  </div>
+                  <img className="right" src={imageRequire('pictogram_commission.png')} alt="commission"/>
+                </div>
+              </Flip>`
+            </div>
           </Content>
-          <Flip top duration={2000}>
-            <Content className="whitepaper" id="whitepaper" >
+
+          <Content className="whitepaper" id="whitepaper" >
+            <Flip bottom cascade duration={2000}>
               <img src={imageRequire('logo_white.svg')} className="logo" alt="logo"/>
               <h1 className="title">{t('main:whitepaper.title')}</h1>
               <h3 className="description">{this.t('main:whitepaper.description')}</h3>
@@ -257,48 +263,45 @@ export default class Home extends Component {
                   >{language.label}</Link>);
                 })}
               </div>
-            </Content>
-          </Flip>
+            </Flip>
+          </Content>
           <Content className="members section-type-1" id="team">
             <h1 className="title">{t("main:member:title")}</h1>
             <ul>
               {members.map(member => this.renderMember(member))}
             </ul>
           </Content>
-          <Fade top>
-            <Content className="advisors section-type-1">
-              <h1 className="title">{t("main:advisor:title")}</h1>
-              <div className="container-fluid">
-                <Row gutter={32}>
-                  {advisors.map(member => this.renderAdvisor(member))}
-                </Row>
-              </div>
-            </Content>
-          </Fade>
-          <Fade top>
-            <Content className="roadmap section-type-1 container-fluid" id="roadmap">
-              <h1 className="title">{t("main:roadmap:title")}</h1>
-              <div className="content">
-                {roadmaps.map((roadmap, key) => {
-                  return (
-                    <Row gutter={16} key={key}>
-                      <Col className="quarter" span={6} offset={key % 2 === 0 ? 3 : 16}>
-                        <ul className="title">
-                          {roadmap.map((e, index) => {
-                            return <li key={index}>{e}</li>;
-                          })}
-                        </ul>
-                      </Col>
-                    </Row>
-                  );
-                })}
-              </div>
-            </Content>
-          </Fade>
-          <Fade top>
-            <Content className="partners section-type-1">
-              <h1 className="title">{t("main:partner:title")}</h1>
-              <ul className="container-fluid">
+          <Content className="advisors section-type-1">
+            <h1 className="title">{t("main:advisor:title")}</h1>
+            <div className="container-fluid">
+              <Row gutter={32}>
+                {advisors.map(member => this.renderAdvisor(member))}
+              </Row>
+            </div>
+          </Content>
+          <Content className="roadmap section-type-1 container-fluid" id="roadmap">
+            <h1 className="title">{t("main:roadmap:title")}</h1>
+            <div className="content">
+              {roadmaps.map((roadmap, key) => {
+                return (
+                  <Row gutter={16} key={key}>
+                    <Col className="quarter" span={6} offset={key % 2 === 0 ? 3 : 16}>
+                      <ul className="title">
+                        {roadmap.map((e, index) => {
+                          return <li key={index}>{e}</li>;
+                        })}
+                      </ul>
+                    </Col>
+                  </Row>
+                );
+              })}
+            </div>
+          </Content>
+
+          <Content className="partners section-type-1">
+            <h1 className="title">{t("main:partner:title")}</h1>
+            <ul className="container-fluid">
+              <Flip bottom cascade>
                 <li key="xlgames" className="xlgames">
                   <img src={imageRequire("logo_xlgames.png")} alt="logo_xlgames"/>
                 </li>
@@ -317,9 +320,9 @@ export default class Home extends Component {
                 <li key="pays">
                   <img src={imageRequire("logo_pays.png")} alt="logo_pays"/>
                 </li>
-              </ul>
-            </Content>
-          </Fade>
+              </Flip>
+            </ul>
+          </Content>
           <Content className="subscribe section-type-1">
             <h1 className="title">{t('main:subscribe:title')}</h1>
             <h3 className="description">{t('main:subscribe:description')}</h3>

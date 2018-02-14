@@ -167,8 +167,9 @@
       font-weight: 400;
     }
     .links {
+      justify-content: center;
       //position: absolute;
-      margin-top: auto;
+      margin-top: 35px;
       display: flex;
       //bottom: 20px;
 
@@ -241,9 +242,12 @@
     .advisor {
       padding: 20px 0;
       height: 300px;
+
+      .react-reveal {
       display: flex;
       flex-direction: row;
       align-items: center;
+      }
       img {
         width: 200px;
         height: 200px;
@@ -321,8 +325,11 @@
   }
   .partners {
     ul {
-      display: flex;
-      justify-content: space-around;
+
+      .react-reveal {
+        display: flex;
+        justify-content: space-around;
+      }
       li {
         padding: 0 20px;
         vertical-align: middle;
