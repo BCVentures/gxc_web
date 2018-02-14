@@ -39,22 +39,24 @@ export default class Home extends Component {
   renderMember = (member) => {
 
     return (
-      <li className="member" key={member.name}>
-        <div className="image-box">
-          <img src={imageRequire(member.photo)} className="photo" alt={member.name}/>
-        </div>
-        <div className="texts">
-          <h2 className="name">
-            {member.name}
-          </h2>
-          <h5 className="role">
-            {member.role}
-          </h5>
-          <h5 className="description">
-            {member.description}
-          </h5>
-        </div>
-      </li>
+      <Flip duration={2000}>
+        <li className="member" key={member.name}>
+          <div className="image-box">
+            <img src={imageRequire(member.photo)} className="photo" alt={member.name}/>
+          </div>
+          <div className="texts">
+            <h2 className="name">
+              {member.name}
+            </h2>
+            <h5 className="role">
+              {member.role}
+            </h5>
+            <h5 className="description">
+              {member.description}
+            </h5>
+          </div>
+        </li>
+      </Flip>
     );
   };
 
@@ -197,7 +199,7 @@ export default class Home extends Component {
             <div className="right-pattern only-desktop" />
           </Content>
 
-          <Flip top>
+          <Flip top duration={2000}>
             <Content className="intro">
               <LogoAnimation />
               <h2 className="title">{t('main:introTitle')}</h2>
@@ -206,7 +208,7 @@ export default class Home extends Component {
           </Flip>
 
           <Content className="advantages">
-            <Fade top>
+            <Fade top duration={2000}>
               <div className="reward">
                 <div className="container-fluid">
                   <div className="texts">
@@ -240,8 +242,8 @@ export default class Home extends Component {
             </div>
             </Fade>
           </Content>
-          <Flip top>
-            <Content className="whitepaper" id="whitepaper">
+          <Flip top duration={2000}>
+            <Content className="whitepaper" id="whitepaper" >
               <img src={imageRequire('logo_white.svg')} className="logo" alt="logo"/>
               <h1 className="title">{t('main:whitepaper.title')}</h1>
               <h3 className="description">{this.t('main:whitepaper.description')}</h3>
@@ -257,14 +259,12 @@ export default class Home extends Component {
               </div>
             </Content>
           </Flip>
-          <Flip top>
-            <Content className="members section-type-1" id="team">
-              <h1 className="title">{t("main:member:title")}</h1>
-              <ul>
-                {members.map(member => this.renderMember(member))}
-              </ul>
-            </Content>
-          </Flip>
+          <Content className="members section-type-1" id="team">
+            <h1 className="title">{t("main:member:title")}</h1>
+            <ul>
+              {members.map(member => this.renderMember(member))}
+            </ul>
+          </Content>
           <Fade top>
             <Content className="advisors section-type-1">
               <h1 className="title">{t("main:advisor:title")}</h1>
