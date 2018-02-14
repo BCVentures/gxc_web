@@ -12,6 +12,7 @@ body {
   }
 }
 
+
 .ant-layout-content {
   background: #fff;
 }
@@ -40,12 +41,33 @@ body {
 .header {
   font-family: 'Poppins', sans-serif;
   //position: fixed;
-  flex-direction: row;
-  z-index: 3;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  z-index: 10;
+  .header-inner {
+    flex-direction: row;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   width: 100%;
+  position: fixed;
+
+  @media (max-width: $screen-sm) {
+    position: relative;
+  }
+  .header-inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    flex: 1;
+  }
+
+  .ant-menu-item:first-child {
+    padding-left: 0;
+  }
+  .ant-menu-item:last-child {
+    padding-right: 0;
+  }
   .logo-box {
     img.logo {
       height: 26px;

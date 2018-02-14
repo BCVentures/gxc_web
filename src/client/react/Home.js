@@ -14,12 +14,12 @@ import subscribeApi from "../../crossover/api/subscribeApi";
 import { Flip } from "react-reveal";
 
 
-
 @translate(['main', 'member', 'error'], { wait: true })
 @observer
 export default class Home extends Component {
   @observable sidebarOpen = false;
   @observable subscribeEmail = "";
+
   @observable
   handleChangeLang(lang) {
     i18n.changeLanguage(lang);
@@ -64,7 +64,7 @@ export default class Home extends Component {
     return (
 
       <Col xs={24} sm={12} className="advisor" key={member.name}>
-          <Fade duration={1500}>
+        <Fade duration={1500}>
           <img src={imageRequire(member.photo)} className="photo" alt={member.name}/>
           <div className="texts">
             <h2 className="name">
@@ -74,15 +74,16 @@ export default class Home extends Component {
               {member.description}
             </h5>
           </div>
-          </Fade>
+        </Fade>
       </Col>
     );
   };
 
-  validateEmail (email) {
+  validateEmail(email) {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
-}
+    return re.test(String(email)
+      .toLowerCase());
+  }
 
   async onEnterEmail(email) {
     if (!this.validateEmail((email))) return message.error("이메일 형식이 잘못되었습니다.");
@@ -108,7 +109,7 @@ export default class Home extends Component {
   };
 
   render() {
-    console.log('render...')
+    console.log('render...');
     const Search = Input.Search;
     const { Header, Footer, Content } = Layout;
     const Option = Select.Option;
@@ -167,44 +168,47 @@ export default class Home extends Component {
 
       <Layout className="layout" id="main">
         <Header className="header">
-          <div className="logo-box">
-            <a className="" href="/">
-              <img src={imageRequire('logo.svg')} alt="logo" className="logo"/>
-              <span><img src={imageRequire('gxc.svg')} alt="gxc" className="gxc"/></span>
-            </a>
+          <div className="header-inner">
+            <div className="logo-box">
+              <a className="" href="/">
+                <img src={imageRequire('logo.svg')} alt="logo" className="logo"/>
+                <span><img src={imageRequire('gxc.svg')} alt="gxc" className="gxc"/></span>
+              </a>
+            </div>
+            <Menu
+              theme="white"
+              mode="horizontal"
+              className="only-desktop"
+              style={{ lineHeight: '64px' }}
+            >
+              <Menu.Item key="1"><a className="nav-link" href="#whitepaper">{t('Whitepaper')}</a></Menu.Item>
+              <Menu.Item key="2"><a className="nav-link" href="#team">Team</a></Menu.Item>
+              <Menu.Item key="3"><a className="nav-link" href="#roadmap">Roadmap</a></Menu.Item>
+              <Menu.Item className="lang-select">
+                <Select defaultValue={i18n.language} style={{ width: 120 }}
+                        onChange={this.handleChangeLang.bind(this)}>
+                  <Option value="KR">KR</Option>
+                </Select>
+              </Menu.Item>
+            </Menu>
+            <Icon className="only-mobile" type="menu-fold" onClick={this.openMobileSidebar}
+                  style={{ display: "none" }}/>
           </div>
-          <Menu
-            theme="white"
-            mode="horizontal"
-            className="only-desktop"
-            style={{ lineHeight: '64px' }}
-          >
-            <Menu.Item key="1"><a className="nav-link" href="#whitepaper">{t('Whitepaper')}</a></Menu.Item>
-            <Menu.Item key="2"><a className="nav-link" href="#team">Team</a></Menu.Item>
-            <Menu.Item key="3"><a className="nav-link" href="#roadmap">Roadmap</a></Menu.Item>
-            <Menu.Item className="lang-select">
-              <Select defaultValue={i18n.language} style={{ width: 120 }}
-                      onChange={this.handleChangeLang.bind(this)}>
-                <Option value="KR">KR</Option>
-              </Select>
-            </Menu.Item>
-          </Menu>
-          <Icon className="only-mobile" type="menu-fold" onClick={this.openMobileSidebar} style={{ display: "none" }}/>
         </Header>
-        <Content className="">
+        <Content className="" id="main-content">
 
           <Content className="main-bg">
             <h1 className="title">{t('main:title')}</h1>
             <h4 className="description">{t('main:description')}</h4>
 
-            <div className="left-pattern" />
-            <div className="center" />
-            <div className="right-pattern only-desktop" />
+            <div className="left-pattern"/>
+            <div className="center"/>
+            <div className="right-pattern only-desktop"/>
           </Content>
 
           <Fade duration={2000}>
             <Content className="intro">
-              <LogoAnimation />
+              <LogoAnimation/>
               <h2 className="title">{t('main:introTitle')}</h2>
               <h4 className="description">{t('main:introDescription')}</h4>
             </Content>
@@ -214,24 +218,24 @@ export default class Home extends Component {
 
             <div className="reward">
               <Fade duration={2000}>
-              <div className="container-fluid">
-                <div className="texts">
-                  <h2 className="title">{t('main:reward:title')}</h2>
-                  <h3 className="description">{t('main:reward:description')}</h3>
+                <div className="container-fluid">
+                  <div className="texts">
+                    <h2 className="title">{t('main:reward:title')}</h2>
+                    <h3 className="description">{t('main:reward:description')}</h3>
+                  </div>
+                  <img className="right" src={imageRequire('pictogram_reward.png')} alt="pictorgram_reward"/>
                 </div>
-                <img className="right" src={imageRequire('pictogram_reward.png')} alt="pictorgram_reward"/>
-              </div>
               </Fade>
             </div>
             <div className="p2p right">
               <Fade duration={2000}>
-              <div className="container-fluid">
-                <img src={imageRequire('pictogram_p2p.png')} alt="pictorgram_p2p"/>
-                <div className="right texts">
-                  <h2 className="title">{t('main:p2p:title')}</h2>
-                  <h3 className="description">{t('main:p2p:description')}</h3>
+                <div className="container-fluid">
+                  <img src={imageRequire('pictogram_p2p.png')} alt="pictorgram_p2p"/>
+                  <div className="right texts">
+                    <h2 className="title">{t('main:p2p:title')}</h2>
+                    <h3 className="description">{t('main:p2p:description')}</h3>
+                  </div>
                 </div>
-              </div>
               </Fade>
             </div>
 
@@ -248,7 +252,7 @@ export default class Home extends Component {
             </div>
           </Content>
 
-          <Content className="whitepaper" id="whitepaper" >
+          <Content className="whitepaper" id="whitepaper">
             <Fade cascade duration={2000}>
               <img src={imageRequire('logo_white.svg')} className="logo" alt="logo"/>
               <h1 className="title">{t('main:whitepaper.title')}</h1>
@@ -326,7 +330,9 @@ export default class Home extends Component {
           <Content className="subscribe section-type-1">
             <h1 className="title">{t('main:subscribe:title')}</h1>
             <h3 className="description">{t('main:subscribe:description')}</h3>
-            <Search type="email" placeholder="E-Mail Address" enterButton="Subscribe" onChange={e => this.subscribeEmail =e.target.value }value={this.subscribeEmail} onSearch={this.onEnterEmail.bind(this)}/>
+            <Search type="email" placeholder="E-Mail Address" enterButton="Subscribe"
+                    onChange={e => this.subscribeEmail = e.target.value} value={this.subscribeEmail}
+                    onSearch={this.onEnterEmail.bind(this)}/>
           </Content>
         </Content>
         <Footer style={{ textAlign: 'center', background: "#414141", color: "white" }}>
