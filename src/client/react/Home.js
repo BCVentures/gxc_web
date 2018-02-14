@@ -6,10 +6,12 @@ import { Drawer, List } from 'antd-mobile';
 import { observer, inject } from 'mobx-react';
 import { observable } from 'mobx';
 import ReactGA from "react-ga";
+import Fade from 'react-reveal/Fade';
 import { imageRequire } from '../../utils/universalRequire';
 import LogoAnimation from './component/LogoAnimation';
 import i18n from "../../crossover/i18n/i18n";
 import subscribeApi from "../../crossover/api/subscribeApi";
+import { Flip } from "react-reveal";
 
 
 
@@ -18,6 +20,7 @@ import subscribeApi from "../../crossover/api/subscribeApi";
 export default class Home extends Component {
   @observable sidebarOpen = false;
   @observable subscribeEmail = "";
+  @observable
   handleChangeLang(lang) {
     i18n.changeLanguage(lang);
   }
@@ -184,6 +187,7 @@ export default class Home extends Component {
           <Icon className="only-mobile" type="menu-fold" onClick={this.openMobileSidebar} style={{ display: "none" }}/>
         </Header>
         <Content className="">
+
           <Content className="main-bg">
             <h1 className="title">{t('main:title')}</h1>
             <h4 className="description">{t('main:description')}</h4>
@@ -192,30 +196,39 @@ export default class Home extends Component {
             <div className="center" />
             <div className="right-pattern only-desktop" />
           </Content>
-          <Content className="intro">
-            <LogoAnimation />
-            <h2 className="title">{t('main:introTitle')}</h2>
-            <h4 className="description">{t('main:introDescription')}</h4>
-          </Content>
+
+          <Flip top>
+            <Content className="intro">
+              <LogoAnimation />
+              <h2 className="title">{t('main:introTitle')}</h2>
+              <h4 className="description">{t('main:introDescription')}</h4>
+            </Content>
+          </Flip>
+
           <Content className="advantages">
-            <div className="reward">
-              <div className="container-fluid">
-                <div className="texts">
-                  <h2 className="title">{t('main:reward:title')}</h2>
-                  <h3 className="description">{t('main:reward:description')}</h3>
-                </div>
-                <img className="right" src={imageRequire('pictogram_reward.png')} alt="pictorgram_reward"/>
-              </div>
-            </div>
-            <div className="p2p right">
-              <div className="container-fluid">
-                <img src={imageRequire('pictogram_p2p.png')} alt="pictorgram_p2p"/>
-                <div className="right texts">
-                  <h2 className="title">{t('main:p2p:title')}</h2>
-                  <h3 className="description">{t('main:p2p:description')}</h3>
+            <Fade top>
+              <div className="reward">
+                <div className="container-fluid">
+                  <div className="texts">
+                    <h2 className="title">{t('main:reward:title')}</h2>
+                    <h3 className="description">{t('main:reward:description')}</h3>
+                  </div>
+                  <img className="right" src={imageRequire('pictogram_reward.png')} alt="pictorgram_reward"/>
                 </div>
               </div>
-            </div>
+            </Fade>
+            <Fade top>
+              <div className="p2p right">
+                <div className="container-fluid">
+                  <img src={imageRequire('pictogram_p2p.png')} alt="pictorgram_p2p"/>
+                  <div className="right texts">
+                    <h2 className="title">{t('main:p2p:title')}</h2>
+                    <h3 className="description">{t('main:p2p:description')}</h3>
+                  </div>
+                </div>
+              </div>
+            </Fade>
+            <Fade top>
             <div className="commission left">
               <div className="container-fluid">
                 <div className="texts">
@@ -225,77 +238,88 @@ export default class Home extends Component {
                 <img className="right" src={imageRequire('pictogram_commission.png')} alt="commission"/>
               </div>
             </div>
+            </Fade>
           </Content>
-          <Content className="whitepaper" id="whitepaper">
-            <img src={imageRequire('logo_white.svg')} className="logo" alt="logo"/>
-            <h1 className="title">{t('main:whitepaper.title')}</h1>
-            <h3 className="description">{this.t('main:whitepaper.description')}</h3>
-            <div className="links">
-              {languages.map((language, index) => {
-                return (<Link
-                  key={index}
-                  onClick={this.downloadWhitepaper.bind(this, language.whitePaperLink)}
-                  to={language[1]}
-                  className={`link-to-whitepaper ${language.code}`}
-                >{language.label}</Link>);
-              })}
-            </div>
-          </Content>
-          <Content className="members section-type-1" id="team">
-            <h1 className="title">{t("main:member:title")}</h1>
-            <ul>
-              {members.map(member => this.renderMember(member))}
-            </ul>
-          </Content>
-          <Content className="advisors section-type-1">
-            <h1 className="title">{t("main:advisor:title")}</h1>
-            <div className="container-fluid">
-              <Row gutter={32}>
-                {advisors.map(member => this.renderAdvisor(member))}
-              </Row>
-            </div>
-          </Content>
-          <Content className="roadmap section-type-1 container-fluid" id="roadmap">
-            <h1 className="title">{t("main:roadmap:title")}</h1>
-            <div className="content">
-              {roadmaps.map((roadmap, key) => {
-                return (
-                  <Row gutter={16} key={key}>
-                    <Col className="quarter" span={6} offset={key % 2 === 0 ? 3 : 16}>
-                      <ul className="title">
-                        {roadmap.map((e, index) => {
-                          return <li key={index}>{e}</li>;
-                        })}
-                      </ul>
-                    </Col>
-                  </Row>
-                );
-              })}
-            </div>
-          </Content>
-          <Content className="partners section-type-1">
-            <h1 className="title">{t("main:partner:title")}</h1>
-            <ul className="container-fluid">
-              <li key="xlgames" className="xlgames">
-                <img src={imageRequire("logo_xlgames.png")} alt="logo_xlgames"/>
-              </li>
-              <li key="superplanet">
-                <img src={imageRequire("logo_superplanet.png")} alt="logo_superplanet"/>
-              </li>
-              <li key="cointong">
-                <img src={imageRequire("logo_cointong.png")} alt="logo_cointong"/>
-              </li>
-              <li key="besuccess">
-                <img src={imageRequire("logo_besuccess.png")} alt="logo_besuccess"/>
-              </li>
-              <li key="hyperithm">
-                <img src={imageRequire("logo_hyperithm.png")} alt="logo_hyperithm"/>
-              </li>
-              <li key="pays">
-                <img src={imageRequire("logo_pays.png")} alt="logo_pays"/>
-              </li>
-            </ul>
-          </Content>
+          <Flip top>
+            <Content className="whitepaper" id="whitepaper">
+              <img src={imageRequire('logo_white.svg')} className="logo" alt="logo"/>
+              <h1 className="title">{t('main:whitepaper.title')}</h1>
+              <h3 className="description">{this.t('main:whitepaper.description')}</h3>
+              <div className="links">
+                {languages.map((language, index) => {
+                  return (<Link
+                    key={index}
+                    onClick={this.downloadWhitepaper.bind(this, language.whitePaperLink)}
+                    to={language[1]}
+                    className={`link-to-whitepaper ${language.code}`}
+                  >{language.label}</Link>);
+                })}
+              </div>
+            </Content>
+          </Flip>
+          <Flip top>
+            <Content className="members section-type-1" id="team">
+              <h1 className="title">{t("main:member:title")}</h1>
+              <ul>
+                {members.map(member => this.renderMember(member))}
+              </ul>
+            </Content>
+          </Flip>
+          <Fade top>
+            <Content className="advisors section-type-1">
+              <h1 className="title">{t("main:advisor:title")}</h1>
+              <div className="container-fluid">
+                <Row gutter={32}>
+                  {advisors.map(member => this.renderAdvisor(member))}
+                </Row>
+              </div>
+            </Content>
+          </Fade>
+          <Fade top>
+            <Content className="roadmap section-type-1 container-fluid" id="roadmap">
+              <h1 className="title">{t("main:roadmap:title")}</h1>
+              <div className="content">
+                {roadmaps.map((roadmap, key) => {
+                  return (
+                    <Row gutter={16} key={key}>
+                      <Col className="quarter" span={6} offset={key % 2 === 0 ? 3 : 16}>
+                        <ul className="title">
+                          {roadmap.map((e, index) => {
+                            return <li key={index}>{e}</li>;
+                          })}
+                        </ul>
+                      </Col>
+                    </Row>
+                  );
+                })}
+              </div>
+            </Content>
+          </Fade>
+          <Fade top>
+            <Content className="partners section-type-1">
+              <h1 className="title">{t("main:partner:title")}</h1>
+              <ul className="container-fluid">
+                <li key="xlgames" className="xlgames">
+                  <img src={imageRequire("logo_xlgames.png")} alt="logo_xlgames"/>
+                </li>
+                <li key="superplanet">
+                  <img src={imageRequire("logo_superplanet.png")} alt="logo_superplanet"/>
+                </li>
+                <li key="cointong">
+                  <img src={imageRequire("logo_cointong.png")} alt="logo_cointong"/>
+                </li>
+                <li key="besuccess">
+                  <img src={imageRequire("logo_besuccess.png")} alt="logo_besuccess"/>
+                </li>
+                <li key="hyperithm">
+                  <img src={imageRequire("logo_hyperithm.png")} alt="logo_hyperithm"/>
+                </li>
+                <li key="pays">
+                  <img src={imageRequire("logo_pays.png")} alt="logo_pays"/>
+                </li>
+              </ul>
+            </Content>
+          </Fade>
           <Content className="subscribe section-type-1">
             <h1 className="title">{t('main:subscribe:title')}</h1>
             <h3 className="description">{t('main:subscribe:description')}</h3>
