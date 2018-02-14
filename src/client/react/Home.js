@@ -10,7 +10,7 @@ import Fade from 'react-reveal/Fade';
 import { imageRequire } from '../../utils/universalRequire';
 import LogoAnimation from './component/LogoAnimation';
 import i18n from "../../crossover/i18n/i18n";
-import subscribeApi from "../../crossover/api/subscribeApi";
+import { subscribe } from "../../crossover/api/subscribeApi";
 import { Flip } from "react-reveal";
 
 
@@ -88,7 +88,7 @@ export default class Home extends Component {
   async onEnterEmail(email) {
     if (!this.validateEmail((email))) return message.error("이메일 형식이 잘못되었습니다.");
     try {
-      await subscribeApi.subscribe(email);
+      await subscribe(email);
       this.subscribeEmail = "";
       message.info("성공적으로 구독에 성공하셨습니다.");
     } catch (e) {
