@@ -1,6 +1,7 @@
 import 'babel-polyfill';
 
 import Koa from 'koa';
+import bodyParser from 'koa-bodyparser';
 import router from './router';
 
 import {
@@ -40,6 +41,7 @@ if (!prod) {
 
 app.use(serverLogging());
 app.use(baseErrorHandling());
+app.use(bodyParser());
 if (prod) app.use(compressResponse());
 app.use(serveStaticFiles());
 app.use(injectState());
@@ -47,5 +49,4 @@ app.use(router.routes());
 app.use(renderReact());
 
 const server = app.listen(3000);
-console.log(server.address())
 console.log('Server listening on %s:%s', server.address().address, server.address().port);

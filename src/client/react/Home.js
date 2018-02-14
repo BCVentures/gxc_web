@@ -3,19 +3,21 @@ import { Layout, Menu, Select, Input, Icon, Row, Col, message } from 'antd';
 import { translate } from 'react-i18next';
 import { Link } from "react-router";
 import { Drawer, List } from 'antd-mobile';
-import { observer } from 'mobx-react';
+import { observer, inject } from 'mobx-react';
 import { observable } from 'mobx';
 import ReactGA from "react-ga";
 import { imageRequire } from '../../utils/universalRequire';
-import i18n from '../../crossover/i18n/i18n';
 import LogoAnimation from './component/LogoAnimation';
+import i18n from "../../crossover/i18n/i18n";
+import subscribeApi from "../../crossover/api/subscribeApi";
+
 
 
 @translate(['main', 'member', 'error'], { wait: true })
 @observer
 export default class Home extends Component {
   @observable sidebarOpen = false;
-
+  @observable subscribeEmail = "";
   handleChangeLang(lang) {
     i18n.changeLanguage(lang);
   }
@@ -69,8 +71,23 @@ export default class Home extends Component {
     );
   };
 
-  onEnterEmail = (email) => {
-    message.info("준비중입니다.");
+  validateEmail (email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
+  async onEnterEmail(email) {
+    if (!this.validateEmail((email))) return message.error("이메일 형식이 잘못되었습니다.");
+    try {
+      await subscribeApi.subscribe(email);
+      this.subscribeEmail = "";
+      message.info("성공적으로 구독에 성공하셨습니다.");
+    } catch (e) {
+      message.error("등록 중 에러가 발생했습니다. 다시 시도해주세요.");
+      console.log(e);
+    }
+
+
   };
 
   openMobileSidebar = () => {
@@ -83,6 +100,7 @@ export default class Home extends Component {
   };
 
   render() {
+    console.log('render...')
     const Search = Input.Search;
     const { Header, Footer, Content } = Layout;
     const Option = Select.Option;
@@ -281,7 +299,7 @@ export default class Home extends Component {
           <Content className="subscribe section-type-1">
             <h1 className="title">{t('main:subscribe:title')}</h1>
             <h3 className="description">{t('main:subscribe:description')}</h3>
-            <Search type="email" placeholder="E-Mail Address" enterButton="Subscribe" onSearch={this.onEnterEmail}/>
+            <Search type="email" placeholder="E-Mail Address" enterButton="Subscribe" onChange={e => this.subscribeEmail =e.target.value }value={this.subscribeEmail} onSearch={this.onEnterEmail.bind(this)}/>
           </Content>
         </Content>
         <Footer style={{ textAlign: 'center', background: "#414141", color: "white" }}>

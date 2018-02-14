@@ -28,7 +28,6 @@ export function renderReact() {
     // react-hot-reloading) as our babel environment variable.
     // see .babelrc
     process.env.BABEL_ENV = process.env.NODE_ENV === 'production' ? 'client-build' : 'client-dev';
-
     match({ routes, location: ctx.path }, (err, redirect, props) => {
       if (err) {
         // there was an error somewhere during route matching
@@ -50,9 +49,11 @@ export function renderReact() {
           initialState: JSON.stringify(ctx.state.mobx),
         });
       } else {
+        ctx.type = "text/json";
+        console.log(ctx.response.body);
         // no errors, no redirect, we just didn't match anything
-        ctx.status = 404;
-        ctx.body = 'Not Found';
+        // ctx.status = 404;
+
       }
     });
   };
