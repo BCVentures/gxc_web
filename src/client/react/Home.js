@@ -39,7 +39,7 @@ export default class Home extends Component {
   renderMember = (member) => {
 
     return (
-      <Flip bottom duration={1500}>
+      <Fade duration={1500}>
         <li className="member" key={member.name}>
           <div className="image-box">
             <img src={imageRequire(member.photo)} className="photo" alt={member.name}/>
@@ -56,7 +56,7 @@ export default class Home extends Component {
             </h5>
           </div>
         </li>
-      </Flip>
+      </Fade>
     );
   };
 
@@ -64,7 +64,7 @@ export default class Home extends Component {
     return (
 
       <Col xs={24} sm={12} className="advisor" key={member.name}>
-          <Flip bottom duration={1500}>
+          <Fade duration={1500}>
           <img src={imageRequire(member.photo)} className="photo" alt={member.name}/>
           <div className="texts">
             <h2 className="name">
@@ -74,7 +74,7 @@ export default class Home extends Component {
               {member.description}
             </h5>
           </div>
-          </Flip>
+          </Fade>
       </Col>
     );
   };
@@ -202,18 +202,18 @@ export default class Home extends Component {
             <div className="right-pattern only-desktop" />
           </Content>
 
-          <Flip top duration={2000}>
+          <Fade duration={2000}>
             <Content className="intro">
               <LogoAnimation />
               <h2 className="title">{t('main:introTitle')}</h2>
               <h4 className="description">{t('main:introDescription')}</h4>
             </Content>
-          </Flip>
+          </Fade>
 
           <Content className="advantages">
 
             <div className="reward">
-              <Flip bottom duration={2000}>
+              <Fade duration={2000}>
               <div className="container-fluid">
                 <div className="texts">
                   <h2 className="title">{t('main:reward:title')}</h2>
@@ -221,10 +221,10 @@ export default class Home extends Component {
                 </div>
                 <img className="right" src={imageRequire('pictogram_reward.png')} alt="pictorgram_reward"/>
               </div>
-              </Flip>
+              </Fade>
             </div>
             <div className="p2p right">
-              <Flip bottom duration={2000}>
+              <Fade duration={2000}>
               <div className="container-fluid">
                 <img src={imageRequire('pictogram_p2p.png')} alt="pictorgram_p2p"/>
                 <div className="right texts">
@@ -232,11 +232,11 @@ export default class Home extends Component {
                   <h3 className="description">{t('main:p2p:description')}</h3>
                 </div>
               </div>
-              </Flip>
+              </Fade>
             </div>
 
             <div className="commission left">
-              <Flip bottom duration={2000}>
+              <Fade duration={2000}>
                 <div className="container-fluid">
                   <div className="texts">
                     <h2 className="title">{t('main:commission:title')}</h2>
@@ -244,12 +244,12 @@ export default class Home extends Component {
                   </div>
                   <img className="right" src={imageRequire('pictogram_commission.png')} alt="commission"/>
                 </div>
-              </Flip>`
+              </Fade>`
             </div>
           </Content>
 
           <Content className="whitepaper" id="whitepaper" >
-            <Flip bottom cascade duration={2000}>
+            <Fade cascade duration={2000}>
               <img src={imageRequire('logo_white.svg')} className="logo" alt="logo"/>
               <h1 className="title">{t('main:whitepaper.title')}</h1>
               <h3 className="description">{this.t('main:whitepaper.description')}</h3>
@@ -263,7 +263,7 @@ export default class Home extends Component {
                   >{language.label}</Link>);
                 })}
               </div>
-            </Flip>
+            </Fade>
           </Content>
           <Content className="members section-type-1" id="team">
             <h1 className="title">{t("main:member:title")}</h1>
@@ -301,7 +301,7 @@ export default class Home extends Component {
           <Content className="partners section-type-1">
             <h1 className="title">{t("main:partner:title")}</h1>
             <ul className="container-fluid">
-              <Flip bottom cascade>
+              <Fade cascade>
                 <li key="xlgames" className="xlgames">
                   <img src={imageRequire("logo_xlgames.png")} alt="logo_xlgames"/>
                 </li>
@@ -320,7 +320,7 @@ export default class Home extends Component {
                 <li key="pays">
                   <img src={imageRequire("logo_pays.png")} alt="logo_pays"/>
                 </li>
-              </Flip>
+              </Fade>
             </ul>
           </Content>
           <Content className="subscribe section-type-1">
