@@ -31,52 +31,43 @@
     }
   }
   .main-bg {
-
-    height: 427px;
     display: flex;
     flex-direction: row;
     align-items: stretch;
     position: relative;
     justify-content: flex-start;
-    .left-pattern {
-      height: 100%;
-      flex-basis: 60%;
-      background: url("/static/images/bg_main_left_pattern.png") center center repeat-x;
-      background-position-y: 62%;
-      //animation: fadeins 3s;
-    }
-
-    .center {
-      height: 100%;
-      flex-basis: 70%;
-      max-width: 750px;
-      background: url("/static/images/bg_main.png") center center no-repeat;
-      background-position-y: 62%;
-      //animation: fadein 2s;
-
-    }
-
-    .right-pattern {
-      height: 100%;
-      flex: 1;
-      background: url("/static/images/bg_main_right_pattern.png") center center repeat-x;
-    }
-    .title {
+    background-image: url('/static/images/bg_intro.jpeg');
+    background-size: cover;
+    background-position-y: 50%;
+    height: calc(100vh - 65px);
+    .overlay {
       position: absolute;
-      top: 202px;
-      left: 20%;
-      color: white;
-      font-weight: bold;
-      letter-spacing: 0.03em;
-      //animation: test 3s;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.4);
     }
-    .description {
+    .contents {
       position: absolute;
-      top: 292px;
-      font-weight: normal;
-      left: 20%;
-      color: $font-default-black;
-      //animation: test 3s;
+      left: 10%;
+      right: 10%;
+      top: 50%;
+      transform: translate(0, -50%);
+      .title {
+        color: $font-default-white;
+        font-size: 60px;
+        font-weight: bold;
+        letter-spacing: 0.03em;
+        line-height: 1.4;
+        //animation: test 3s;
+      }
+      .description {
+        font-size: 18px;
+        font-weight: normal;
+        color: $font-default-white;
+        //animation: test 3s;
+      }
     }
   }
 
@@ -373,16 +364,10 @@
 
   @media (max-width: $screen-xl) {
     .main-bg {
-      height: 327px;
-      .title {
-        left: 3%;
-        font-size: 25px;
-        top: 160px;
-      }
-      .description {
-        left: 3%;
-        font-size: 14px;
-        top: 230px;
+      .contents {
+        .title {
+          font-size: 56px;
+        }
       }
     }
   }
@@ -396,14 +381,13 @@
       }
     }
     .main-bg {
-      height: 327px;
-      .title {
-        font-size: 25px;
-        top: 160px;
-      }
-      .description {
-        font-size: 14px;
-        top: 230px;
+      .contents {
+        .title {
+          font-size: 42px;
+        }
+        .description {
+          font-size: 16px;
+        }
       }
     }
   }
@@ -418,20 +402,10 @@
       }
     }
     .main-bg {
-      height: 280px;
-      .left-pattern {
-        background-position-y: 65.2%;
-      }
-      .center {
-        flex-basis: 100%;
-        background-size: cover;
-      }
-      .title {
-        top: 120px;
-      }
-      .description {
-        top: 12rem;
-        color: black;
+      .contents {
+        .title {
+          font-size: 32px;
+        }
       }
     }
   }
@@ -443,28 +417,13 @@
       padding-top: 80px;
     }
     .main-bg {
-      height: 170px;
-      .center {
-        flex-basis: 100%;
-        background-size: cover;
-      }
-      .title {
-        top: 70px;
-        left: 20px;
-        font-size: 20px;
-        left: 50%;
-        transform: translate(-50%, 0);
-      }
-      .description {
-        top: 120px;
-        left: 20px;
-        right: 20px;
-        color: black;
-        font-size: 13px;
-        text-align: center;
-      }
-      .left-pattern {
-        display: none;
+      .contents {
+        .title {
+          font-size: 20px;
+        }
+        .description {
+          font-size: 13px;
+        }
       }
     }
     .intro {
@@ -635,6 +594,18 @@
     }
     .subscribe {
       min-height: 400px;
+    }
+  }
+  @media (max-width: $screen-xs) {
+    .main-bg {
+      .contents {
+        .title {
+          font-size: 30px;
+        }
+        .description {
+          font-size: 18px;
+        }
+      }
     }
   }
 }

@@ -198,12 +198,11 @@ export default class Home extends Component {
         <Content className="" id="main-content">
 
           <Content className="main-bg">
-            <h1 className="title">{t('main:title')}</h1>
-            <h4 className="description">{t('main:description')}</h4>
-
-            <div className="left-pattern"/>
-            <div className="center"/>
-            <div className="right-pattern only-desktop"/>
+            <div className="overlay" />
+            <div className="contents">
+              <h1 className="title">{t('main:title')}<br/>{t('main:subtitle')}</h1>
+              <h4 className="description">{t('main:description')}</h4>
+            </div>
           </Content>
 
           <Fade duration={2000}>
