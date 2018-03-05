@@ -294,7 +294,9 @@ export default class Home extends Component {
           <Content className="roadmap section-type-1 container-fluid" id="roadmap">
             <h1 className="title">{t("main:roadmap:title")}</h1>
             <div className="content">
-              {roadmaps.map((roadmap, key) => {
+            <img src={imageRequire('roadmap_desktop.png')} alt="roadmap" className="roadmap_image only-desktop" />
+            <img src={imageRequire('roadmap_mobile.png')} alt="roadmap" className="roadmap_image only-mobile" />
+              { /*roadmaps.map((roadmap, key) => {
                 return (
                   <Row gutter={16} key={key}>
                     <Col className="quarter" span={6} offset={key % 2 === 0 ? 3 : 16}>
@@ -306,7 +308,7 @@ export default class Home extends Component {
                     </Col>
                   </Row>
                 );
-              })}
+              }) */}
             </div>
           </Content>
 
