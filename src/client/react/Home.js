@@ -207,48 +207,49 @@ export default class Home extends Component {
 
           <Fade duration={2000}>
             <Content className="intro">
-              <LogoAnimation/>
+              <LogoAnimation />
               <h2 className="title">{t('main:introTitle')}</h2>
               <h4 className="description">{t('main:introDescription')}</h4>
             </Content>
           </Fade>
 
-          <Content className="advantages">
-
-            <div className="reward">
-              <Fade duration={2000}>
-                <div className="container-fluid">
-                  <div className="texts">
-                    <h2 className="title">{t('main:reward:title')}</h2>
-                    <h3 className="description">{t('main:reward:description')}</h3>
+          <Content className="advantages section-type-1">
+            <h1 className="title">{t("main:advantages:title")}</h1>
+            <Row>
+              <Col xs={24} sm={8} className="reward">
+                <Fade duration={2000}>
+                  <div className="container-fluid">
+                  <img src={imageRequire('pictogram_reward.png')} alt="pictorgram_reward" />
+                    <div className="texts">
+                      <h2 className="title">{t('main:reward:title')}</h2>
+                      <h3 className="description">{t('main:reward:description')}</h3>
+                    </div>
                   </div>
-                  <img className="right" src={imageRequire('pictogram_reward.png')} alt="pictorgram_reward"/>
-                </div>
-              </Fade>
-            </div>
-            <div className="p2p right">
-              <Fade duration={2000}>
-                <div className="container-fluid">
-                  <img src={imageRequire('pictogram_p2p.png')} alt="pictorgram_p2p"/>
-                  <div className="right texts">
-                    <h2 className="title">{t('main:p2p:title')}</h2>
-                    <h3 className="description">{t('main:p2p:description')}</h3>
+                </Fade>
+              </Col>
+              <Col xs={24} sm={8} className="p2p right">
+                <Fade duration={2000}>
+                  <div className="container-fluid">
+                    <img src={imageRequire('pictogram_p2p.png')} alt="pictorgram_p2p" />
+                    <div className="right texts">
+                      <h2 className="title">{t('main:p2p:title')}</h2>
+                      <h3 className="description">{t('main:p2p:description')}</h3>
+                    </div>
                   </div>
-                </div>
-              </Fade>
-            </div>
-
-            <div className="commission left">
-              <Fade duration={2000}>
-                <div className="container-fluid">
-                  <div className="texts">
-                    <h2 className="title">{t('main:commission:title')}</h2>
-                    <h3 className="description">{t('main:commission:description')}</h3>
+                </Fade>
+              </Col>
+              <Col xs={24} sm={8} className="commission left">
+                <Fade duration={2000}>
+                  <div className="container-fluid">
+                    <img className="right" src={imageRequire('pictogram_commission.png')} alt="commission" />
+                    <div className="texts">
+                      <h2 className="title">{t('main:commission:title')}</h2>
+                      <h3 className="description">{t('main:commission:description')}</h3>
+                    </div>
                   </div>
-                  <img className="right" src={imageRequire('pictogram_commission.png')} alt="commission"/>
-                </div>
-              </Fade>`
-            </div>
+                </Fade>`
+              </Col>
+            </Row>
           </Content>
 
           <Content className="whitepaper" id="whitepaper">
