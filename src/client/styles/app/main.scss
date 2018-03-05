@@ -102,6 +102,13 @@
 
   .advantages {
     max-width: 1280px;
+    .ecosystem {
+      margin-bottom: 100px;
+      img {
+        width: 100%;
+        max-width: 960px;
+      }
+    }
     div.container-fluid {
       display: flex;
       align-content: flex-end;
@@ -151,6 +158,11 @@
       margin-top: 35px;
       display: flex;
       //bottom: 20px;
+
+      .comming_soon {
+        font-size: 30px;
+        font-weight: 600;
+      }
 
       .link-to-whitepaper {
         width: 62px;

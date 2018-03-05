@@ -216,6 +216,13 @@ export default class Home extends Component {
           <Content className="advantages section-type-1">
             <h1 className="title">{t("main:advantages:title")}</h1>
             <Row>
+              <Col xs={24} className="ecosystem">
+                <Fade duration={2000}>
+                  <img src={imageRequire('gxc_ecosystem.png')} alt="gxc_ecosystem" />
+                </Fade>
+              </Col>
+            </Row>
+            <Row>
               <Col xs={24} sm={8} className="reward">
                 <Fade duration={2000}>
                   <div className="container-fluid">
@@ -258,14 +265,15 @@ export default class Home extends Component {
               <h1 className="title">{t('main:whitepaper.title')}</h1>
               <h3 className="description">{this.t('main:whitepaper.description')}</h3>
               <div className="links">
-                {languages.map((language, index) => {
+                {/* languages.map((language, index) => {
                   return (<Link
                     key={index}
                     onClick={this.downloadWhitepaper.bind(this, language.whitePaperLink)}
                     to={language[1]}
                     className={`link-to-whitepaper ${language.code}`}
                   >{language.label}</Link>);
-                })}
+                }) */}
+                <span className="comming_soon">COMING SOON</span>
               </div>
             </Fade>
           </Content>
