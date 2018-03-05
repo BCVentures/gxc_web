@@ -313,20 +313,25 @@
   }
   .partners {
     ul {
-
       .react-reveal {
         display: flex;
         justify-content: space-around;
       }
       li {
-        padding: 0 20px;
+        padding: 30px 0;
         vertical-align: middle;
-        &.xlgames img {
-          height: 50px;
+        width: 180px;
+        height: 100px;
+        margin: 0 auto;
+        &.seum {
+          padding: 20px 0;
+        }
+        &.xlgames, &.supercat, &.hyperithm {
+          padding: 35px 0;
         }
       }
       li img {
-        height: 60px;
+        height: 100%;
       }
     }
   }
@@ -582,10 +587,7 @@
         .react-reveal {
           flex-direction: column;
         }
-
         li {
-          margin: 1rem 0;
-
           .description {
 
           }

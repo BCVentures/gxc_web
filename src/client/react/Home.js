@@ -311,18 +311,45 @@ export default class Home extends Component {
                 <li key="superplanet">
                   <img src={imageRequire("logo_superplanet.png")} alt="logo_superplanet"/>
                 </li>
+                <li key="supercat" className="supercat">
+                  <img src={imageRequire("logo_supercat.png")} alt="logo_supecat"/>
+                </li>
                 <li key="cointong">
                   <img src={imageRequire("logo_cointong.png")} alt="logo_cointong"/>
                 </li>
+                <li key="seum" className="seum">
+                  <img src={imageRequire("logo_seum.png")} alt="logo_seum"/>
+                </li>
+              </Fade>
+            </ul>
+            <ul className="container-fluid">
+              <Fade cascade>
                 <li key="besuccess">
                   <img src={imageRequire("logo_besuccess.png")} alt="logo_besuccess"/>
                 </li>
-                <li key="hyperithm">
+                <li key="hyperithm" className="hyperithm">
                   <img src={imageRequire("logo_hyperithm.png")} alt="logo_hyperithm"/>
                 </li>
                 <li key="pays">
                   <img src={imageRequire("logo_pays.png")} alt="logo_pays"/>
                 </li>
+                <li key="whooper">
+                  <img src={imageRequire("logo_whooper.jpg")} alt="logo_whooper"/>
+                </li>
+                <li key="decipher">
+                  <img src={imageRequire("logo_decipher.png")} alt="logo_decipher"/>
+                </li>
+              </Fade>
+            </ul>
+            <ul className="container-fluid">
+              <Fade cascade>
+                <li key="coopmarketing">
+                  <img src={imageRequire("logo_coopmarketing.png")} alt="logo_coopmarketing"/>
+                </li>
+                <li className="only-desktop"></li>
+                <li className="only-desktop"></li>
+                <li className="only-desktop"></li>
+                <li className="only-desktop"></li>
               </Fade>
             </ul>
           </Content>
