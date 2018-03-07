@@ -17,7 +17,7 @@ i18n
       en: {
         main: {
           title: 'Game X Coin',
-          subtitle: 'Cryptocurrency For Game',
+          subtitle: 'The Universal Game Currency',
           description: 'By connecting the game with the blockchain, Break the wall between games',
           introTitle: '블록체인과 게임을 연결하여 게임 간의 벽을 허문다',
           introDescription: 'Gamecoin Exchange는 게임 간 화폐들을 기축통화인 GXC를 통해 연결하는 것을 목적으로 둡니다.\n' +
@@ -28,7 +28,7 @@ i18n
       ko: {
         main: {
           title: 'Game X Coin',
-          subtitle: 'Cryptocurrency For Game',
+          subtitle: 'The Universal Game Currency',
           description: 'By connecting the game with the blockchain, Break the wall between games',
           introTitle: '블록체인과 게임을 연결하여\n게임 간의 벽을 허문다',
           introDescription: 'Game X Coin는 게임 간 화폐들을 기축통화인 GXC를 통해 연결하는 것을 목적으로 둡니다.\n' +
