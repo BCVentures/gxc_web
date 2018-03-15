@@ -121,7 +121,7 @@ export default class Home extends Component {
       { label: "中國語", whitePaperLink: "#", code: "chinese" },
     ];
     const whitepapers = [];
-    const memberNames = ["kwk", "yjh", "bhs", "cyw", "pje", "lhh"];
+    const memberNames = ["kwk", "yjh", "nss", "bhs", "cyw", "pje", "lhh"];
     const members = memberNames.map(memberName => {
       return {
         name: t(`member:${memberName}:name`),

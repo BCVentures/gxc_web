@@ -99,6 +99,11 @@ i18n
             "Profound에서 CTO로 활동하였다. 다방면에서 10년이 넘는 기간동안 Server, Architecture, User Interface 등을" +
             "설계, 제작하였으며 17년부터 블록체인에 관심을 가져 리서치, 개발을 개인적으로 진행하다 팀에 합류하게 되었다.",
           },
+          nss: {
+            name: "Sansung Nam",
+            role: "Community Director",
+            description: "미국 미시간대학교 (앤아버) 경영학과를 졸업한 게임 마케팅 전문가이다. 미국 실리콘벨리에서 커리어를 시작하여 길건너 친구들, 마블퓨처파이트, 리니지2 레볼루션, 스타워즈 포스아레나, 세븐나이츠 등의 글로벌 히트 게임들의 마케팅을 담당하였다. 넷마블게임즈 마케팅 팀장으로 겸직하다가 암호화폐의 매력에 이끌려 블록체인벤처스에 합류하게 되었다.",
+          },
           bhs: {
             name: "Hyunseok Bang",
             role: "Chief Creative Officer",
