@@ -347,17 +347,9 @@ export default class Home extends Component {
                 <li key="decipher">
                   <img src={imageRequire("logo_decipher.png")} alt="logo_decipher"/>
                 </li>
-              </Fade>
-            </ul>
-            <ul className="container-fluid">
-              <Fade cascade>
                 <li key="coopmarketing">
                   <img src={imageRequire("logo_coopmarketing.png")} alt="logo_coopmarketing"/>
                 </li>
-                <li className="only-desktop"></li>
-                <li className="only-desktop"></li>
-                <li className="only-desktop"></li>
-                <li className="only-desktop"></li>
               </Fade>
             </ul>
           </Content>
