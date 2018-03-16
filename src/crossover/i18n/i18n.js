@@ -19,7 +19,7 @@ i18n
           title: 'Game X Coin',
           subtitle: 'The Universal Game Currency',
           description: 'By connecting the game with the blockchain, Break the wall between games',
-          introTitle: '블록체인과 게임을 연결하여 게임 간의 벽을 허문다',
+          introTitle: '게임과 현실의 경계를 허물고, \n 더 나아가 게임과 게임이 갖는 \n 경제적 장벽을 무너뜨린다.',
           introDescription: 'Gamecoin Exchange는 게임 간 화폐들을 기축통화인 GXC를 통해 연결하는 것을 목적으로 둡니다.\n' +
           'GXC는 블록체인을 기반으로 게임 개발사, 게이머에게 보다 가치있는 시스템을 제공합니다.',
         },
@@ -30,7 +30,7 @@ i18n
           title: 'Game X Coin',
           subtitle: 'The Universal Game Currency',
           description: 'By connecting the game with the blockchain, Break the wall between games',
-          introTitle: '블록체인과 게임을 연결하여\n게임 간의 벽을 허문다',
+          introTitle: '게임과 현실의 경계를 허물고, \n 더 나아가 게임과 게임이 갖는 \n 경제적 장벽을 무너뜨린다.',
           introDescription: 'Game X Coin는 게임 간 화폐들을 기축통화인 GXC를 통해 연결하는 것을 목적으로 둡니다.\n' +
           'GXC는 블록체인을 기반으로 게임 개발사, 게이머에게 보다 가치있는 시스템을 제공합니다.',
           advantages: {
@@ -100,7 +100,7 @@ i18n
             "설계, 제작하였으며 17년부터 블록체인에 관심을 가져 리서치, 개발을 개인적으로 진행하다 팀에 합류하게 되었다.",
           },
           nss: {
-            name: "Sansung Nam",
+            name: "Samuel Nam",
             role: "Community Director",
             description: "미국 미시간대학교 (앤아버) 경영학과를 졸업한 게임 마케팅 전문가이다. 미국 실리콘벨리에서 커리어를 시작하여 길건너 친구들, 마블퓨처파이트, 리니지2 레볼루션, 스타워즈 포스아레나, 세븐나이츠 등의 글로벌 히트 게임들의 마케팅을 담당하였다. 넷마블게임즈 마케팅 팀장으로 겸직하다가 암호화폐의 매력에 이끌려 블록체인벤처스에 합류하게 되었다.",
           },
@@ -118,6 +118,11 @@ i18n
             name: "Hwanhee Lee",
             role: "Blockchain Developer",
             description: "이환희는 블록체인벤처스의 개발자로서 명지대학교 소프트웨어공학 연구실에 있었으며, 컴퓨터공학과를 졸업했다. 개발 경력 개발 10년 차 경력을 보유하고 있다. 아사달에서 정부 프로젝트에 참여했으며,  한국 최대 웹호스팅 기업 가비아에서 근무하며, 데몬과 서버, 웹 개발을 했다. 커뮤니티 기업 리퍼블릭닷에서 CTO로 백만명이 넘는 커뮤니티 서비스를 개발 및 운영하였다. 개발자들을 위한 소규모 개발 프로젝트 그룹인 인디벨로퍼를 운영하고 있다. 또한 Pacy라는 팀에서 블록체인과 공유경제 모델을 통해 일 관련 협동 조합에 대한 프로젝트를 진행한 바 있다.",
+          },
+          asb: {
+            name: "Sungbin Ahn",
+            role: "Blockchain Developer",
+            description: "안성빈은 명지대학교 데이터테크놀로지학과에 재학 중이다. 주로 파이썬 그리고 R 언어를 활용하여 웹 개 발 프로젝트 그리고 데이터 분석 관련 프로젝트를 진행하였다. 파이썬으로는 비트코인 키워드로 기사 크롤링, fbprophet 머신 러닝 라이브러리를 이용한 주가 예측 사이트, 삼성전자 해커톤에서 개발한 맥주 평가 사이트 등이 있다. R 언어로는 정부 공공 데이터를 활용해 영화 흥행 추이 분석 그리고 전국 범죄 예방 방법 등에 대해 분석하였다. 정치 스타트업 그리고 스포츠 사진 거래 스 타트업에서는 장고 서버 개발자로 일했다. 그 외에도 연애플레이리스트 뉴스레터 외주 경험 그리고 대치동에서 국제학교 학생들에게 pandas, numpy와 같은 파이썬 데이터 분석 라이브러리를 가르친 경험이 있다.",
           },
           ckh: {
             name: "Kwanho Choi",

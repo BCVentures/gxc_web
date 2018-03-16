@@ -121,7 +121,7 @@ export default class Home extends Component {
       { label: "中國語", whitePaperLink: "#", code: "chinese" },
     ];
     const whitepapers = [];
-    const memberNames = ["kwk", "yjh", "nss", "bhs", "cyw", "pje", "lhh"];
+    const memberNames = ["kwk", "yjh", "nss", "bhs", "cyw", "pje", "lhh", "asb"];
     const members = memberNames.map(memberName => {
       return {
         name: t(`member:${memberName}:name`),
@@ -343,9 +343,6 @@ export default class Home extends Component {
                 </li>
                 <li key="pays">
                   <img src={imageRequire("logo_pays.png")} alt="logo_pays"/>
-                </li>
-                <li key="whooper">
-                  <img src={imageRequire("logo_whooper.jpg")} alt="logo_whooper"/>
                 </li>
                 <li key="decipher">
                   <img src={imageRequire("logo_decipher.png")} alt="logo_decipher"/>
