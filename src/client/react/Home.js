@@ -130,7 +130,7 @@ export default class Home extends Component {
         description: t(`member:${memberName}:description`),
       };
     });
-    const advisorNames = ["ckh", "kjh", "kdi", "cjm", "myw"];
+    const advisorNames = ["ckh", "lys", "kjh", "kdi", "cjm", "myw"];
     const advisors = advisorNames.map(name => {
       return {
         name: t(`member:${name}:name`),
