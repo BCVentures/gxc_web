@@ -1,0 +1,13 @@
+<Content className="main-bg">
+            <h1 className="title">{t('main:title')}</h1>
+            <h4 className="description">{t('main:description')}</h4>
+            <div className="left-pattern"/>
+            <div className="center"/>
+            <div className="right-pattern"/>
+          </Content>
+          <Content className="intro">
+            <img className="logo" src={imageRequire('logo.svg')}/>
+            <img src={imageRequire('gxc.svg')} alt="gxc" className="gxc"/>
+            <h2 className="title">{t('main:introTitle')}</h2>
+            <h3 className="description">{t('main:introDescription')}</h3>
+          </Content>

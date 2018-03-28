@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700');
+@import url('/static/fonts/SpoqaHanSans/font.css');
+@import "../common/_variables.scss";
+
+body {
+  font-family: 'Poppins', 'Spoqa Han Sans', sans-serif;
+  word-break: keep-all;
+  color: #4a4a4a;
+  h1, h2, h3, h4, h5, h6 {
+    color: #4a4a4a;
+    line-height: 150%;
+  }
+}
+
+
+.ant-layout-content {
+  background: #fff;
+}
+
+.container-fluid {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 15px;
+  @media (max-width: $screen-xs) {
+    width: 100%;
+  }
+  @media (max-width: $screen-sm) {
+    width: 100%;
+  }
+  @media (max-width: $screen-md) {
+    max-width: 720px;
+  }
+  @media (max-width: $screen-lg) {
+    max-width: 950px;
+  }
+  @media (max-width: $screen-xl) {
+    max-width: 1100px;
+  }
+}
+
+.header {
+  font-family: 'Poppins', sans-serif;
+  //position: fixed;
+  z-index: 10;
+  .header-inner {
+    flex-direction: row;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  width: 100%;
+  position: fixed;
+
+  @media (max-width: $screen-sm) {
+    position: relative;
+  }
+  .header-inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    flex: 1;
+  }
+
+  .ant-menu-item:first-child {
+    padding-left: 0;
+  }
+  .ant-menu-item:last-child {
+    padding-right: 0;
+  }
+  .logo-box {
+    img.logo {
+      height: 26px;
+      //margin-top: 20px;
+      margin-right: 5px;
+    }
+    img.gxc {
+      height: 26px;
+    }
+  }
+  .ant-menu-horizontal {
+    border-bottom: none;
+  }
+  .ant-menu {
+    font-family: 'Poppins', sans-serif;
+  }
+  .ant-menu-item {
+    padding: 0 40px;
+  }
+  .lang-select .ant-select-selection {
+    border: none;
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .only-desktop {
+    display: none;
+  }
+}
+
+@media (min-width: $screen-sm) {
+  .only-mobile {
+    display: none;
+  }
+}
+
+.ant-layout-header {
+  height: 65px;
+  background: white;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+.ant-layout-footer {
+  padding: 76px 0;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+  > img {
+    display: flex;
+    margin: 0 auto;
+    &.logo {
+      width: 160px;
+      height: 120px;
+      margin-bottom: 24px;
+    }
+    &.gxc {
+      width: 81px;
+      height: 28px;
+      margin-bottom: 14px;
+    }
+  }
+  .email {
+    margin-bottom: 20px;
+    a {
+      color: #d2d2d2;
+    }
+  }
+  .copyright {
+    font-size: 10px;
+    color: #d2d2d2;
+  }
+}
+
+@media (max-width: $screen-sm) {
+  h1 {
+    font-size: 25px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  h4 {
+    font-size: 13px;
+  }
+  .container-fluid {
+    padding: 0 10px;
+  }
+}
