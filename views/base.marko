@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>${data.title}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <meta name="description" content="${data.description}">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/manifest.json">
+  <link href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,400,700" rel="stylesheet">
+  <meta name="application-name" content="Game X Coin">
+  <title>Game X Coin</title>
+  <meta name="description" content="Game X Coin - Integrate game with blockchain.">
+  <meta name="image" content="https://www.gamexcoin.io/static/images/logo_with_name.png">
+  <meta name="keywords" content="Blockchain, Game X Coin">
+  <meta property="og:url" content="https://www.gamexcoin.io"/>
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="Game X Coin - Integrate game with blockchain.">
+  <meta property="og:image" content="https://www.gamexcoin.io/static/images/logo_with_name.png">
+  <meta property="og:title" content="Game X Coin">
+  <meta property="fb:app_id" content="152401382129460">
+  <link rel="stylesheet" type="text/css" href="/dist/styles.css">
+</head>
+<body>
+  <div id="root">$!{data.html}</div>
+  <script type="text/javascript">window.__INITIAL_STATE__ = JSON.stringify(${data.initialState});</script>
+  <script src="/dist/bundle.js"></script>
+</body>
+</html>

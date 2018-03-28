@@ -1,0 +1,89 @@
+$blue: #046fbe;
+$green: #32ba21;
+$red: #ff4b34;
+$yellow: #ffd110;
+$logo-size: 130px;
+$font-size: $logo-size/4;
+$animation-duration: 1.2s;
+$animation-delay: $animation-duration/3;
+
+#logo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .logo-title {
+    font-size: $font-size;
+    text-align: center;
+    opacity: 0;
+    transition-duration: $animation-duration*2;
+  }
+  &.active {
+    .logo {
+      top: 0;
+      opacity: 1;
+      transition-timing-function: ease-in-out;
+      transition-duration: $animation-duration;
+      .box {
+        &#green {
+          transform: rotate3d(0, 1, 0, 180deg);
+          transition-delay: $animation-delay;
+        }
+        &#red {
+          transform: rotate3d(1, 0, 0, -180deg);
+          transition-delay: 0s;
+        }
+      }
+    }
+    .logo-title {
+      transition-timing-function: ease-in-out;
+      transform: translate(0, -40%);
+      opacity: 1;
+    }
+  }
+  .logo {
+    position: relative;
+    width: $logo-size;
+    height: $logo-size;
+    top: 30px;
+    opacity: 0;
+    transform: rotate(45deg);
+    .box {
+      transform: rotate3d(0, 0, 0, 0deg);
+      transition-timing-function: ease-in-out;
+      transition-duration: $animation-duration;
+      &#blue {
+        position: absolute;
+        background: $blue;
+        width: 50%;
+        height: 50%;
+        top: 0;
+        left: 0;
+      }
+      &#green {
+        position: absolute;
+        background: $green;
+        width: 50%;
+        height: 50%;
+        transform-origin: top right;
+        transition-delay: 0s;
+      }
+      &#red {
+        position: absolute;
+        background: $red;
+        width: 50%;
+        height: 50%;
+        transform-origin: center bottom;
+        transition-delay: $animation-delay;
+        #yellow {
+          width: 0;
+          height: 0;
+          border: 0 solid transparent;
+          border-right-width: 0;
+          border-left-width: ($logo-size/2);
+          border-top: ($logo-size/2) solid $yellow;
+        }
+      }
+    }
+  }
+}
