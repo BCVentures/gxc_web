@@ -94,13 +94,13 @@ body {
 
 @media (max-width: $screen-sm) {
   .only-desktop {
-    display: none;
+    display: none !important;
   }
 }
 
 @media (min-width: $screen-sm) {
   .only-mobile {
-    display: none;
+    display: none !important;
   }
 }
 

@@ -16,6 +16,7 @@ export default class LogoAnimation extends Component {
 
   render() {
     const { active } = this.state;
+
     return (
       <div id="logo" className={active ? 'active' : ''}>
         <div className="logo">
