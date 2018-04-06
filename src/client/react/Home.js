@@ -100,7 +100,6 @@ export default class Home extends Component {
   };
 
   openMobileSidebar = () => {
-    console.log(this.sidebarOpen);
     this.sidebarOpen = !this.sidebarOpen;
   };
 
@@ -109,7 +108,6 @@ export default class Home extends Component {
   };
 
   render() {
-    console.log('render...');
     const Search = Input.Search;
     const { Header, Footer, Content } = Layout;
     const Option = Select.Option;
@@ -197,7 +195,17 @@ export default class Home extends Component {
         </Header>
         <Content className="" id="main-content">
 
-          <Content className="main-bg">
+          <Content className="main only-desktop">
+            <video autoPlay preload>
+              <source src="/static/images/GXC_Video.mov" type="video/mp4" />
+            </video>
+            <div className="contents">
+              <h1 className="title">{t('main:title')}<br/>{t('main:subtitle')}</h1>
+              <h4 className="description">{t('main:description')}</h4>
+            </div>
+          </Content>
+
+          <Content className="main main-bg only-mobile">
             <div className="overlay" />
             <div className="contents">
               <h1 className="title">{t('main:title')}<br/>{t('main:subtitle')}</h1>
