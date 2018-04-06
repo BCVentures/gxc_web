@@ -40,7 +40,9 @@
     overflow: hidden;
     &.only-desktop {
       video {
+        position: absolute;
         min-height: 100vh;
+        min-width: 100%;
       }
       .contents {
         left: 5%;
