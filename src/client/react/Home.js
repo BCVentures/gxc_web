@@ -201,7 +201,6 @@ export default class Home extends Component {
               <source src="/static/images/GXC_Video.mov" type="video/mp4"/>
             </video>
           </Content>
-
           <Content className="main main-bg only-mobile">
             <div className="overlay"/>
             <div className="contents">
@@ -209,16 +208,11 @@ export default class Home extends Component {
               <h4 className="description">{t('main:description')}</h4>
             </div>
           </Content>
-
-
-
           <Content className="advantages section-type-1">
-                      <Fade duration={2000}>
-            <Content className="intro">
-              <LogoAnimation/>
-            </Content>
-          </Fade>
+            <Fade duration={2000}>
+            </Fade>
             <Row>
+              <h1 className="title">GXC</h1>
               <Col xs={24} className="ecosystem">
                 <Fade duration={2000}>
                   <img src={imageRequire('gxc_ecosystem.png')} alt="gxc_ecosystem"/>
@@ -228,7 +222,6 @@ export default class Home extends Component {
             <Row>
               <h1 className="title">{t("main:benefits:title")}</h1>
               <Col xs={24} sm={8} md={6} className="reward">
-
                 <Fade duration={2000}>
                   <div className="container-fluid">
                     <img src={imageRequire('pictogram_reward.png')} alt="pictorgram_reward"/>
@@ -290,16 +283,14 @@ export default class Home extends Component {
                     We’re all set to navigate the uncharted waters of in-game items trading and<br></br>
                     we invite you to embark on this journey with us</p>
                 </Col>
-
               </Row>
             </Fade>
           </Content>
-
           <Content className="section-type-2 products wallet" id="product">
             <Fade cascade duration={2000}>
               <Row className="wallet">
                 <Col md={12} sm={24} className="description">
-                  <div className="sub-title">Wallet</div>
+                  <div className="sub-title">SDK Toolbox</div>
                   <p>GXC is the future of the gaming industry that is happening right now.<br></br>
                     We are creating a new gaming economy and giving every gamer the power<br></br>
                     to turn virtual items into real assets and take their passion for gaming.<br></br>
@@ -307,7 +298,7 @@ export default class Home extends Component {
                     we invite you to embark on this journey with us</p>
                 </Col>
                 <Col md={12} sm={24} className="image">
-                  <img src={imageRequire('wallet.png')} className="wallet" alt="wallet"/>
+                  <img className="macbook" src={imageRequire('wallet.png')} alt="macbook"/>
                 </Col>
               </Row>
             </Fade>
@@ -341,7 +332,7 @@ export default class Home extends Component {
                     we invite you to embark on this journey with us</p>
                 </Col>
                 <Col md={12} sm={24} className="image">
-                  <img src={imageRequire('macbook.png')} className="macbook" alt="macbook"/>
+                  <img className="macbook" src={imageRequire('macbook.png')} alt="macbook"/>
                 </Col>
               </Row>
             </Fade>
@@ -622,7 +613,7 @@ export default class Home extends Component {
                         Dept of Communication & Media</p></h3>
                     </div>
                   </div>
-                </Fade>`
+                </Fade>
               </Col>
               <Col xs={24} sm={8} md={6} className="commission left">
                 <Fade duration={2000}>
@@ -798,9 +789,19 @@ export default class Home extends Component {
               </Col>
             </Row>
           </Content>
-          <Content className="subscribe section-type-1">
-            <h1 className="title">{t('main:subscribe:title')}</h1>
-            <h3 className="description">{t('main:subscribe:description')}</h3>
+          <Content className="advantages2 section-type-1 only-mobile">
+            <Row>
+              <h1 className="title">Roadmap</h1>
+              <Col xs={24} className="ecosystem">
+                <Fade duration={2000}>
+                  <img src={imageRequire('roadmap_desktop2.png')} alt="roadmap_desktop2"/>
+                </Fade>
+              </Col>
+            </Row>
+          </Content>
+          <Content className="subscribe section-type-1 ">
+            <h1 className="title">{t('main:subscribe:title')}</h1><br/>
+            <h3 className="description">Enter your email address to get the GXC news.</h3>
             <Search type="email" placeholder="E-Mail Address" enterButton="Subscribe"
                     onChange={e => this.subscribeEmail = e.target.value} value={this.subscribeEmail}
                     onSearch={this.onEnterEmail.bind(this)}/>
