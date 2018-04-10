@@ -416,7 +416,7 @@
         }
         p {
           margin-top: 36px;
-          font-size: 20px;
+
         }
       }
     }
@@ -441,10 +441,14 @@
         }
         p {
           margin-top: 36px;
-          font-size: 20px;
+
         }
       }
     }
+  }
+
+  .roadmap_mobile {
+    width:100%;
   }
 
   .wallet {
@@ -510,7 +514,15 @@
     }
   }
 
+
+  @media (min-width:1200px) {
+    p{
+      font-size: 20px;
+    }
+  }
+
   @media (max-width: $screen-xl) {
+
     .main-bg {
       .contents {
         .title {
@@ -540,6 +552,7 @@
     }
   }
   @media (max-width: $screen-md) {
+
     .header {
       .logo-box {
         img {
@@ -558,6 +571,7 @@
     }
   }
   @media (max-width: $screen-sm) {
+
     .section-type-1 {
       padding: 30px 15px;
     }

@@ -277,10 +277,10 @@ export default class Home extends Component {
                 </Col>
                 <Col md={12} sm={24} className="description">
                   <div className="sub-title">DEX</div>
-                  <p>GXC is the future of the gaming industry that is happening right now.<br></br>
-                    We are creating a new gaming economy and giving every gamer the power<br></br>
-                    to turn virtual items into real assets and take their passion for gaming.<br></br>
-                    We’re all set to navigate the uncharted waters of in-game items trading and<br></br>
+                  <p>GXC is the future of the gaming industry that is happening right now.<br/>
+                    We are creating a new gaming economy and giving every gamer the power
+                    to turn virtual items into real assets and take their passion for gaming.
+                    We’re all set to navigate the uncharted waters of in-game items trading and
                     we invite you to embark on this journey with us</p>
                 </Col>
               </Row>
@@ -359,11 +359,10 @@ export default class Home extends Component {
               <Col xs={24} sm={12} md={8} className="p2p right">
                 <Fade duration={2000}>
                   <div className="container-fluid2">
-                    <img src={imageRequire('logo_entermate.png')} alt="logo_entermate"/>
+                    <img src={imageRequire('logo_entermate.png')} alt="logo_entermate" />
                     <div className="right texts">
                       <h2 className="title">Entermate</h2>
-                      <h3 className="description">XLGames is the world’s premier publisher
-                        and developer of massively online games.
+                      <h3 className="description">XLGames is the world’s premier publisher and developer of massively online games.
                         Established in 1997 in Korea,
                         XLGames quickly became the leader
                         in online games with the blockchain</h3>
@@ -789,12 +788,22 @@ export default class Home extends Component {
               </Col>
             </Row>
           </Content>
+          <Content className="advantages2 section-type-1 only-desktop">
+            <Row>
+              <h1 className="title">Roadmap</h1>
+              <Col xs={24} className="ecosystem">
+                <Fade duration={2000}>
+                  <img className='roadmap_desktop' src={imageRequire('roadmap_desktop.png')} alt="roadmap_desktop"/>
+                </Fade>
+              </Col>
+            </Row>
+          </Content>
           <Content className="advantages2 section-type-1 only-mobile">
             <Row>
               <h1 className="title">Roadmap</h1>
               <Col xs={24} className="ecosystem">
                 <Fade duration={2000}>
-                  <img src={imageRequire('roadmap_desktop2.png')} alt="roadmap_desktop2"/>
+                  <img className='roadmap_mobile' src={imageRequire('roadmap_mobile2.png')} alt="roadmap_mobile2"/>
                 </Fade>
               </Col>
             </Row>
