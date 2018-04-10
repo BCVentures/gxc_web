@@ -36,6 +36,12 @@ i18n
           advantages: {
             title: 'OUR MISSION',
           },
+          benefits: {
+            title: 'GXC Benefits',
+          },
+          products: {
+            title: 'GXC Product',
+          },
           reward: {
             title: 'Reward',
             description: 'GXC를 통해 어떠한 게임을 플레이 하든 게임에서 얻은 보상을 온전히 소유할 수 있습니다.',

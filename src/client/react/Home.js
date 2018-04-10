@@ -1,20 +1,21 @@
-import React, { Component } from 'react';
-import { Layout, Menu, Select, Input, Icon, Row, Col, message } from 'antd';
-import { translate } from 'react-i18next';
-import { Link } from "react-router";
-import { Drawer, List } from 'antd-mobile';
-import { observer, inject } from 'mobx-react';
-import { observable } from 'mobx';
+import React, {Component} from 'react';
+import {Layout, Menu, Select, Input, Icon, Row, Col, message} from 'antd';
+import {translate} from 'react-i18next';
+import {Link} from "react-router";
+import {Drawer, List} from 'antd-mobile';
+import {observer, inject} from 'mobx-react';
+import {observable} from 'mobx';
 import ReactGA from "react-ga";
 import Fade from 'react-reveal/Fade';
-import { imageRequire } from '../../utils/universalRequire';
+import {imageRequire} from '../../utils/universalRequire';
 import LogoAnimation from './component/LogoAnimation';
+import SubscribePhoto from './component/SubscribeFooter';
 import i18n from "../../crossover/i18n/i18n";
-import { subscribe } from "../../crossover/api/subscribeApi";
-import { Flip } from "react-reveal";
+import {subscribe} from "../../crossover/api/subscribeApi";
+import {Flip} from "react-reveal";
 
 
-@translate(['main', 'member', 'error'], { wait: true })
+@translate(['main', 'member', 'error'], {wait: true})
 @observer
 export default class Home extends Component {
   @observable sidebarOpen = false;
@@ -109,14 +110,14 @@ export default class Home extends Component {
 
   render() {
     const Search = Input.Search;
-    const { Header, Footer, Content } = Layout;
+    const {Header, Footer, Content} = Layout;
     const Option = Select.Option;
     const t = this.t;
     const languages = [
-      { label: "English", whitePaperLink: "#", code: "english" },
-      { label: "日本語", whitePaperLink: "#", code: "japanese" },
-      { label: "한국어", whitePaperLink: "#", code: "korean" },
-      { label: "中國語", whitePaperLink: "#", code: "chinese" },
+      {label: "English", whitePaperLink: "#", code: "english"},
+      {label: "日本語", whitePaperLink: "#", code: "japanese"},
+      {label: "한국어", whitePaperLink: "#", code: "korean"},
+      {label: "中國語", whitePaperLink: "#", code: "chinese"},
     ];
     const whitepapers = [];
     const memberNames = ["kwk", "yjh", "nss", "bhs", "cyw", "pje", "lhh", "asb"];
@@ -177,64 +178,60 @@ export default class Home extends Component {
               theme="white"
               mode="horizontal"
               className="only-desktop"
-              style={{ lineHeight: '64px' }}
+              style={{lineHeight: '64px'}}
             >
               <Menu.Item key="1"><a className="nav-link" href="#whitepaper">{t('Whitepaper')}</a></Menu.Item>
               <Menu.Item key="2"><a className="nav-link" href="#team">Team</a></Menu.Item>
               <Menu.Item key="3"><a className="nav-link" href="#roadmap">Roadmap</a></Menu.Item>
               <Menu.Item className="lang-select">
-                <Select defaultValue={i18n.language} style={{ width: 120 }}
+                <Select defaultValue={i18n.language} style={{width: 120}}
                         onChange={this.handleChangeLang.bind(this)}>
                   <Option value="KR">KR</Option>
                 </Select>
               </Menu.Item>
             </Menu>
             <Icon className="only-mobile" type="menu-fold" onClick={this.openMobileSidebar}
-                  style={{ display: "none" }}/>
+                  style={{display: "none"}}/>
           </div>
         </Header>
         <Content className="" id="main-content">
 
           <Content className="main only-desktop">
             <video autoPlay preload>
-              <source src="/static/images/GXC_Video.mov" type="video/mp4" />
+              <source src="/static/images/GXC_Video.mov" type="video/mp4"/>
             </video>
-            <div className="contents">
-              <h1 className="title">{t('main:title')}<br/>{t('main:subtitle')}</h1>
-              <h4 className="description">{t('main:description')}</h4>
-            </div>
           </Content>
 
           <Content className="main main-bg only-mobile">
-            <div className="overlay" />
+            <div className="overlay"/>
             <div className="contents">
               <h1 className="title">{t('main:title')}<br/>{t('main:subtitle')}</h1>
               <h4 className="description">{t('main:description')}</h4>
             </div>
           </Content>
 
-          <Fade duration={2000}>
-            <Content className="intro">
-              <LogoAnimation />
-              <h2 className="title">{t('main:introTitle')}</h2>
-              <h4 className="description">{t('main:introDescription')}</h4>
-            </Content>
-          </Fade>
+
 
           <Content className="advantages section-type-1">
-            <h1 className="title">{t("main:advantages:title")}</h1>
+                      <Fade duration={2000}>
+            <Content className="intro">
+              <LogoAnimation/>
+            </Content>
+          </Fade>
             <Row>
               <Col xs={24} className="ecosystem">
                 <Fade duration={2000}>
-                  <img src={imageRequire('gxc_ecosystem.png')} alt="gxc_ecosystem" />
+                  <img src={imageRequire('gxc_ecosystem.png')} alt="gxc_ecosystem"/>
                 </Fade>
               </Col>
             </Row>
             <Row>
-              <Col xs={24} sm={8} className="reward">
+              <h1 className="title">{t("main:benefits:title")}</h1>
+              <Col xs={24} sm={8} md={6} className="reward">
+
                 <Fade duration={2000}>
                   <div className="container-fluid">
-                  <img src={imageRequire('pictogram_reward.png')} alt="pictorgram_reward" />
+                    <img src={imageRequire('pictogram_reward.png')} alt="pictorgram_reward"/>
                     <div className="texts">
                       <h2 className="title">{t('main:reward:title')}</h2>
                       <h3 className="description">{t('main:reward:description')}</h3>
@@ -242,10 +239,10 @@ export default class Home extends Component {
                   </div>
                 </Fade>
               </Col>
-              <Col xs={24} sm={8} className="p2p right">
+              <Col xs={24} sm={8} md={6} className="p2p right">
                 <Fade duration={2000}>
                   <div className="container-fluid">
-                    <img src={imageRequire('pictogram_p2p.png')} alt="pictorgram_p2p" />
+                    <img src={imageRequire('pictogram_p2p.png')} alt="pictorgram_p2p"/>
                     <div className="right texts">
                       <h2 className="title">{t('main:p2p:title')}</h2>
                       <h3 className="description">{t('main:p2p:description')}</h3>
@@ -253,25 +250,252 @@ export default class Home extends Component {
                   </div>
                 </Fade>
               </Col>
-              <Col xs={24} sm={8} className="commission left">
+              <Col xs={24} sm={8} md={6} className="commission left">
                 <Fade duration={2000}>
                   <div className="container-fluid">
-                    <img className="right" src={imageRequire('pictogram_commission.png')} alt="commission" />
+                    <img className="right" src={imageRequire('pictogram_commission.png')} alt="commission"/>
                     <div className="texts">
                       <h2 className="title">{t('main:commission:title')}</h2>
                       <h3 className="description">{t('main:commission:description')}</h3>
                     </div>
                   </div>
-                </Fade>`
+                </Fade>
+              </Col>
+              <Col xs={24} sm={8} md={6} className="commission left">
+                <Fade duration={2000}>
+                  <div className="container-fluid">
+                    <img className="right" src={imageRequire('pictogram_platformfees.png')} alt="commission"/>
+                    <div className="texts">
+                      <h2 className="title">{t('main:commission:title')}</h2>
+                      <h3 className="description">{t('main:commission:description')}</h3>
+                    </div>
+                  </div>
+                </Fade>
               </Col>
             </Row>
           </Content>
 
+          <Content className="section-type-2 products dex" id="product">
+            <h1 className="title">{t('main:products.title')}</h1>
+            <Fade cascade duration={2000}>
+              <Row className="product">
+                <Col md={12} sm={24} className="image">
+                  <img src={imageRequire('dex.png')} className="dex" alt="dex"/>
+                </Col>
+                <Col md={12} sm={24} className="description">
+                  <div className="sub-title">DEX</div>
+                  <p>GXC is the future of the gaming industry that is happening right now.<br></br>
+                    We are creating a new gaming economy and giving every gamer the power<br></br>
+                    to turn virtual items into real assets and take their passion for gaming.<br></br>
+                    We’re all set to navigate the uncharted waters of in-game items trading and<br></br>
+                    we invite you to embark on this journey with us</p>
+                </Col>
+
+              </Row>
+            </Fade>
+          </Content>
+
+          <Content className="section-type-2 products wallet" id="product">
+            <Fade cascade duration={2000}>
+              <Row className="wallet">
+                <Col md={12} sm={24} className="description">
+                  <div className="sub-title">Wallet</div>
+                  <p>GXC is the future of the gaming industry that is happening right now.<br></br>
+                    We are creating a new gaming economy and giving every gamer the power<br></br>
+                    to turn virtual items into real assets and take their passion for gaming.<br></br>
+                    We’re all set to navigate the uncharted waters of in-game items trading and<br></br>
+                    we invite you to embark on this journey with us</p>
+                </Col>
+                <Col md={12} sm={24} className="image">
+                  <img src={imageRequire('wallet.png')} className="wallet" alt="wallet"/>
+                </Col>
+              </Row>
+            </Fade>
+          </Content>
+          <Content className="section-type-2 products dex" id="product">
+            <Fade cascade duration={2000}>
+              <Row className="product">
+                <Col md={12} sm={24} className="image">
+                  <img src={imageRequire('block_explorer.png')} className="block_explorer" alt="block_explorer"/>
+                </Col>
+                <Col md={12} sm={24} className="description">
+                  <div className="sub-title">GXC Block Explorer</div>
+                  <p>GXC is the future of the gaming industry that is happening right now.<br></br>
+                    We are creating a new gaming economy and giving every gamer the power<br></br>
+                    to turn virtual items into real assets and take their passion for gaming.<br></br>
+                    We’re all set to navigate the uncharted waters of in-game items trading and<br></br>
+                    we invite you to embark on this journey with us</p>
+                </Col>
+              </Row>
+            </Fade>
+          </Content>
+          <Content className="section-type-2 products wallet" id="product">
+            <Fade cascade duration={2000}>
+              <Row className="wallet">
+                <Col md={12} sm={24} className="description">
+                  <div className="sub-title">SDK Toolbox</div>
+                  <p>GXC is the future of the gaming industry that is happening right now.<br></br>
+                    We are creating a new gaming economy and giving every gamer the power<br></br>
+                    to turn virtual items into real assets and take their passion for gaming.<br></br>
+                    We’re all set to navigate the uncharted waters of in-game items trading and<br></br>
+                    we invite you to embark on this journey with us</p>
+                </Col>
+                <Col md={12} sm={24} className="image">
+                  <img src={imageRequire('macbook.png')} className="macbook" alt="macbook"/>
+                </Col>
+              </Row>
+            </Fade>
+          </Content>
+
+          <Content className="advantages section-type-1">
+            <Row>
+              <h1 className="title">Parteners</h1>
+              <Col xs={24} sm={12} md={8} className="reward">
+                <Fade duration={2000}>
+                  <div className="container-fluid2">
+                    <img src={imageRequire('logo_xlgames.png')} alt="logo_xlgames"/>
+                    <div className="texts">
+                      <h2 className="title">XL Games</h2>
+                      <h3 className="description">XLGames is the world’s premier publisher
+                        and developer of massively online games.
+                        Established in 1997 in Korea,
+                        XLGames quickly became the leader
+                        in online games with the blockchain.</h3>
+                    </div>
+                  </div>
+                </Fade>
+              </Col>
+              <Col xs={24} sm={12} md={8} className="p2p right">
+                <Fade duration={2000}>
+                  <div className="container-fluid2">
+                    <img src={imageRequire('logo_entermate.png')} alt="logo_entermate"/>
+                    <div className="right texts">
+                      <h2 className="title">Entermate</h2>
+                      <h3 className="description">XLGames is the world’s premier publisher
+                        and developer of massively online games.
+                        Established in 1997 in Korea,
+                        XLGames quickly became the leader
+                        in online games with the blockchain</h3>
+                    </div>
+                  </div>
+                </Fade>
+              </Col>
+              <Col xs={24} sm={12} md={8} className="commission left">
+                <Fade duration={2000}>
+                  <div className="container-fluid2">
+                    <img className="right" src={imageRequire('logo_supercat.png')} alt="logo_supercat"/>
+                    <div className="texts">
+                      <h2 className="title">Supercat</h2>
+                      <h3 className="description">XLGames is the world’s premier publisher
+                        and developer of massively online games.
+                        Established in 1997 in Korea,
+                        XLGames quickly became the leader
+                        in online games with the blockchain</h3>
+                    </div>
+                  </div>
+                </Fade>
+              </Col>
+            </Row>
+            <Row>
+              <Col xs={24} sm={12} md={8} className="reward">
+                <Fade duration={2000}>
+                  <div className="container-fluid2">
+                    <img src={imageRequire('logo_superplanet.png')} alt="logo_superplanet"/>
+                    <div className="texts">
+                      <h2 className="title">Superplanet</h2>
+                      <h3 className="description">XLGames is the world’s premier publisher
+                        and developer of massively online games.
+                        Established in 1997 in Korea,
+                        XLGames quickly became the leader
+                        in online games with the blockchain</h3>
+                    </div>
+                  </div>
+                </Fade>
+              </Col>
+              <Col xs={24} sm={12} md={8} className="p2p right">
+                <Fade duration={2000}>
+                  <div className="container-fluid2">
+                    <img src={imageRequire('logo_cointong.png')} alt="logo_cointong"/>
+                    <div className="right texts">
+                      <h2 className="title">Cointong</h2>
+                      <h3 className="description">XLGames is the world’s premier publisher
+                        and developer of massively online games.
+                        Established in 1997 in Korea,
+                        XLGames quickly became the leader
+                        in online games with the blockchain</h3>
+                    </div>
+                  </div>
+                </Fade>
+              </Col>
+              <Col xs={24} sm={12} md={8} className="commission left">
+                <Fade duration={2000}>
+                  <div className="container-fluid2">
+                    <img className="right" src={imageRequire('logo_seum.png')} alt="logo_seum"/>
+                    <div className="texts">
+                      <h2 className="title">SEUM</h2>
+                      <h3 className="description">XLGames is the world’s premier publisher
+                        and developer of massively online games.
+                        Established in 1997 in Korea,
+                        XLGames quickly became the leader
+                        in online games with the blockchain</h3>
+                    </div>
+                  </div>
+                </Fade>
+              </Col>
+              <Col xs={24} sm={12} md={8} className="reward">
+                <Fade duration={2000}>
+                  <div className="container-fluid2">
+                    <img src={imageRequire('logo_hyperithm.png')} alt="logo_hyperithm"/>
+                    <div className="texts">
+                      <h2 className="title">Hyperithm</h2>
+                      <h3 className="description">XLGames is the world’s premier publisher
+                        and developer of massively online games.
+                        Established in 1997 in Korea,
+                        XLGames quickly became the leader
+                        in online games with the blockchain</h3>
+                    </div>
+                  </div>
+                </Fade>
+              </Col>
+              <Col xs={24} sm={12} md={8} className="p2p right">
+                <Fade duration={2000}>
+                  <div className="container-fluid2">
+                    <img src={imageRequire('logo_besuccess.png')} alt="logo_besuccess"/>
+                    <div className="right texts">
+                      <h2 className="title">beSUCCESS</h2>
+                      <h3 className="description">XLGames is the world’s premier publisher
+                        and developer of massively online games.
+                        Established in 1997 in Korea,
+                        XLGames quickly became the leader
+                        in online games with the blockchain</h3>
+                    </div>
+                  </div>
+                </Fade>
+              </Col>
+              <Col xs={24} sm={12} md={8} className="commission left">
+                <Fade duration={2000}>
+                  <div className="container-fluid2">
+                    <img className="right" src={imageRequire('logo_pays.png')} alt="logo_pays"/>
+                    <div className="texts">
+                      <h2 className="title">Pays</h2>
+                      <h3 className="description">XLGames is the world’s premier publisher
+                        and developer of massively online games.
+                        Established in 1997 in Korea,
+                        XLGames quickly became the leader
+                        in online games with the blockchain</h3>
+                    </div>
+                  </div>
+                </Fade>
+              </Col>
+            </Row>
+          </Content>
           <Content className="whitepaper" id="whitepaper">
             <Fade cascade duration={2000}>
-              <img src={imageRequire('logo_white.svg')} className="logo" alt="logo"/>
               <h1 className="title">{t('main:whitepaper.title')}</h1>
-              <h3 className="description">{this.t('main:whitepaper.description')}</h3>
+              <img src={imageRequire('logo_white.svg')} className="logo" alt="logo"/>
+              <h3 className="description">Game X Coin aims to connect currencies between games via the GXC, the main
+                currency.
+                <p>GXC provides a more valuable system for game developers and gamers based on the blockchain.</p></h3>
               <div className="links">
                 {/* languages.map((language, index) => {
                   return (<Link
@@ -281,85 +505,298 @@ export default class Home extends Component {
                     className={`link-to-whitepaper ${language.code}`}
                   >{language.label}</Link>);
                 }) */}
-                <span className="comming_soon">COMING SOON</span>
               </div>
+              <Col className="p2p right">
+                <img className="right" src={imageRequire('whitepaper_english.png')} alt="whitepaper_english"/>
+                <img className="right" src={imageRequire('whitepaper_japanese.png')} alt="whitepaper_japanese"/>
+                <img className="right" src={imageRequire('whitepaper_korean.png')} alt="whitepaper_korean"/>
+                <img className="right" src={imageRequire('whitepaper_chinese.png')} alt="whitepaper_chinese"/>
+              </Col>
             </Fade>
           </Content>
-          <Content className="members section-type-1" id="team">
-            <h1 className="title">{t("main:member:title")}</h1>
-            <ul>
-              {members.map(member => this.renderMember(member))}
-            </ul>
+          <Content className="advantages section-type-1">
+            <h1 className="title">Team</h1>
+            <Row>
+              <Col xs={24} sm={8} md={6} className="p2p right">
+                <Fade duration={2000}>
+                  <div className="container-fluid">
+                    <img src={imageRequire('photo_kwk.png')} alt="photo_kwk"/>
+                    <div className="right texts">
+                      <h2 className="title">Woongkyum Kim</h2>
+                      <h3 className="description">CEO, Founder<p>CEO at Whooper
+                        20+ s/w engineer
+                        (payment/game)
+                        Yonsei University
+                        Dept of Computer Science</p></h3>
+                    </div>
+                  </div>
+                </Fade>
+              </Col>
+              <Col xs={24} sm={8} md={6} className="p2p right">
+                <Fade duration={2000}>
+                  <div className="container-fluid">
+                    <img src={imageRequire('photo_yjh.png')} alt="photo_yjh"/>
+                    <div className="right texts">
+                      <h2 className="title">Jinhwan Yang</h2>
+                      <h3 className="description">CTO<p>Mentor at Decipher
+                        CTO at Qpick
+                        CTO at Profound
+                        Seoul National University
+                        Dept of BA / CS</p></h3>
+                    </div>
+                  </div>
+                </Fade>
+              </Col>
+              <Col xs={24} sm={8} md={6} className="commission left">
+                <Fade duration={2000}>
+                  <div className="container-fluid">
+                    <img className="right" src={imageRequire('photo_jay.png')} alt="photo_jay"/>
+                    <div className="texts">
+                      <h2 className="title">Jay Heo</h2>
+                      <h3 className="description">COO<p>Playnery, CEO
+                        Nsurfin, CEO
+                        Gala-Net, Senior Director
+                        Yonsei University
+                        Dept of Political Science</p></h3>
+                    </div>
+                  </div>
+                </Fade>
+              </Col>
+              <Col xs={24} sm={8} md={6} className="commission left">
+                <Fade duration={2000}>
+                  <div className="container-fluid">
+                    <img className="right" src={imageRequire('photo_nss.png')} alt="photo_nss"/>
+                    <div className="texts">
+                      <h2 className="title">Samuel Nam</h2>
+                      <h3 className="description">Community Director<p>Lead Marketer at Netmarble
+                        Marketer at Yodo1 Games
+                        Analyst at Cisco Systems
+                        University of Michigan
+                        Ross School of Business</p></h3>
+                    </div>
+                  </div>
+                </Fade>
+              </Col>
+            </Row>
+            <Row>
+              <Col xs={24} sm={8} md={6} className="p2p right">
+                <Fade duration={2000}>
+                  <div className="container-fluid">
+                    <img src={imageRequire('photo_bhs.png')} alt="photo_bhs"/>
+                    <div className="right texts">
+                      <h2 className="title">Hyunseok Bang</h2>
+                      <h3 className="description">CCO<p>Designer at beSUCCESS
+                        Planning Executive at Qpick
+                        CCO at Profound
+                        Seoultech
+                        Dept of Visual Design</p></h3>
+                    </div>
+                  </div>
+                </Fade>
+              </Col>
+              <Col xs={24} sm={8} md={6} className="p2p right">
+                <Fade duration={2000}>
+                  <div className="container-fluid">
+                    <img src={imageRequire('photo_cyw.png')} alt="photo_cyw"/>
+                    <div className="right texts">
+                      <h2 className="title">Yeonwoo Chu</h2>
+                      <h3 className="description">CPO<p>CEO at CORO Studio
+                        Leader Developer at Mobion
+                        Leader Developer at Irugo
+                        University of Seoul
+                        Dept of Civil Engineering</p></h3>
+                    </div>
+                  </div>
+                </Fade>
+              </Col>
+              <Col xs={24} sm={8} md={6} className="commission left">
+                <Fade duration={2000}>
+                  <div className="container-fluid">
+                    <img className="right" src={imageRequire('photo_pje.png')} alt="photo_pje"/>
+                    <div className="texts">
+                      <h2 className="title">Jieun Park</h2>
+                      <h3 className="description">Management Support Director<p>COO at Whooper
+                        Launched multiple fintech and
+                        mobile services
+                        Sookmyung Womans University
+                        Dept of Communication & Media</p></h3>
+                    </div>
+                  </div>
+                </Fade>`
+              </Col>
+              <Col xs={24} sm={8} md={6} className="commission left">
+                <Fade duration={2000}>
+                  <div className="container-fluid">
+                    <img className="right" src={imageRequire('photo_lhh.png')} alt="photo_lhh"/>
+                    <div className="texts">
+                      <h2 className="title">Hwanhee Lee</h2>
+                      <h3 className="description">Developer<p>Developer at Asadal
+                        Developer at Gabia
+                        CTO at Republic Dot
+                        Myungji University
+                        Dept of Computer Science</p></h3>
+                    </div>
+                  </div>
+                </Fade>
+              </Col>
+            </Row>
+            <Row>
+              <Col xs={24} sm={8} md={6} className="commission left">
+                <Fade duration={2000}>
+                  <div className="container-fluid">
+                    <img className="right" src={imageRequire('photo_asb.png')} alt="photo_asb"/>
+                    <div className="texts">
+                      <h2 className="title">Richard Ahn</h2>
+                      <h3 className="description">Developer<p>
+                        Developer at NextOpt
+                        Myungji University
+                        Dept of Computer Science</p></h3>
+                    </div>
+                  </div>
+                </Fade>
+              </Col>
+            </Row>
           </Content>
-          <Content className="advisors section-type-1">
-            <h1 className="title">{t("main:advisor:title")}</h1>
-            <div className="container-fluid">
-              <Row gutter={32}>
-                {advisors.map(member => this.renderAdvisor(member))}
-              </Row>
-            </div>
-          </Content>
-          <Content className="roadmap section-type-1 container-fluid" id="roadmap">
-            <h1 className="title">{t("main:roadmap:title")}</h1>
-            <div className="content">
-            <img src={imageRequire('roadmap_desktop.png')} alt="roadmap" className="roadmap_image only-desktop" />
-            <img src={imageRequire('roadmap_mobile.png')} alt="roadmap" className="roadmap_image only-mobile" />
-              { /*roadmaps.map((roadmap, key) => {
-                return (
-                  <Row gutter={16} key={key}>
-                    <Col className="quarter" span={6} offset={key % 2 === 0 ? 3 : 16}>
-                      <ul className="title">
-                        {roadmap.map((e, index) => {
-                          return <li key={index}>{e}</li>;
-                        })}
-                      </ul>
-                    </Col>
-                  </Row>
-                );
-              }) */}
-            </div>
-          </Content>
-
-          <Content className="partners section-type-1">
-            <h1 className="title">{t("main:partner:title")}</h1>
-            <ul className="container-fluid">
-              <Fade cascade>
-                <li key="xlgames" className="xlgames">
-                  <img src={imageRequire("logo_xlgames.png")} alt="logo_xlgames"/>
-                </li>
-                <li key="superplanet">
-                  <img src={imageRequire("logo_superplanet.png")} alt="logo_superplanet"/>
-                </li>
-                <li key="supercat" className="supercat">
-                  <img src={imageRequire("logo_supercat.png")} alt="logo_supecat"/>
-                </li>
-                <li key="cointong">
-                  <img src={imageRequire("logo_cointong.png")} alt="logo_cointong"/>
-                </li>
-                <li key="seum" className="seum">
-                  <img src={imageRequire("logo_seum.png")} alt="logo_seum"/>
-                </li>
-              </Fade>
-            </ul>
-            <ul className="container-fluid">
-              <Fade cascade>
-                <li key="besuccess">
-                  <img src={imageRequire("logo_besuccess.png")} alt="logo_besuccess"/>
-                </li>
-                <li key="hyperithm" className="hyperithm">
-                  <img src={imageRequire("logo_hyperithm.png")} alt="logo_hyperithm"/>
-                </li>
-                <li key="pays">
-                  <img src={imageRequire("logo_pays.png")} alt="logo_pays"/>
-                </li>
-                <li key="decipher">
-                  <img src={imageRequire("logo_decipher.png")} alt="logo_decipher"/>
-                </li>
-                <li key="coopmarketing">
-                  <img src={imageRequire("logo_coopmarketing.png")} alt="logo_coopmarketing"/>
-                </li>
-              </Fade>
-            </ul>
+          <Content className="advantages section-type-1">
+            <h1 className="title">Advisor</h1>
+            <Row>
+              <Col xs={24} sm={8} md={6} className="p2p right">
+                <Fade duration={2000}>
+                  <div className="container-fluid">
+                    <img src={imageRequire('photo_ckh.png')} alt="photo_ckh"/>
+                    <div className="right texts">
+                      <h2 className="title">Kwanho Choi</h2>
+                      <h3 className="description">CEO at Neowiz Games
+                        CEO at GameON
+                        Chairman of the Korean game
+                        industry association</h3>
+                    </div>
+                  </div>
+                </Fade>
+              </Col>
+              <Col xs={24} sm={8} md={6} className="p2p right">
+                <Fade duration={2000}>
+                  <div className="container-fluid">
+                    <img src={imageRequire('photo_lcs.png')} alt="photo_lcs"/>
+                    <div className="right texts">
+                      <h2 className="title">Changsu Lee</h2>
+                      <h3 className="description">SVP at Tapjoy CEO at 5Rocks CTO at Abla Company</h3>
+                    </div>
+                  </div>
+                </Fade>
+              </Col>
+              <Col xs={24} sm={8} md={6} className="commission left">
+                <Fade duration={2000}>
+                  <div className="container-fluid">
+                    <img className="right" src={imageRequire('photo_kdy.png')} alt="photo_kdy"/>
+                    <div className="texts">
+                      <h2 className="title">Doyon Kim</h2>
+                      <h3 className="description">SVP at Celcom Planet CEO at Camp Mobile VP at YD Online</h3>
+                    </div>
+                  </div>
+                </Fade>
+              </Col>
+              <Col xs={24} sm={8} md={6} className="commission left">
+                <Fade duration={2000}>
+                  <div className="container-fluid">
+                    <img className="right" src={imageRequire('photo_mm.png')} alt="photo_mm"/>
+                    <div className="texts">
+                      <h2 className="title">Mary Min</h2>
+                      <h3 className="description">Senior Gaming BD Manager for
+                        Unity’s strategic partnership team
+                        VP at SEWORKS
+                        CEO at Second Wave Games</h3>
+                    </div>
+                  </div>
+                </Fade>
+              </Col>
+            </Row>
+            <Row>
+              <Col xs={24} sm={8} md={6} className="p2p right">
+                <Fade duration={2000}>
+                  <div className="container-fluid">
+                    <img src={imageRequire('photo_lys.png')} alt="photo_lys"/>
+                    <div className="right texts">
+                      <h2 className="title">Yongsoo Lee</h2>
+                      <h3 className="description">Global marketing expert
+                        Director at Leoburnett
+                        Marketer at Johnson & Johnson,
+                        Walt Disney</h3>
+                    </div>
+                  </div>
+                </Fade>
+              </Col>
+              <Col xs={24} sm={8} md={6} className="p2p right">
+                <Fade duration={2000}>
+                  <div className="container-fluid">
+                    <img src={imageRequire('photo_kdi.png')} alt="photo_kdi"/>
+                    <div className="right texts">
+                      <h2 className="title">Dooil Kim</h2>
+                      <h3 className="description">CEO at ChinaLab
+                        CEO at Neowin Games
+                        Expert for Chinese game market</h3>
+                    </div>
+                  </div>
+                </Fade>
+              </Col>
+              <Col xs={24} sm={8} md={6} className="commission left">
+                <Fade duration={2000}>
+                  <div className="container-fluid">
+                    <img className="right" src={imageRequire('photo_kjo.png')} alt="photo_kjo"/>
+                    <div className="texts">
+                      <h2 className="title">Jongho Kim</h2>
+                      <h3 className="description">Director at Payletter
+                        Director at Aegis Hyosung
+                        Sogang Universiy
+                      </h3>
+                    </div>
+                  </div>
+                </Fade>
+              </Col>
+              <Col xs={24} sm={8} md={6} className="commission left">
+                <Fade duration={2000}>
+                  <div className="container-fluid">
+                    <img className="right" src={imageRequire('photo_myw.png')} alt="photo_myw"/>
+                    <div className="texts">
+                      <h2 className="title">Yongwon Moon</h2>
+                      <h3 className="description">Director at Coop Marketing
+                        Marketing Leader at Ebay Korea
+                        Hanyang University
+                        Dept of Business Administration
+                      </h3>
+                    </div>
+                  </div>
+                </Fade>
+              </Col>
+            </Row>
+            <Row>
+              <Col xs={24} sm={8} md={6} className="commission left">
+                <Fade duration={2000}>
+                  <div className="container-fluid">
+                    <img className="right" src={imageRequire('photo_kcw.png')} alt="photo_kcw"/>
+                    <div className="texts">
+                      <h2 className="title">Chulhwan Kim</h2>
+                      <h3 className="description">CEO at Largosoft
+                        Mobile security expert </h3>
+                    </div>
+                  </div>
+                </Fade>
+              </Col>
+              <Col xs={24} sm={8} md={6} className="commission left">
+                <Fade duration={2000}>
+                  <div className="container-fluid">
+                    <img className="right" src={imageRequire('photo_cjm.png')} alt="photo_cjm"/>
+                    <div className="texts">
+                      <h2 className="title">Jaemin Choi</h2>
+                      <h3 className="description">Tax Accountant of Jasung
+                        Seoul National Univeristy
+                        Dept of Marine Engineering
+                        Expert for cryptocurrency tax issues</h3>
+                    </div>
+                  </div>
+                </Fade>
+              </Col>
+            </Row>
           </Content>
           <Content className="subscribe section-type-1">
             <h1 className="title">{t('main:subscribe:title')}</h1>
@@ -369,13 +806,14 @@ export default class Home extends Component {
                     onSearch={this.onEnterEmail.bind(this)}/>
           </Content>
         </Content>
-        <Footer style={{ textAlign: 'center', background: "#414141", color: "white" }}>
+        <SubscribePhoto/>
+        <Footer style={{textAlign: 'center', background: "#414141", color: "white"}}>
           <img src={imageRequire('logo.svg')} alt="logo" className="logo"/>
           <img src={imageRequire('gxc_white.svg')} alt="gxc" className="gxc"/>
           <div className="email">
             <Link to="mailto:support@bcventures.io">support@bcventures.io</Link>
           </div>
-          <Content className="social" style={{ display: 'none' }}>
+          <Content className="social" style={{display: 'none'}}>
             <Link className="facebook"/>
             <Link className="facebook"/>
           </Content>
