@@ -273,7 +273,7 @@ export default class Home extends Component {
             <Fade cascade duration={2000}>
               <Row className="product">
                 <Col md={12} sm={24} className="image">
-                  <img src={imageRequire('dex.png')} className="dex" alt="dex"/>
+                  <img src={imageRequire('dex.png')} className="macbook" alt="dex"/>
                 </Col>
                 <Col md={12} sm={24} className="description">
                   <div className="sub-title">DEX</div>
@@ -307,7 +307,7 @@ export default class Home extends Component {
             <Fade cascade duration={2000}>
               <Row className="product">
                 <Col md={12} sm={24} className="image">
-                  <img src={imageRequire('block_explorer.png')} className="block_explorer" alt="block_explorer"/>
+                  <img src={imageRequire('block_explorer.png')} className="macbook" alt="block_explorer"/>
                 </Col>
                 <Col md={12} sm={24} className="description">
                   <div className="sub-title">GXC Block Explorer</div>
