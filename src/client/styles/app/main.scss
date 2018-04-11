@@ -9,7 +9,22 @@
     opacity: 1;
   }
 }
-
+.roadmap_wrapping{
+  max-width:760px;
+  margin: 0 auto;
+}
+.roadmaps_desktop{
+  max-width:220px;
+}
+*{
+  font-family: Play;
+}
+#teams{
+  margin-bottom:36.5px;
+}
+#teams2{
+  margin-bottom:36.5px;
+}
 @keyframes test {
   from {
     width: 0;
@@ -18,7 +33,17 @@
     width: auto;
   }
 }
-
+h1.title{
+  font-family: Play;
+  font-size: 40px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  text-align: center;
+  color: #262626;
+}
 p{
   font-family: Play;
 }
@@ -27,6 +52,16 @@ p{
   width:100%;
   max-width:620px;
 }
+
+
+.benefits{
+  margin-bottom: 126px;
+}
+
+.parteners{
+  margin-bottom: 60px;
+}
+
 .gxc_description{
   font-family:Play;
   max-width:600px;
@@ -219,10 +254,11 @@ p{
   .advantages {
     max-width: 1280px;
     .ecosystem {
-      margin-bottom: 100px;
+      margin-top: 46px;
+      margin-bottom: 50px;
       img {
         width: 100%;
-        max-width: 960px;
+        max-width: 700px;
       }
     }
     div.container-fluid {
@@ -502,7 +538,7 @@ p{
         }
         p {
           margin-top: 36px;
-
+          max-width: 680px;
         }
       }
     }
@@ -527,6 +563,7 @@ p{
         }
         p {
           margin-top: 36px;
+          max-width: 680px;
 
         }
       }
@@ -660,6 +697,10 @@ p{
   }
   @media (max-width: $screen-sm) {
 
+  h1.title{
+  font-size:26px
+  }
+
     .section-type-1 {
       padding: 30px 15px;
     }
@@ -686,12 +727,18 @@ p{
         .title {
           font-size: 22px;
           margin-top: 0;
+          width: 200px;
+      text-align: center;
         }
         .description {
           font-size: 12px;
           -ms-word-break: break-all;
           word-break: break-all;
           padding-left: 20px;
+        }
+        .benefits_image{
+        width:50px;
+        height:50px;
         }
         img {
           width: 7rem;
@@ -723,6 +770,8 @@ p{
 
           &:first-child {
             margin-right: 8px;
+
+
           }
         }
         h4:first-child {

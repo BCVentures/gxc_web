@@ -229,13 +229,13 @@ export default class Home extends Component {
               </Col>
             </Row>
             <Row>
-              <h1 className="title">{t("main:benefits:title")}</h1>
+              <h1 className="title benefits">GXC Benefits</h1>
               <Col xs={24} sm={8} md={6} className="reward">
                 <Fade duration={2000}>
                   <div className="container-fluid">
-                    <img src={imageRequire('borderless_economy.png')} alt="pictorgram_reward"/>
+                    <img className="benefits_image" src={imageRequire('borderless_economy.png')} alt="pictorgram_reward"/>
                     <div className="texts">
-                      <h2 className="title">Borderless  <br /> Economy</h2>
+                      <h2 className="benefits_title">Borderless  <br /> Economy</h2>
                       <h3 className="description">Gamers are able to transfer their in-game wealth from an existing to a new game freely.</h3>
                     </div>
                   </div>
@@ -244,9 +244,9 @@ export default class Home extends Component {
               <Col xs={24} sm={8} md={6} className="p2p right">
                 <Fade duration={2000}>
                   <div className="container-fluid">
-                    <img src={imageRequire('red_graph.png')} alt="pictorgram_p2p"/>
+                    <img className="benefits_image" src={imageRequire('red_graph.png')} alt="pictorgram_p2p"/>
                     <div className="right texts">
-                      <h2 className="title">New Player <br /> Acquisition</h2>
+                      <h2 className="benefits_title">New Player <br /> Acquisition</h2>
                       <h3 className="description">Games can gain exposure to millions of players who play other GXC powered games.</h3>
                     </div>
                   </div>
@@ -255,9 +255,9 @@ export default class Home extends Component {
               <Col xs={24} sm={8} md={6} className="commission left">
                 <Fade duration={2000}>
                   <div className="container-fluid">
-                    <img className="right" src={imageRequire('trade.png')} alt="commission"/>
+                    <img className="benefits_image" src={imageRequire('trade.png')} alt="commission"/>
                     <div className="texts">
-                      <h2 className="title">Frictionless <br /> Trade</h2>
+                      <h2 className="benefits_title">Frictionless <br /> Trade</h2>
                       <h3 className="description">With the decentralized exchange, item/token trades are frictionless and low in cost.</h3>
                     </div>
                   </div>
@@ -266,9 +266,9 @@ export default class Home extends Component {
               <Col xs={24} sm={8} md={6} className="commission left">
                 <Fade duration={2000}>
                   <div className="container-fluid">
-                    <img className="right" src={imageRequire('fees.png')} alt="commission"/>
+                    <img className="benefits_image" src={imageRequire('fees.png')} alt="commission"/>
                     <div className="texts">
-                      <h2 className="title">Reduced <br /> Platform Fees</h2>
+                      <h2 className="benefits_title">Reduced <br /> Platform Fees</h2>
                       <h3 className="description"> Game developers can choose GXC as the method of payment and minimize high platform fees.</h3>
                     </div>
                   </div>
@@ -333,7 +333,7 @@ export default class Home extends Component {
 
           <Content className="advantages section-type-1">
             <Row>
-              <h1 className="title">Parteners</h1>
+              <h1 className="title parteners">Parteners</h1>
               <Col xs={24} sm={12} md={8} className="reward">
                 <Fade duration={2000}>
                   <div className="container-fluid2">
@@ -440,9 +440,9 @@ export default class Home extends Component {
               </Col>
             </Fade>
           </Content>
-          <Content className="advantages section-type-1">
+          <Content className="advantages section-type-1" id="team">
             <h1 className="title">Team</h1>
-            <Row>
+            <Row id="teams">
               <Col xs={24} sm={8} md={6} className="p2p right">
                 <Fade duration={2000}>
                   <div className="container-fluid">
@@ -457,7 +457,7 @@ export default class Home extends Component {
               <Col xs={24} sm={8} md={6} className="p2p right">
                 <Fade duration={2000}>
                   <div className="container-fluid">
-                    <img src={imageRequire('photo_yjh.png')} alt="photo_yjh"/>
+                    <a href="https://www.linkedin.com/in/jinhwan-yang-258653107/"><img src={imageRequire('photo_yjh.png')} alt="photo_yjh"/></a>
                     <div className="right texts">
                       <h2 className="title">Jinhwan Yang</h2>
                       <h3 className="description">CTO<p>Mentor at Decipher <br /> CTO at Qpick <br /> CTO at Profound <br /> Seoul National University <br /> Dept of BA / CS</p></h3>
@@ -468,7 +468,7 @@ export default class Home extends Component {
               <Col xs={24} sm={8} md={6} className="commission left">
                 <Fade duration={2000}>
                   <div className="container-fluid">
-                    <img className="right" src={imageRequire('photo_jay.png')} alt="photo_jay"/>
+                    <a href="https://www.linkedin.com/in/jayheo/" ><img className="right" src={imageRequire('photo_jay.png')} alt="photo_jay" usemap="#Map" /></a>
                     <div className="texts">
                       <h2 className="title">Jay Heo</h2>
                       <h3 className="description">COO<p>Playnery, CEO  <br /> Nsurfin, CEO  <br /> Gala-Net, Senior Director <br /> Yonsei University <br /> Dept of Political Science</p></h3>
@@ -479,7 +479,7 @@ export default class Home extends Component {
               <Col xs={24} sm={8} md={6} className="commission left">
                 <Fade duration={2000}>
                   <div className="container-fluid">
-                    <img className="right" src={imageRequire('photo_nss.png')} alt="photo_nss"/>
+                    <a href = "https://www.linkedin.com/in/namsamuel/"><img className="right" src={imageRequire('photo_nss.png')} alt="photo_nss"/></a>
                     <div className="texts">
                       <h2 className="title">Samuel Nam</h2>
                       <h3 className="description">Community Director<p>Lead Marketer at Netmarble <br /> Marketer at Yodo1 Games <br /> Analyst at Cisco Systems <br /> University of Michigan <br /> Ross School of Business</p></h3>
@@ -488,7 +488,7 @@ export default class Home extends Component {
                 </Fade>
               </Col>
             </Row>
-            <Row>
+            <Row id="teams">
               <Col xs={24} sm={8} md={6} className="p2p right">
                 <Fade duration={2000}>
                   <div className="container-fluid">
@@ -538,10 +538,10 @@ export default class Home extends Component {
               <Col xs={24} sm={8} md={6} className="commission left">
                 <Fade duration={2000}>
                   <div className="container-fluid">
-                    <img className="right" src={imageRequire('photo_asb.png')} alt="photo_asb"/>
+                    <a href="https://www.linkedin.com/in/sungbin-ahn-32a4a7146/"><img className="right" src={imageRequire('photo_asb.png')} alt="photo_asb"/></a>
                     <div className="texts">
                       <h2 className="title">Richard Ahn</h2>
-                      <h3 className="description">Developer<p> <br /> Developer at NextOpt  <br /> Myongji University <br /> Dept of Computer Science</p></h3>
+                      <h3 className="description">Developer<p>Developer at NextOpt  <br /> Myongji University <br /> Dept of Computer Science</p></h3>
                     </div>
                   </div>
                 </Fade>
@@ -568,7 +568,7 @@ export default class Home extends Component {
                     <img src={imageRequire('photo_lcs.png')} alt="photo_lcs"/>
                     <div className="right texts">
                       <h2 className="title">Changsu Lee</h2>
-                      <h3 className="description">SVP at Tapjoy CEO at 5Rocks CTO at Abla Company</h3>
+                      <h3 className="description">SVP at Tapjoy <br />  CEO at 5Rocks <br />  CTO at Abla Company</h3>
                     </div>
                   </div>
                 </Fade>
@@ -579,7 +579,7 @@ export default class Home extends Component {
                     <img className="right" src={imageRequire('photo_kdy.png')} alt="photo_kdy"/>
                     <div className="texts">
                       <h2 className="title">Doyon Kim</h2>
-                      <h3 className="description">SVP at Celcom Planet CEO at Camp Mobile VP at YD Online</h3>
+                      <h3 className="description">SVP at Celcom Planet <br /> CEO at Camp Mobile <br /> VP at YD Online</h3>
                     </div>
                   </div>
                 </Fade>
@@ -669,9 +669,11 @@ export default class Home extends Component {
               </Col>
             </Row>
           </Content>
-          <Content className="advantages2 section-type-1 only-desktop ">
+          <Content className="advantages2 section-type-1 only-desktop " id="roadmap">
             <Row>
               <h1 className="title">Roadmap</h1>
+              <Fade duration={2000}>
+              <Row className='roadmap_wrapping'>
               <Col md={8}>
               <div className='roadmap1-1'>Develop GXC proof of  concept</div>
               <div className='roadmap1-2'>Publish technical white paper<br /> Launch alpha testnet<br />Public coin sale</div>
@@ -679,9 +681,7 @@ export default class Home extends Component {
               <div className='roadmap1-4'>Launch GXC DEX</div>
               <div className='roadmap1-5'>Launch 30 dGames <br /> Launch in-game purchase services</div>
               </Col>
-
-
-              <Col md={8}>
+              <Col md={8} className="roadmaps_desktop">
               <img className='roadmap_desktop' src={imageRequire('roadmap_desktop.png')} alt="roadmap_mobile2"/>
               </Col>
               <Col md={8}>
@@ -690,11 +690,13 @@ export default class Home extends Component {
               <div className='roadmap2-3'>Launch GXC DEX alpha version <br /> Launch mainet GXC wallet</div>
               <div className='roadmap2-4'>Launch dGame Community Service <br /> Launch GXC SDK</div>
               </Col>
+              </Row>
+              </Fade>
             </Row>
           </Content>
           <Content>
           </Content>
-          <Content className="advantages2 section-type-1 only-mobile">
+          <Content className="advantages2 section-type-1 only-mobile mobile-road">
             <Row>
               <h1 className="title">Roadmap</h1>
               <Col xs={24} className="ecosystem">
