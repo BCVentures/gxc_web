@@ -19,12 +19,21 @@
   }
 }
 
+p{
+  font-family: Play;
+}
 
 .macbook {
   width:100%;
   max-width:620px;
 }
-
+.gxc_description{
+  font-family:Play;
+  max-width:600px;
+  margin: 0 auto;
+  margin-bottom:170px;
+  font-size:20px;
+}
 .roadmap1{
   margin-top:200px;
   text-align:right;
@@ -252,7 +261,7 @@
       }
       .description {
         width: 296px;
-        height: 115px;
+        height: 160px;
         font-family: Play;
         font-size: 16px;
         font-weight: normal;
@@ -592,6 +601,8 @@
   }
 
 
+
+
   @media (min-width:1300px) {
     p{
       font-size: 20px;
@@ -872,6 +883,7 @@
       }
     }
   }
+
 }
 
 

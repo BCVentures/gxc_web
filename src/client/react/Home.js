@@ -220,14 +220,23 @@ export default class Home extends Component {
               </Col>
             </Row>
             <Row>
+              <Col xs={24} sm={24} md={24}>
+                <Fade duration={2000}>
+                  <div className="gxc_description">
+                    <p> Game X Coin (GXC) is a cryptocurrency used universally among games on all platforms. Gamers can tokenize their in-game currency and trade them for any other game’s currency without censorship or friction.</p>
+                    </div>
+                </Fade>
+              </Col>
+            </Row>
+            <Row>
               <h1 className="title">{t("main:benefits:title")}</h1>
               <Col xs={24} sm={8} md={6} className="reward">
                 <Fade duration={2000}>
                   <div className="container-fluid">
-                    <img src={imageRequire('pictogram_reward.png')} alt="pictorgram_reward"/>
+                    <img src={imageRequire('borderless_economy.png')} alt="pictorgram_reward"/>
                     <div className="texts">
-                      <h2 className="title">{t('main:reward:title')}</h2>
-                      <h3 className="description">{t('main:reward:description')}</h3>
+                      <h2 className="title">Borderless  <br /> Economy</h2>
+                      <h3 className="description">Gamers are able to transfer their in-game wealth from an existing to a new game freely.</h3>
                     </div>
                   </div>
                 </Fade>
@@ -235,10 +244,10 @@ export default class Home extends Component {
               <Col xs={24} sm={8} md={6} className="p2p right">
                 <Fade duration={2000}>
                   <div className="container-fluid">
-                    <img src={imageRequire('pictogram_p2p.png')} alt="pictorgram_p2p"/>
+                    <img src={imageRequire('red_graph.png')} alt="pictorgram_p2p"/>
                     <div className="right texts">
-                      <h2 className="title">{t('main:p2p:title')}</h2>
-                      <h3 className="description">{t('main:p2p:description')}</h3>
+                      <h2 className="title">New Player <br /> Acquisition</h2>
+                      <h3 className="description">Games can gain exposure to millions of players who play other GXC powered games.</h3>
                     </div>
                   </div>
                 </Fade>
@@ -246,10 +255,10 @@ export default class Home extends Component {
               <Col xs={24} sm={8} md={6} className="commission left">
                 <Fade duration={2000}>
                   <div className="container-fluid">
-                    <img className="right" src={imageRequire('pictogram_commission.png')} alt="commission"/>
+                    <img className="right" src={imageRequire('trade.png')} alt="commission"/>
                     <div className="texts">
-                      <h2 className="title">{t('main:commission:title')}</h2>
-                      <h3 className="description">{t('main:commission:description')}</h3>
+                      <h2 className="title">Frictionless <br /> Trade</h2>
+                      <h3 className="description">With the decentralized exchange, item/token trades are frictionless and low in cost.</h3>
                     </div>
                   </div>
                 </Fade>
@@ -257,10 +266,10 @@ export default class Home extends Component {
               <Col xs={24} sm={8} md={6} className="commission left">
                 <Fade duration={2000}>
                   <div className="container-fluid">
-                    <img className="right" src={imageRequire('pictogram_platformfees.png')} alt="commission"/>
+                    <img className="right" src={imageRequire('fees.png')} alt="commission"/>
                     <div className="texts">
-                      <h2 className="title">{t('main:commission:title')}</h2>
-                      <h3 className="description">{t('main:commission:description')}</h3>
+                      <h2 className="title">Reduced <br /> Platform Fees</h2>
+                      <h3 className="description"> Game developers can choose GXC as the method of payment and minimize high platform fees.</h3>
                     </div>
                   </div>
                 </Fade>
@@ -277,11 +286,7 @@ export default class Home extends Component {
                 </Col>
                 <Col md={12} sm={24} className="description">
                   <div className="sub-title">DEX</div>
-                  <p>GXC is the future of the gaming industry that is happening right now.<br/>
-                    We are creating a new gaming economy and giving every gamer the power
-                    to turn virtual items into real assets and take their passion for gaming.
-                    We’re all set to navigate the uncharted waters of in-game items trading and
-                    we invite you to embark on this journey with us</p>
+                  <p>Through GXC’s decentralized exchange, players can liquidate their in-game assets into other cryptocurrencies such as Bitcoin or exchange them for another game’s. Utilizing smart contracts, DEX removes any intermediaries required during transactions allowing <br /> 1) reduced transaction cost <br /> 2) validation of exchanged goods and the transaction <br />3) removal of fraud. </p>
                 </Col>
               </Row>
             </Fade>
@@ -290,12 +295,8 @@ export default class Home extends Component {
             <Fade cascade duration={2000}>
               <Row className="wallet">
                 <Col md={12} sm={24} className="description">
-                  <div className="sub-title">SDK Toolbox</div>
-                  <p>GXC is the future of the gaming industry that is happening right now.<br></br>
-                    We are creating a new gaming economy and giving every gamer the power<br></br>
-                    to turn virtual items into real assets and take their passion for gaming.<br></br>
-                    We’re all set to navigate the uncharted waters of in-game items trading and<br></br>
-                    we invite you to embark on this journey with us</p>
+                  <div className="sub-title">Wallet</div>
+                  <p>The GXC wallet stores GXC coins and tokens issued by games participating in the GXC platform. Aside from the storage feature, the wallet features voting functionality to elect block producers, trade functionality to trade coins and tokens via DEX, and payment gateway functionality to use tokens to purchase in-game assets -- all with just touch of a button.</p>
                 </Col>
                 <Col md={12} sm={24} className="image">
                   <img className="macbook" src={imageRequire('wallet.png')} alt="macbook"/>
@@ -310,12 +311,8 @@ export default class Home extends Component {
                   <img src={imageRequire('block_explorer.png')} className="macbook" alt="block_explorer"/>
                 </Col>
                 <Col md={12} sm={24} className="description">
-                  <div className="sub-title">GXC Block Explorer</div>
-                  <p>GXC is the future of the gaming industry that is happening right now.<br></br>
-                    We are creating a new gaming economy and giving every gamer the power<br></br>
-                    to turn virtual items into real assets and take their passion for gaming.<br></br>
-                    We’re all set to navigate the uncharted waters of in-game items trading and<br></br>
-                    we invite you to embark on this journey with us</p>
+                  <div className="sub-title">Block Explorer</div>
+                  <p>All transactions and account status are viewable via the block explorer with full transparency. This includes both  GXC coin transactions as well as game token transactions. Additionally, gamers are able to view total circulating supply of all game tokens, their escrow values, and current market values.</p>
                 </Col>
               </Row>
             </Fade>
@@ -325,11 +322,7 @@ export default class Home extends Component {
               <Row className="wallet">
                 <Col md={12} sm={24} className="description">
                   <div className="sub-title">SDK Toolbox</div>
-                  <p>GXC is the future of the gaming industry that is happening right now.<br></br>
-                    We are creating a new gaming economy and giving every gamer the power<br></br>
-                    to turn virtual items into real assets and take their passion for gaming.<br></br>
-                    We’re all set to navigate the uncharted waters of in-game items trading and<br></br>
-                    we invite you to embark on this journey with us</p>
+                  <p>SDK is provided for most operating systems, languages, and development tools including Cocos, Unity, C++, C#, and Java. Game developers can use the SDK of their choice to easily and seamlessly implement functions like wallet synchronization, balance check, grant permissions, and exchange tokens. </p>
                 </Col>
                 <Col md={12} sm={24} className="image">
                   <img className="macbook" src={imageRequire('macbook.png')} alt="macbook"/>
@@ -347,57 +340,18 @@ export default class Home extends Component {
                     <img src={imageRequire('logo_xlgames.png')} alt="logo_xlgames"/>
                     <div className="texts">
                       <h2 className="title">XL Games</h2>
-                      <h3 className="description">XLGames is the world’s premier publisher
-                        and developer of massively online games.
-                        Established in 1997 in Korea,
-                        XLGames quickly became the leader
-                        in online games with the blockchain.</h3>
+                      <h3 className="description">XLGAMES is a game studio specializing in MMORPGs. The company was founded by Jae-kyung Song, co-founder of Nexon and developer of the Kingdom of the Wind and Lineage.</h3>
                     </div>
                   </div>
                 </Fade>
               </Col>
-              <Col xs={24} sm={12} md={8} className="p2p right">
-                <Fade duration={2000}>
-                  <div className="container-fluid2">
-                    <img src={imageRequire('logo_entermate.png')} alt="logo_entermate" />
-                    <div className="right texts">
-                      <h2 className="title">Entermate</h2>
-                      <h3 className="description">XLGames is the world’s premier publisher and developer of massively online games.
-                        Established in 1997 in Korea,
-                        XLGames quickly became the leader
-                        in online games with the blockchain</h3>
-                    </div>
-                  </div>
-                </Fade>
-              </Col>
-              <Col xs={24} sm={12} md={8} className="commission left">
-                <Fade duration={2000}>
-                  <div className="container-fluid2">
-                    <img className="right" src={imageRequire('logo_supercat.png')} alt="logo_supercat"/>
-                    <div className="texts">
-                      <h2 className="title">Supercat</h2>
-                      <h3 className="description">XLGames is the world’s premier publisher
-                        and developer of massively online games.
-                        Established in 1997 in Korea,
-                        XLGames quickly became the leader
-                        in online games with the blockchain</h3>
-                    </div>
-                  </div>
-                </Fade>
-              </Col>
-            </Row>
-            <Row>
               <Col xs={24} sm={12} md={8} className="reward">
                 <Fade duration={2000}>
                   <div className="container-fluid2">
                     <img src={imageRequire('logo_superplanet.png')} alt="logo_superplanet"/>
                     <div className="texts">
                       <h2 className="title">Superplanet</h2>
-                      <h3 className="description">XLGames is the world’s premier publisher
-                        and developer of massively online games.
-                        Established in 1997 in Korea,
-                        XLGames quickly became the leader
-                        in online games with the blockchain</h3>
+                      <h3 className="description">Super Planet is a mobile game studio behind wildly popular games like Hero Maker with Naver Webtoon (Editor’s pick on Google Play ) and Guardians of the Video Game with Naver Webtoon (top 15 grossing in South Korea).</h3>
                     </div>
                   </div>
                 </Fade>
@@ -408,26 +362,21 @@ export default class Home extends Component {
                     <img src={imageRequire('logo_cointong.png')} alt="logo_cointong"/>
                     <div className="right texts">
                       <h2 className="title">Cointong</h2>
-                      <h3 className="description">XLGames is the world’s premier publisher
-                        and developer of massively online games.
-                        Established in 1997 in Korea,
-                        XLGames quickly became the leader
-                        in online games with the blockchain</h3>
+                      <h3 className="description">Cointong is a cryptocurrency exchange launched by Tomato Group. Tomato Group runs News Tomato, a South Korea’s very first stocks and economy new channel, Tomato TV, and Stocktong, South Korea’s #1 stocks application.</h3>
                     </div>
                   </div>
                 </Fade>
               </Col>
+            </Row>
+            <Row>
+
               <Col xs={24} sm={12} md={8} className="commission left">
                 <Fade duration={2000}>
                   <div className="container-fluid2">
                     <img className="right" src={imageRequire('logo_seum.png')} alt="logo_seum"/>
                     <div className="texts">
                       <h2 className="title">SEUM</h2>
-                      <h3 className="description">XLGames is the world’s premier publisher
-                        and developer of massively online games.
-                        Established in 1997 in Korea,
-                        XLGames quickly became the leader
-                        in online games with the blockchain</h3>
+                      <h3 className="description">SEUM is a law firm known for its specialty in cryptocurrencies. SEUM participated as legal advisor in various projects such as Medibloc.</h3>
                     </div>
                   </div>
                 </Fade>
@@ -438,11 +387,7 @@ export default class Home extends Component {
                     <img src={imageRequire('logo_hyperithm.png')} alt="logo_hyperithm"/>
                     <div className="texts">
                       <h2 className="title">Hyperithm</h2>
-                      <h3 className="description">XLGames is the world’s premier publisher
-                        and developer of massively online games.
-                        Established in 1997 in Korea,
-                        XLGames quickly became the leader
-                        in online games with the blockchain</h3>
+                      <h3 className="description">Hyperithm is a fund management company specializing in cryptocurrency with offies in Tokyo and Seoul. As part of its private/pre-ICO investment work, Hyperithm utilizes global networks including Korea and Japan to advise ICO projects with highest potential.</h3>
                     </div>
                   </div>
                 </Fade>
@@ -453,11 +398,7 @@ export default class Home extends Component {
                     <img src={imageRequire('logo_besuccess.png')} alt="logo_besuccess"/>
                     <div className="right texts">
                       <h2 className="title">beSUCCESS</h2>
-                      <h3 className="description">XLGames is the world’s premier publisher
-                        and developer of massively online games.
-                        Established in 1997 in Korea,
-                        XLGames quickly became the leader
-                        in online games with the blockchain</h3>
+                      <h3 className="description">beSUCCESS is South Korea’s most representative tech and startup media first published in 2011. beSUCCESS holds beLAUNCH, a conference for startups, and beLAUNCH, Asia’s largest conference for startups.</h3>
                     </div>
                   </div>
                 </Fade>
@@ -468,11 +409,7 @@ export default class Home extends Component {
                     <img className="right" src={imageRequire('logo_pays.png')} alt="logo_pays"/>
                     <div className="texts">
                       <h2 className="title">Pays</h2>
-                      <h3 className="description">XLGames is the world’s premier publisher
-                        and developer of massively online games.
-                        Established in 1997 in Korea,
-                        XLGames quickly became the leader
-                        in online games with the blockchain</h3>
+                      <h3 className="description">Pay’s offers issuing services for digital gift certificates, gift cards, and payment brokerage. Pay’s offers brand payment brokerage for simple payment services to allow easier access to fintech services.</h3>
                     </div>
                   </div>
                 </Fade>
@@ -483,9 +420,8 @@ export default class Home extends Component {
             <Fade cascade duration={2000}>
               <h1 className="title">{t('main:whitepaper.title')}</h1>
               <img src={imageRequire('logo_white.svg')} className="logo" alt="logo"/>
-              <h3 className="description">Game X Coin aims to connect currencies between games via the GXC, the main
-                currency.
-                <p>GXC provides a more valuable system for game developers and gamers based on the blockchain.</p></h3>
+              <h3 className="description">Read our white paper for more information on our ambitions to turn the gaming ecosystem upside down.
+                </h3>
               <div className="links">
                 {/* languages.map((language, index) => {
                   return (<Link
@@ -512,12 +448,8 @@ export default class Home extends Component {
                   <div className="container-fluid">
                     <img src={imageRequire('photo_kwk.png')} alt="photo_kwk"/>
                     <div className="right texts">
-                      <h2 className="title">Woongkyum Kim</h2>
-                      <h3 className="description">CEO, Founder<p>CEO at Whooper
-                        20+ s/w engineer
-                        (payment/game)
-                        Yonsei University
-                        Dept of Computer Science</p></h3>
+                      <h2 className="title">Woongkyum Kim </h2>
+                      <h3 className="description">CEO, Founder<p>CEO at Whooper <br /> 20+ s/w engineer (payment/game) <br /> Yonsei University <br /> Dept of Computer Science</p></h3>
                     </div>
                   </div>
                 </Fade>
@@ -528,11 +460,7 @@ export default class Home extends Component {
                     <img src={imageRequire('photo_yjh.png')} alt="photo_yjh"/>
                     <div className="right texts">
                       <h2 className="title">Jinhwan Yang</h2>
-                      <h3 className="description">CTO<p>Mentor at Decipher
-                        CTO at Qpick
-                        CTO at Profound
-                        Seoul National University
-                        Dept of BA / CS</p></h3>
+                      <h3 className="description">CTO<p>Mentor at Decipher <br /> CTO at Qpick <br /> CTO at Profound <br /> Seoul National University <br /> Dept of BA / CS</p></h3>
                     </div>
                   </div>
                 </Fade>
@@ -543,11 +471,7 @@ export default class Home extends Component {
                     <img className="right" src={imageRequire('photo_jay.png')} alt="photo_jay"/>
                     <div className="texts">
                       <h2 className="title">Jay Heo</h2>
-                      <h3 className="description">COO<p>Playnery, CEO
-                        Nsurfin, CEO
-                        Gala-Net, Senior Director
-                        Yonsei University
-                        Dept of Political Science</p></h3>
+                      <h3 className="description">COO<p>Playnery, CEO  <br /> Nsurfin, CEO  <br /> Gala-Net, Senior Director <br /> Yonsei University <br /> Dept of Political Science</p></h3>
                     </div>
                   </div>
                 </Fade>
@@ -558,11 +482,7 @@ export default class Home extends Component {
                     <img className="right" src={imageRequire('photo_nss.png')} alt="photo_nss"/>
                     <div className="texts">
                       <h2 className="title">Samuel Nam</h2>
-                      <h3 className="description">Community Director<p>Lead Marketer at Netmarble
-                        Marketer at Yodo1 Games
-                        Analyst at Cisco Systems
-                        University of Michigan
-                        Ross School of Business</p></h3>
+                      <h3 className="description">Community Director<p>Lead Marketer at Netmarble <br /> Marketer at Yodo1 Games <br /> Analyst at Cisco Systems <br /> University of Michigan <br /> Ross School of Business</p></h3>
                     </div>
                   </div>
                 </Fade>
@@ -575,11 +495,7 @@ export default class Home extends Component {
                     <img src={imageRequire('photo_bhs.png')} alt="photo_bhs"/>
                     <div className="right texts">
                       <h2 className="title">Hyunseok Bang</h2>
-                      <h3 className="description">CCO<p>Designer at beSUCCESS
-                        Planning Executive at Qpick
-                        CCO at Profound
-                        Seoultech
-                        Dept of Visual Design</p></h3>
+                      <h3 className="description">CCO<p>Designer at beSUCCESS <br /> Planning Executive at Qpick <br /> CCO at Profound  <br /> Seoultech  <br /> Dept of Visual Design</p></h3>
                     </div>
                   </div>
                 </Fade>
@@ -590,11 +506,7 @@ export default class Home extends Component {
                     <img src={imageRequire('photo_cyw.png')} alt="photo_cyw"/>
                     <div className="right texts">
                       <h2 className="title">Yeonwoo Chu</h2>
-                      <h3 className="description">CPO<p>CEO at CORO Studio
-                        Leader Developer at Mobion
-                        Leader Developer at Irugo
-                        University of Seoul
-                        Dept of Civil Engineering</p></h3>
+                      <h3 className="description">CPO<p>CEO at CORO Studio <br /> Leader Developer at Mobion <br /> Leader Developer at Irugo <br /> University of Seoul <br /> Dept of Civil Engineering</p></h3>
                     </div>
                   </div>
                 </Fade>
@@ -605,11 +517,7 @@ export default class Home extends Component {
                     <img className="right" src={imageRequire('photo_pje.png')} alt="photo_pje"/>
                     <div className="texts">
                       <h2 className="title">Jieun Park</h2>
-                      <h3 className="description">Management Support Director<p>COO at Whooper
-                        Launched multiple fintech and
-                        mobile services
-                        Sookmyung Womans University
-                        Dept of Communication & Media</p></h3>
+                      <h3 className="description">Management Support Director<p>COO at Whooper <br /> Launched multiple fintech and <br /> mobile services <br /> Sookmyung Womans University <br /> Dept of Communication & Media</p></h3>
                     </div>
                   </div>
                 </Fade>
@@ -620,11 +528,7 @@ export default class Home extends Component {
                     <img className="right" src={imageRequire('photo_lhh.png')} alt="photo_lhh"/>
                     <div className="texts">
                       <h2 className="title">Hwanhee Lee</h2>
-                      <h3 className="description">Developer<p>Developer at Asadal
-                        Developer at Gabia
-                        CTO at Republic Dot
-                        Myungji University
-                        Dept of Computer Science</p></h3>
+                      <h3 className="description">Developer<p>Developer at Asadal <br /> Developer at Gabia <br /> CTO at Republic Dot <br /> Myongji University <br /> Dept of Computer Science</p></h3>
                     </div>
                   </div>
                 </Fade>
@@ -637,10 +541,7 @@ export default class Home extends Component {
                     <img className="right" src={imageRequire('photo_asb.png')} alt="photo_asb"/>
                     <div className="texts">
                       <h2 className="title">Richard Ahn</h2>
-                      <h3 className="description">Developer<p>
-                        Developer at NextOpt
-                        Myungji University
-                        Dept of Computer Science</p></h3>
+                      <h3 className="description">Developer<p> <br /> Developer at NextOpt  <br /> Myongji University <br /> Dept of Computer Science</p></h3>
                     </div>
                   </div>
                 </Fade>
@@ -656,10 +557,7 @@ export default class Home extends Component {
                     <img src={imageRequire('photo_ckh.png')} alt="photo_ckh"/>
                     <div className="right texts">
                       <h2 className="title">Kwanho Choi</h2>
-                      <h3 className="description">CEO at Neowiz Games
-                        CEO at GameON
-                        Chairman of the Korean game
-                        industry association</h3>
+                      <h3 className="description">CEO at Neowiz Games <br /> CEO at GameON <br /> Chairman of the Korean game <br /> industry association</h3>
                     </div>
                   </div>
                 </Fade>
@@ -692,10 +590,7 @@ export default class Home extends Component {
                     <img className="right" src={imageRequire('photo_mm.png')} alt="photo_mm"/>
                     <div className="texts">
                       <h2 className="title">Mary Min</h2>
-                      <h3 className="description">Senior Gaming BD Manager for
-                        Unity’s strategic partnership team
-                        VP at SEWORKS
-                        CEO at Second Wave Games</h3>
+                      <h3 className="description">Senior Gaming BD Manager for <br /> Unity’s strategic partnership team <br /> VP at SEWORKS <br /> CEO at Second Wave Games</h3>
                     </div>
                   </div>
                 </Fade>
@@ -708,10 +603,7 @@ export default class Home extends Component {
                     <img src={imageRequire('photo_lys.png')} alt="photo_lys"/>
                     <div className="right texts">
                       <h2 className="title">Yongsoo Lee</h2>
-                      <h3 className="description">Global marketing expert
-                        Director at Leoburnett
-                        Marketer at Johnson & Johnson,
-                        Walt Disney</h3>
+                      <h3 className="description">Global marketing expert <br /> Director at Leoburnett <br /> Marketer at Johnson & Johnson, <br /> Walt Disney</h3>
                     </div>
                   </div>
                 </Fade>
@@ -722,9 +614,7 @@ export default class Home extends Component {
                     <img src={imageRequire('photo_kdi.png')} alt="photo_kdi"/>
                     <div className="right texts">
                       <h2 className="title">Dooil Kim</h2>
-                      <h3 className="description">CEO at ChinaLab
-                        CEO at Neowin Games
-                        Expert for Chinese game market</h3>
+                      <h3 className="description">CEO at ChinaLab <br /> CEO at Neowin Games <br /> Expert for Chinese game market</h3>
                     </div>
                   </div>
                 </Fade>
@@ -735,9 +625,7 @@ export default class Home extends Component {
                     <img className="right" src={imageRequire('photo_kjo.png')} alt="photo_kjo"/>
                     <div className="texts">
                       <h2 className="title">Jongho Kim</h2>
-                      <h3 className="description">Director at Payletter
-                        Director at Aegis Hyosung
-                        Sogang Universiy
+                      <h3 className="description">Director at Payletter <br /> Director at Aegis Hyosung <br /> Sogang Universiy
                       </h3>
                     </div>
                   </div>
@@ -749,10 +637,7 @@ export default class Home extends Component {
                     <img className="right" src={imageRequire('photo_myw.png')} alt="photo_myw"/>
                     <div className="texts">
                       <h2 className="title">Yongwon Moon</h2>
-                      <h3 className="description">Director at Coop Marketing
-                        Marketing Leader at Ebay Korea
-                        Hanyang University
-                        Dept of Business Administration
+                      <h3 className="description">Director at Coop Marketing <br /> Marketing Leader at Ebay Korea <br /> Hanyang University <br /> Dept of Business Administration
                       </h3>
                     </div>
                   </div>
@@ -766,8 +651,7 @@ export default class Home extends Component {
                     <img className="right" src={imageRequire('photo_kcw.png')} alt="photo_kcw"/>
                     <div className="texts">
                       <h2 className="title">Chulhwan Kim</h2>
-                      <h3 className="description">CEO at Largosoft
-                        Mobile security expert </h3>
+                      <h3 className="description">CEO at Largosoft <br /> Mobile security expert </h3>
                     </div>
                   </div>
                 </Fade>
@@ -778,10 +662,7 @@ export default class Home extends Component {
                     <img className="right" src={imageRequire('photo_cjm.png')} alt="photo_cjm"/>
                     <div className="texts">
                       <h2 className="title">Jaemin Choi</h2>
-                      <h3 className="description">Tax Accountant of Jasung
-                        Seoul National Univeristy
-                        Dept of Marine Engineering
-                        Expert for cryptocurrency tax issues</h3>
+                      <h3 className="description">Tax Accountant of Jasung <br /> Seoul National Univeristy <br /> Dept of Marine Engineering <br />Cryptocurrency tax issue expert</h3>
                     </div>
                   </div>
                 </Fade>
