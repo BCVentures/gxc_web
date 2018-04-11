@@ -788,15 +788,30 @@ export default class Home extends Component {
               </Col>
             </Row>
           </Content>
-          <Content className="advantages2 section-type-1 only-desktop">
+          <Content className="advantages2 section-type-1 only-desktop ">
             <Row>
               <h1 className="title">Roadmap</h1>
-              <Col xs={24} className="ecosystem">
-                <Fade duration={2000}>
-                  <img className='roadmap_desktop' src={imageRequire('roadmap_desktop.png')} alt="roadmap_desktop"/>
-                </Fade>
+              <Col md={8}>
+              <div className='roadmap1-1'>Develop GXC proof of  concept</div>
+              <div className='roadmap1-2'>Publish technical white paper<br /> Launch alpha testnet<br />Public coin sale</div>
+              <div className='roadmap1-3'>Launch mainnet with <br /> 3participating dGames</div>
+              <div className='roadmap1-4'>Launch GXC DEX</div>
+              <div className='roadmap1-5'>Launch 30 dGames <br /> Launch in-game purchase services</div>
+              </Col>
+
+
+              <Col md={8}>
+              <img className='roadmap_desktop' src={imageRequire('roadmap_desktop.png')} alt="roadmap_mobile2"/>
+              </Col>
+              <Col md={8}>
+              <div className='roadmap2-1'>Publish white paper<br />Private coin sale</div>
+              <div className='roadmap2-2'>Launch second beta testnet<br /> Develop wallet system</div>
+              <div className='roadmap2-3'>Launch GXC DEX alpha version <br /> Launch mainet GXC wallet</div>
+              <div className='roadmap2-4'>Launch dGame Community Service <br /> Launch GXC SDK</div>
               </Col>
             </Row>
+          </Content>
+          <Content>
           </Content>
           <Content className="advantages2 section-type-1 only-mobile">
             <Row>
