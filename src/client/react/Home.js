@@ -446,7 +446,7 @@ export default class Home extends Component {
               <Col xs={24} sm={8} md={6} className="p2p right">
                 <Fade duration={2000}>
                   <div className="container-fluid">
-                    <img src={imageRequire('photo_kwk.png')} alt="photo_kwk"/>
+                    <a href="https://www.linkedin.com/in/%EC%9B%85%EA%B2%B8-%EA%B9%80-55065584/"><img src={imageRequire('photo_kwk.png')} alt="photo_kwk"/></a>
                     <div className="right texts">
                       <h2 className="title">Woongkyum Kim </h2>
                       <h3 className="description">CEO, Founder<p>CEO at Whooper <br /> 20+ s/w engineer (payment/game) <br /> Yonsei University <br /> Dept of Computer Science</p></h3>
